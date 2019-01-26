@@ -1,0 +1,113 @@
+@import variables
+@import url('https://fonts.googleapis.com/css?family=Raleway:900,800,500|Work+Sans:200,300')
+
+*
+  box-sizing: border-box
+
+html, body
+  margin: 0
+  padding: 0
+  min-height: 100vh
+
+body
+  margin-top: 50px
+  font-family: $text-font
+  font-weight: $text-weight
+  display: grid
+  grid-template-areas: "content" "footer"
+  grid-template-rows: 1fr 50px
+  background: $background-color-dark
+  color: $white
+  overflow-x: hidden
+  margin-bottom: 2rem
+  @media screen and (min-width: 1024px)
+    grid-template-areas: ". content content content ." ". footer footer footer ."
+    grid-template-columns: 2rem 1fr 1024px 1fr 2rem
+
+@import navbar
+
+main
+  grid-area: content
+  display: grid
+
+  a:link,
+  a:visited
+    text-decoration: none
+    color: $primary
+    font-weight: bold
+    transition: 0.2s ease-in-out
+
+  a:hover
+    color: mix($primary, $white, 75%)
+
+@import home
+
+footer
+  grid-area: footer
+  display: flex
+  align-items: center
+  justify-content: center
+  border-top: 1px solid transparentize($white, 0.75)
+
+  a:link, a:visited
+    text-decoration: none
+    color: transparentize($white, 0.25)
+    transition: 0.2s ease-in-out
+
+  a:hover
+    color: $white
+
+@media screen and (max-width: 1024px)
+  .frame
+    display: none
+
+@media screen and (min-width: 1024px)
+  .frame
+    z-index: 50
+    position: fixed
+    background: $background-color-light
+    &.left, &.right
+      height: 100vh
+      width: 2rem
+
+    &.left
+      left: 0
+      border-right: 1px solid transparentize($white, 0.75)
+      display: flex
+      align-items: center
+      justify-content: center
+      .social
+        width: 100%
+        display: flex
+        flex-direction: column
+        a
+          display: inline-block
+          text-align: center
+          &:link, &:visited
+            color: $white
+            transition: 0.2s ease-in-out
+          &:hover
+            color: $primary
+            transform: scale(1.1)
+          &:not(:first-child)
+            margin-top: 1em
+        i
+          font-size: 1.5em
+
+    &.right
+      right: 0
+      border-left: 1px solid transparentize($white, 0.75)
+    &.bottom
+      width: 100%
+      bottom: 0
+      height: 2rem
+      display: grid
+      grid-template-columns: 2rem 1fr 2rem
+      & > div
+        grid-column-start: 2
+        background: $background-color-light
+        border-top: 1px solid transparentize($white, 0.75)
+        z-index: 1000
+
+@import login
+@import admin

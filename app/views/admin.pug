@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  main.admin-area
+    section
+      .content
+        h1 News
+        if articles.length > 0
+          .news
+            each news,index in articles
+              include includes/article.pug
+                .controls 
+                  button Edit
+                  button Delete
+        else
+          p At the moment there aren't any news to display.
+        .add-news
+          a(href='/news/add') Add News
+  script(src='/js/utils.js')
+  script(src='/js/admin.js')

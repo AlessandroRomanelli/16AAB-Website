@@ -1,0 +1,9 @@
+article.carousel-item(data-id=news._id ,data-timestamp=news.timestamp)
+  if (news.image)
+    img.background(src=news.image)
+  .content
+    .header
+      h2= news.title
+      span.author By #{news.author.displayName}
+      span.date 
+    .main !{news.content}

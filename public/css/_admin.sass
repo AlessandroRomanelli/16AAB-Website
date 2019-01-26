@@ -1,0 +1,44 @@
+main.news-edit
+  form
+    width: 100%
+    input
+      outline: 0
+      width: 100%
+    input[type='submit']
+      width: auto
+      margin: 0.5em 0 0 0
+    input[type='text']
+      text-transform: uppercase
+      margin-bottom: 0.5em
+    .fileUpload
+      margin-top: 0.5em
+      position: relative
+      input[type='file']
+        display: inline
+      img.preview
+        position: absolute
+        max-width: 300px
+        left: 0
+        top: calc(100% + 0.5em)
+        border-radius: 5px
+        border: 1px solid transparentize($white, 0.75)
+
+main.admin-area .news
+  display: flex
+  flex-wrap: wrap
+  article.carousel-item
+    flex: 1 0 50%
+
+main.admin-area .add-news
+  margin-top: 1em
+  display: flex
+  justify-content: center
+  a
+    padding: 0.5em
+    background: $white
+    color: $black
+    border-radius: 0.25em
+    text-transform: uppercase
+    transition: 0.2s ease-in-out
+    &:hover
+      filter: drop-shadow(0 0 5px transparentize($white, 0.66))

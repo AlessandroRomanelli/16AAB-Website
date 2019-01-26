@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    block css
+      link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+      link(rel='stylesheet', href='/css/style.css')
+    block js
+      if ENV_DEVELOPMENT
+        script(src='http://localhost:35729/livereload.js')
+  body
+    include includes/navbar.pug
+    .frame.left
+      .social
+        a(href='https://discord.gg/mAXUwt', target='_blank')
+          i.fab.fa-discord
+        a(href='ts3server://no4commando.com?port=9987&nickname=Web%20Visitor')
+          i.fab.fa-teamspeak
+        a(href='https://steamcommunity.com/groups/britishpathfinders', target='_blank')
+          i.fab.fa-steam-square
+    block content
+    .frame.right
+    include includes/footer.pug
+    .frame.bottom
+      div
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="/js/vendors/pug.min.js")
+    script(src="/js/templates.js")
+
+  

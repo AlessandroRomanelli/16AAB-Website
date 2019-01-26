@@ -1,0 +1,437 @@
+@mixin fullSizeBeforeAfter()
+  &::before, &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    pointer-events: none
+    z-index: -1
+
+
+@mixin backgroundFadeInFadeOut($color, $percentage, $offset)
+  background: linear-gradient(0deg, $color 0% - $offset, transparent $percentage, transparent 100% - $percentage, $color 100% + $offset)
+
+
+.home-page
+  display: grid
+  grid-template-areas: "title" "news" "about" "operations" "joining" "teamspeak"
+  grid-template-rows: 400px 1fr
+
+.news
+  grid-area: news
+
+.about
+  grid-area: about
+
+.operations
+  grid-area: operations
+
+.joining
+  grid-area: joining
+
+.teamspeak
+  grid-area: teamspeak
+
+
+main > .header
+  position: relative
+  grid-area: title
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  background-attachment: fixed
+  &:hover
+    cursor: default
+  @include fullSizeBeforeAfter()
+  &::before
+    background: url(/img/mainbg.jpg) no-repeat
+    background-size: cover
+    background-attachment: fixed
+    background-position: center
+    @media screen and (min-width: 1024px) and (max-width: 1680px)
+      background-position: 0% 50%
+    @media screen and (min-width: 1680px)
+      background-position: 0 150%
+    opacity: 0.66
+    z-index: 0
+  &::after
+    @include backgroundFadeInFadeOut($background-color-dark, 20%, 5%)
+    z-index: 0
+  .title, .subtitle, .call-to-action
+    filter: drop-shadow(0 0 3px $shadow-dark)
+
+main > .header .title
+  font-family: $title-font
+  text-transform: uppercase
+  font-weight: $title-font-medium
+  z-index: 1
+  h1
+    font-size: 2.75em
+    margin: 0
+    span
+      color: $primary
+      font-weight: $title-font-bold
+    &:first-of-type
+      margin-right: 1em
+    &:last-of-type
+      margin-left: 1em
+
+main > .header .subtitle
+  width: 100%
+  text-align: center
+  text-transform: uppercase
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+main > .header .call-to-action
+  display: flex
+  justify-content: center
+  width: 100%
+  position: absolute
+  bottom: 25%
+  button
+    font-size: 1em
+    color: $white
+    font-family: $text-font
+    font-weight: $text-weight
+    text-transform: uppercase
+    padding: 0.6em 1em
+    outline: 0
+    background: transparentize($background-color-dark, 0.8)
+    border: 1px solid transparentize($white, 0.8)
+    position: relative
+    transition: all 0.2s ease-in-out
+    border-radius: 2px
+    &:last-of-type
+      background: transparentize(mix($primary, $background-color-dark, 50%), 0.8)
+      border-color: transparentize($primary, 0.8)
+      margin-left: 1em
+    &::before, &::after
+      position: absolute
+      content: ''
+      background: $white
+      width: 0
+      height: 2px
+      left: 50%
+      opacity: 0
+      transition: 0.2s ease-in-out
+    &::before
+      top: 0
+      border-radius: 2px 2px 0 0
+    &::after
+      bottom: 0
+      border-radius: 0 0 2px 2px
+    &:hover
+      cursor: pointer
+      letter-spacing: 1px
+      border-left-color: transparentize($white, 0.75)
+      border-right-color: transparentize($white, 0.75)
+      background: transparentize($white, 0.9)
+      &:last-of-type
+        border-left-color: transparentize($primary, 0.75)
+        border-right-color: transparentize($primary, 0.75)
+        background: transparentize($primary, 0.9)
+        &::before, &::after
+          background: $primary
+
+      &::before, &::after
+        left: 0
+        opacity: 1
+        width: 100%
+
+section
+  padding: 2em 1em
+  @media screen and (min-width: 1024px)
+    display: grid
+    grid-template-columns: 1fr 1024px 1fr
+    .content
+      grid-column-start: 2
+  h1
+    text-transform: uppercase
+    text-align: center
+    font-size: 2.5em
+    margin: 1rem 0
+    font-family: $title-font
+    font-weight: $title-font-regular
+    & > span
+      color: $primary
+      font-weight: $title-font-medium
+    div
+      position: relative
+      font-size: 0.8rem
+      span:nth-child(2n-1)
+        color: $primary
+
+.news
+  padding: 0
+  & > .content
+    position: relative
+    overflow: hidden
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(90deg, $background-color-dark 0%, transparent 2%, transparent 98%, $background-color-dark 100%)
+      pointer-events: none
+
+
+.carousel
+  position: relative
+  padding: 0
+  margin: 0
+  max-width: 100vw
+  display: flex
+  list-style: none
+  transition: 1s cubic-bezier(.41,.01,0,1)
+  left: 0%
+
+.carousel-item
+  overflow: hidden
+  position: relative
+  display: flex
+  align-items: center
+  padding: 0 1em
+  flex: 1 0 100%
+  border-top: 1px solid transparentize($white, 0.5)
+  border-bottom: 1px solid transparentize($white, 0.5)
+  @media screen and (min-width: 1024px)
+    flex: 1 0 50%
+  &:nth-child(2n-1)
+    background: transparentize($white, 0.975)
+  &:nth-child(2n)
+    background: transparentize($white, 0.95)
+  &:not(:last-child)
+    border-right: 1px solid transparentize($white, 0.9)
+  h2
+    margin: 0
+    flex: 1 0 100%
+  .header
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    text-transform: uppercase
+    .author, .date
+      font-size: 0.8em
+  .content
+    width: 100%
+    margin: 1em 0
+  & > img.background
+    position: absolute
+    top: 0
+    left: 0
+    max-width: 100%
+    z-index: -1
+    opacity: 0.3
+.carousel-item .main
+  margin-top: 1em
+  p
+    margin: 0
+  .read-more
+    margin-top: 0.5em
+    text-align: right
+    a
+      position: relative
+      transition: 0.2s ease-in-out
+      &:hover i
+        opacity: 1
+        right: 0
+    i
+      position: relative
+      transition: 0.2s ease-in-out
+      right: 20px
+      opacity: 0
+
+
+.controls
+  display: flex
+  justify-content: center
+  margin: 0.5em 0
+  i
+    color: $white
+    font-size: 2.5em
+    transition: 0.2s ease-in-out
+    &:not(:last-child)
+      margin-right: 0.5em
+    &:not(.active):hover
+      cursor: pointer
+      opacity: 0.75
+    &:hover
+      color: $primary
+
+.about
+  position: relative
+  z-index: 0
+  @media screen and (max-width: $mobile-large)
+    text-align: center
+  img.logo
+    display: block
+    margin: 1em auto
+    width: 60%
+    max-width: 350px
+    filter: drop-shadow(0 0 10px $background-color-dark)
+    @media screen and (min-width: $tablet)
+      float: right
+      margin: 1em
+  .duties
+    display: flex
+    justify-content: space-evenly
+    .duty
+      display: flex
+      flex-direction: column
+      justify-content: center
+      text-align: center
+      transition: 0.2s ease-in-out
+      img
+        margin: 0 auto
+        width: 80px
+        filter: invert(1)
+      span
+        letter-spacing: 3px
+        display: block
+        font-family: $title-font
+        text-transform: uppercase
+      &:hover
+        filter: drop-shadow(0 0 3px transparentize($white, 0.5))
+        transform: scale(1.05)
+  @include fullSizeBeforeAfter()
+  &::before
+    background: url('/img/heli.png') no-repeat center fixed / cover
+    opacity: 0.33
+  &::after
+    @include backgroundFadeInFadeOut($background-color-dark, 20%, 5%)
+
+.operations
+  text-align: center
+
+.operations .opdays
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  padding: 0
+  div
+    text-transform: uppercase
+    display: inline-block
+    padding: 0.25em 0.5em
+    &:not(.opday)
+      color: transparentize($white, 0.5)
+      &:hover
+        cursor: default
+    &.opday
+      position: relative
+      font-family: $title-font
+      color: $primary
+      &.side::after, &.main::after
+        color: desaturate($primary, 30%)
+        position: absolute
+        width: 100%
+        text-align: center
+        top: 0
+        left: 50%
+        font-size: 0.8em
+        transform: translate(-50%, 0%)
+        opacity: 0
+        transition: 0.2s ease-in-out
+      &.side::after
+        content: 'side op'
+
+      &:hover
+        cursor: pointer
+        &::after
+          opacity: 1
+          transform: translate(-50%, -50%)
+
+      &.main::after
+        content: 'main op'
+
+.joining
+  position: relative
+  z-index: 0
+  text-align: center
+  @include fullSizeBeforeAfter()
+  &::before
+    background: url('/img/joinpara.jpg') no-repeat
+    background-attachment: fixed
+    background-size: cover
+    background-position: center
+    @media screen and (min-width: 1024px) and (max-width: 1680px)
+      background-position: 0% 80%
+    @media screen and (min-width: 1680px)
+      background-position: 0 60%
+    opacity: 0.33
+  &::after
+    @include backgroundFadeInFadeOut($background-color-dark, 20%, 5%)
+  ul
+    padding: 0
+    max-width: 400px
+    margin: 0 auto
+    list-style: none
+    li
+      display: flex
+      align-content: center
+      &:not(:first-child)
+        margin-top: 0.2em
+      i
+        width: 30px
+        font-size: 1em
+        text-align: right
+        margin-right: 0.5em
+
+#modal
+  overflow-y: scroll
+  display: grid
+  grid-template-rows: 50px 1fr 2rem
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: transparentize($black, 0.1)
+  z-index: 25
+  opacity: 0
+  transition: 0.2s ease-in-out
+  pointer-events: none
+  &.show
+    opacity: 1
+    pointer-events: all
+  @media screen and (min-width: 1024px)
+    grid-template-columns: 1fr 1024px 1fr
+  & > .content
+    position: relative
+    grid-column-start: 2
+    grid-column: 2
+    grid-row: 2
+    display: flex
+    align-items: center
+    flex-direction: column
+  i.close
+    position: absolute
+    top: 0
+    right: 0
+    margin: 1em
+    font-size: 3em
+    opacity: 0.85
+    transition: 0.2s ease-in-out
+    z-index: 100
+    &:hover
+      cursor: pointer
+      opacity: 1
+      transform: scale(1.1)
+
+#modal .content article
+  border: none
+  background: none
+  img.background
+    display: none
+  .main, .header
+    width: 100%
+    h2
+      font-size: 3em

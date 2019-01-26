@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  main.login
+    section
+      .content
+        h1 Admin Area
+        form 
+          input(type='text' name='username' placeholder='Username')
+          input(type='password' name='password' placeholder='Password')
+          input(type='submit' value='Login')
+  script(src='/js/utils.js')
+  script(src='/js/login.js')
