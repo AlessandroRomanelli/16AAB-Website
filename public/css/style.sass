@@ -133,5 +133,22 @@ footer
         border-top: 1px solid transparentize($white, 0.75)
         z-index: 1000
 
+.error .content
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  h1
+    font-family: $text-font
+    font-weight: bold
+    line-height: 0.8em
+    margin: 0
+    @media screen and (min-width: 1024px)
+    font-size: 20em
+  h2
+    margin: 0
+    font-family: $text-font
+    text-transform: uppercase
+
 @import login
 @import admin

@@ -618,6 +618,21 @@ footer {
         border-top: 1px solid rgba(254, 253, 255, 0.25);
         z-index: 1000; } }
 
+.error .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .error .content h1 {
+    font-size: 20em;
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
+    line-height: 0.8em;
+    margin: 0; }
+  .error .content h2 {
+    margin: 0;
+    text-transform: uppercase; }
+
 main.login .content, main.signup .content, main.news-edit .content {
   display: flex;
   justify-content: center;

@@ -1,4 +1,6 @@
 const express = require('express');
+const config = require('../../config/config');
+
 
 const router = express.Router();
 const mongoose = require('mongoose');
@@ -11,14 +13,14 @@ module.exports = (app) => {
 
 router.get('/add', (req, res) => {
   if (!req.user) {return res.redirect('/admin/login')}
-  return res.render('news', { year: new Date().getFullYear()});
+  return res.render('news', { year: new Date().getFullYear(), title: config.app.title });
 })
 
 router.get('/:newsid/edit', (req, res) => {
   if (!req.user) return res.redirect('/admin/login')
   const { newsid } = req.params
   Article.findById(newsid).then(article => {
-    return res.render('news', { year: new Date().getFullYear(), article})
+    return res.render('news', { year: new Date().getFullYear(), article, title: config.app.title })
   }).catch(err => {
     console.error(err)
     return res.status(500).json({status: 500, message: "Internal Server Error"})

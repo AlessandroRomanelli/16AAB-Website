@@ -9,6 +9,7 @@ const session = require('express-session');
 const compress = require('compression');
 const methodOverride = require('method-override');
 const passport = require('passport');
+const config = require('./config');
 
 module.exports = (app, config) => {
   const env = process.env.NODE_ENV || 'development';
@@ -39,31 +40,38 @@ module.exports = (app, config) => {
     require(controller)(app);
   });
 
-  app.use((req, res, next) => {
-    const err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-  });
-
   if (app.get('env') === 'development') {
-    app.use((err, req, res) => {
+    app.use((err, req, res, next) => {
       res.status(err.status || 500);
       res.render('error', {
         message: err.message,
         error: err,
-        title: 'error',
+        title: config.app.title,
       });
     });
   }
 
-  app.use((err, req, res) => {
+
+  app.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
       error: {},
-      title: 'error',
+      title: config.app.title,
     });
   });
+
+
+  app.use((req,res) => {
+    const error = new Error('Not Found');
+    error.status = 404;
+    res.status(error.status);
+    res.render('error', {
+      message: error.message,
+      error,
+      title: config.app.title,
+    })
+  })
 
   return app;
 };

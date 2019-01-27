@@ -9,6 +9,7 @@ const config = {
     root: rootPath,
     app: {
       name: '16aab',
+      title: '16AAB Pathfinders Platoon'
     },
     port: process.env.PORT || 3000,
     db: 'mongodb://localhost/16aab-development',
@@ -19,6 +20,7 @@ const config = {
     root: rootPath,
     app: {
       name: '16aab',
+      title: '16AAB Pathfinders Platoon'
     },
     port: process.env.PORT || 3000,
     db: 'mongodb://localhost/16aab-test',
@@ -29,6 +31,7 @@ const config = {
     root: rootPath,
     app: {
       name: '16aab',
+      title: '16AAB Pathfinders Platoon'
     },
     port: process.env.PORT || 3000,
     db: 'mongodb://localhost/16aab-production',

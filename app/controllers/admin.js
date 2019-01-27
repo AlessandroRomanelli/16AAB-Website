@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
   if (req.user) {
     return News.find({}).populate('author').then((news) => {
       console.log(news);
-      return res.render('admin', { year: new Date().getFullYear(), articles: news });
+      return res.render('admin', { year: new Date().getFullYear(), articles: news, title: config.app.title });
     });
   }
   return res.redirect('/admin/login');
@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
 
 
 router.get('/login', (req, res) => {
-  res.render('login', { year: new Date().getFullYear() });
+  res.render('login', { year: new Date().getFullYear(), title: config.app.title });
 });
 
 router.post('/login', passport.authenticate('local'), (req, res) => {

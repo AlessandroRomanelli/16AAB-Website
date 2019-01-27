@@ -1,6 +1,15 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  main.error
+    section
+      .content
+        h1= error.status
+        if (error.status == 404)
+          h2 These are not the droids you are looking for...
+        else
+          h2= error.message
+        a(href='/') 
+          i.fas.fa-arrow-left
+          |  Back to safety!
+        

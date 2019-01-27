@@ -222,7 +222,7 @@ pug_html = pug_html + "\u003Cscript src=\"https:\u002F\u002Fajax.googleapis.com\
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fpug.min.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 33;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Ftemplates.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"articles" in locals_for_with?locals_for_with.articles:typeof articles!=="undefined"?articles:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
-"error":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, error, message, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
+"error":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003C!DOCTYPE html\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Chtml lang=\"en\"\u003E";
@@ -288,15 +288,7 @@ pug_html = pug_html + "\u003Ci class=\"fab fa-steam-square\"\u003E\u003C\u002Fi\
 ;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Ferror.pug";
 pug_html = pug_html + "\u003Ch1\u003E";
 ;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Ferror.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = message) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Ferror.pug";
-pug_html = pug_html + "\u003Ch2\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Ferror.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = error.status) ? "" : pug_interp)) + "\u003C\u002Fh2\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Ferror.pug";
-pug_html = pug_html + "\u003Cpre\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Ferror.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = error.stack) ? "" : pug_interp)) + "\u003C\u002Fpre\u003E";
+pug_html = pug_html + "Hi\u003C\u002Fh1\u003E";
 ;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cdiv class=\"frame right\"\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Ffooter.pug";
@@ -320,7 +312,7 @@ pug_html = pug_html + "\u003Cscript src=\"https:\u002F\u002Fajax.googleapis.com\
 ;pug_debug_line = 32;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fpug.min.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 33;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Ftemplates.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"error" in locals_for_with?locals_for_with.error:typeof error!=="undefined"?error:undefined,"message" in locals_for_with?locals_for_with.message:typeof message!=="undefined"?message:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
+pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Ftemplates.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
 "index":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, articles, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003C!DOCTYPE html\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
@@ -756,7 +748,7 @@ pug_html = pug_html + "this\u003C\u002Fa\u003E";
 ;pug_debug_line = 99;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
 pug_html = pug_html + "&nbsp;form.\u003C\u002Fp\u003E";
 ;pug_debug_line = 100;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
-pug_html = pug_html + "\u003Ca class=\"call-to action\" href=\"https:\u002F\u002Fdocs.google.com\u002Fforms\u002Fd\u002F10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk\" target=\"_blank\"\u003E";
+pug_html = pug_html + "\u003Ca class=\"call-to-action\" href=\"https:\u002F\u002Fdocs.google.com\u002Fforms\u002Fd\u002F10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk\" target=\"_blank\"\u003E";
 ;pug_debug_line = 101;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
 pug_html = pug_html + "\u003Cbutton\u003E";
 ;pug_debug_line = 101;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";

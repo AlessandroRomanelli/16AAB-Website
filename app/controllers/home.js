@@ -1,4 +1,5 @@
 const express = require('express');
+const config = require('../../config/config');
 
 const router = express.Router();
 const mongoose = require('mongoose');
@@ -16,7 +17,7 @@ router.get('/', (req, res) => {
     })
     res.render('index', {
       year: new Date().getFullYear(),
-      title: '16AAB Pathfinders Platoon',
+      title: config.app.title,
       articles
     });
   })
