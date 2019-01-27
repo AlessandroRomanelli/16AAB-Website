@@ -220,6 +220,7 @@ main > .header .call-to-action {
       opacity: 1;
       width: 100%; }
   .call-to-action button a {
+    font-weight: lighter;
     padding: 0.6em 1em;
     display: inline-block;
     width: 100%;
