@@ -9,6 +9,7 @@ const newsSchema = new Schema({
   author: {type: Schema.Types.ObjectId, ref: 'User', required: true},
   content: {type: String, required: true},
   image: {type: String, default: ""},
+  level: {type: Number, default: 0},
   timestamp: {type: Number, default: Date.now}
 });
 

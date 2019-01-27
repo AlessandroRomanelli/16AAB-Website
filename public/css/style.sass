@@ -81,6 +81,7 @@ footer
         display: flex
         flex-direction: column
         a
+          position: relative
           display: inline-block
           text-align: center
           &:link, &:visited
@@ -91,6 +92,29 @@ footer
             transform: scale(1.1)
           &:not(:first-child)
             margin-top: 1em
+          &::after
+            width: 125px
+            height: 100%
+            text-align: left
+            position: absolute
+            top: 50%
+            left: 100%
+            padding-left: 0.5em
+            transform: translateY(-50%)
+            letter-spacing: -8px
+            opacity: 0
+            transition: 0.2s ease-in-out
+            pointer-events: none
+          &:nth-child(1)::after
+            content: 'Discord'
+          &:nth-child(2)::after
+            content: 'Teamspeak 3'
+          &:nth-child(3)::after
+            content: 'Steam Group'
+          &:hover::after
+            opacity: 1
+            letter-spacing: 0
+            pointer-events: all
         i
           font-size: 1.5em
 

@@ -168,54 +168,55 @@ main > .header .call-to-action {
   width: 100%;
   position: absolute;
   bottom: 25%; }
-  main > .header .call-to-action button {
-    font-size: 1em;
-    color: #FEFDFF;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 200;
-    text-transform: uppercase;
-    padding: 0.6em 1em;
-    outline: 0;
-    background: rgba(15, 23, 28, 0.2);
-    border: 1px solid rgba(254, 253, 255, 0.2);
-    position: relative;
-    transition: all 0.2s ease-in-out;
-    border-radius: 2px; }
-    main > .header .call-to-action button:last-of-type {
-      background: rgba(111, 12, 16, 0.2);
-      border-color: rgba(207, 0, 5, 0.2);
-      margin-left: 1em; }
-    main > .header .call-to-action button::before, main > .header .call-to-action button::after {
-      position: absolute;
-      content: '';
-      background: #FEFDFF;
-      width: 0;
-      height: 2px;
-      left: 50%;
-      opacity: 0;
-      transition: 0.2s ease-in-out; }
-    main > .header .call-to-action button::before {
-      top: 0;
-      border-radius: 2px 2px 0 0; }
-    main > .header .call-to-action button::after {
-      bottom: 0;
-      border-radius: 0 0 2px 2px; }
-    main > .header .call-to-action button:hover {
-      cursor: pointer;
-      letter-spacing: 1px;
-      border-left-color: rgba(254, 253, 255, 0.25);
-      border-right-color: rgba(254, 253, 255, 0.25);
-      background: rgba(254, 253, 255, 0.1); }
-      main > .header .call-to-action button:hover:last-of-type {
-        border-left-color: rgba(207, 0, 5, 0.25);
-        border-right-color: rgba(207, 0, 5, 0.25);
-        background: rgba(207, 0, 5, 0.1); }
-        main > .header .call-to-action button:hover:last-of-type::before, main > .header .call-to-action button:hover:last-of-type::after {
-          background: #cf0005; }
-      main > .header .call-to-action button:hover::before, main > .header .call-to-action button:hover::after {
-        left: 0;
-        opacity: 1;
-        width: 100%; }
+
+.call-to-action button {
+  font-size: 1em;
+  color: #FEFDFF;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  padding: 0.6em 1em;
+  outline: 0;
+  background: rgba(15, 23, 28, 0.2);
+  border: 1px solid rgba(254, 253, 255, 0.2);
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  border-radius: 2px; }
+  .call-to-action button:last-of-type {
+    background: rgba(111, 12, 16, 0.2);
+    border-color: rgba(207, 0, 5, 0.2);
+    margin-left: 1em; }
+  .call-to-action button::before, .call-to-action button::after {
+    position: absolute;
+    content: '';
+    background: #FEFDFF;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    opacity: 0;
+    transition: 0.2s ease-in-out; }
+  .call-to-action button::before {
+    top: 0;
+    border-radius: 2px 2px 0 0; }
+  .call-to-action button::after {
+    bottom: 0;
+    border-radius: 0 0 2px 2px; }
+  .call-to-action button:hover {
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-left-color: rgba(254, 253, 255, 0.25);
+    border-right-color: rgba(254, 253, 255, 0.25);
+    background: rgba(254, 253, 255, 0.1); }
+    .call-to-action button:hover:last-of-type {
+      border-left-color: rgba(207, 0, 5, 0.25);
+      border-right-color: rgba(207, 0, 5, 0.25);
+      background: rgba(207, 0, 5, 0.1); }
+      .call-to-action button:hover:last-of-type::before, .call-to-action button:hover:last-of-type::after {
+        background: #cf0005; }
+    .call-to-action button:hover::before, .call-to-action button:hover::after {
+      left: 0;
+      opacity: 1;
+      width: 100%; }
 
 section {
   padding: 2em 1em; }
@@ -566,6 +567,7 @@ footer {
         display: flex;
         flex-direction: column; }
         .frame.left .social a {
+          position: relative;
           display: inline-block;
           text-align: center; }
           .frame.left .social a:link, .frame.left .social a:visited {
@@ -576,6 +578,29 @@ footer {
             transform: scale(1.1); }
           .frame.left .social a:not(:first-child) {
             margin-top: 1em; }
+          .frame.left .social a::after {
+            width: 125px;
+            height: 100%;
+            text-align: left;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            padding-left: 0.5em;
+            transform: translateY(-50%);
+            letter-spacing: -8px;
+            opacity: 0;
+            transition: 0.2s ease-in-out;
+            pointer-events: none; }
+          .frame.left .social a:nth-child(1)::after {
+            content: 'Discord'; }
+          .frame.left .social a:nth-child(2)::after {
+            content: 'Teamspeak 3'; }
+          .frame.left .social a:nth-child(3)::after {
+            content: 'Steam Group'; }
+          .frame.left .social a:hover::after {
+            opacity: 1;
+            letter-spacing: 0;
+            pointer-events: all; }
         .frame.left .social i {
           font-size: 1.5em; }
     .frame.right {

@@ -40,13 +40,11 @@ block content
           span Who 
           | are we?
         p The 
-          a(href="#") Pathfinders Platoon
+          a(href="https://en.wikipedia.org/wiki/Pathfinder_Platoon" target='_blank') Pathfinders Platoon
           |  is a unit of the British Army and an integral part of 
-          a(href="#") 16
-            sup th
-            |   Air Assault Brigade
+          a(href="https://en.wikipedia.org/wiki/16_Air_Assault_Brigade" target='_blank') 16 Air Assault Brigade
           | .
-        img.logo(src="/img/unitlogobg.png")
+        img.logo(src="/img/unitlogobg.png" data-aos="fade-left" data-aos-duration='1000')
         p The Platoon acts as the Brigade's advance and reconnaissance force. The Platoon was deployed on a wide variety of operations between 1948 and 1977.
         p Our roles include locating and marking drop zones, helicopter landing zones for air landing operations, forward reconnaissance, convoy guidance, unconventional military support, hostage rescue preparation, guiding air support and artillery and working with special forces teams from various nations and being the first unit into the combat zone.
         .duties
@@ -67,13 +65,13 @@ block content
         p We require all our members to attend at least twice a week to our operations.
         p Operations take place in the following days: 
         .opdays
-          div Monday
-          div.side.opday Tuesday
-          div Wednesday
-          div.side.opday Thursday
-          div Friday
-          div.main.opday Saturday
-          div Sunday
+          div(data-aos='fade-up' data-aos-delay='1000' data-aos-duration='500') Monday
+          div.side.opday(data-aos='fade-up' data-aos-duration='500') Tuesday
+          div(data-aos='fade-up' data-aos-delay='1000' data-aos-duration='500') Wednesday
+          div.side.opday(data-aos='fade-up' data-aos-duration='500') Thursday
+          div(data-aos='fade-up' data-aos-delay='1000' data-aos-duration='500') Friday
+          div.main.opday(data-aos='fade-up' data-aos-duration='500') Saturday
+          div(data-aos='fade-up' data-aos-delay='1000' data-aos-duration='500') Sunday
         p The time at which operations begin is: 
           b.time 19:30 
           a(href="https://www.timeanddate.com/worldclock/uk/london", target="_blank") British Time
@@ -84,22 +82,25 @@ block content
          span join
         p We require you to fullfil the following conditions in order to apply:
         ul
-          li 
+          li(data-aos='fade-up' data-aos-duration='500') 
             i.fas.fa-microphone
             span You must have a working microphone;
-          li 
+          li(data-aos='fade-up' data-aos-duration='500') 
             i.fas.fa-people-carry
             span You must be willing to play in team;
-          li 
+          li(data-aos='fade-up' data-aos-duration='500') 
             i.fas.fa-child 
             span You must be 16 years old or older;
-          li 
+          li(data-aos='fade-up' data-aos-duration='500') 
             i.fas.fa-fire-alt
             span You must have a mature and relaxed attitude.
         p If you'd like to submit your application you can do so by filling out 
           a.enlist-form(href='https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk' target="_blank") this
           | &nbsp;form.
+        a.call-to-action(href='https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk' target="_blank")
+          button Enlist now
   #modal
     .content
+  script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
   script(src='/js/utils.js')
   script(src='/js/app.js')

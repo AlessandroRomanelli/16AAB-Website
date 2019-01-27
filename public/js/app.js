@@ -1,5 +1,8 @@
 (function () {
   if (window.location.pathname !== "/") {return}
+  
+  AOS.init();
+
   const toggleButton = (button) => {
     const opacity = (button.style.opacity !== "") ? Math.abs(parseInt(button.style.opacity) - 1) : 0
     button.style.opacity = opacity
