@@ -51,6 +51,25 @@
     })
   }
 
+  handleImage = (image) => {
+    const id = image.dataset.id
+    const editBtn = image.querySelector('button:first-child')
+    editBtn.addEventListener('click', (event) => {
+      event.preventDefault()
+      window.location.pathname = '/screenshot/'+id+'/edit'
+    })
+    const deleteBtn = image.querySelector('button:last-child')
+    deleteBtn.addEventListener('click', (event) => {
+      event.preventDefault()
+      doJSONRequest('DELETE', '/screenshot/'+id, {}, {}).then(response => {
+        console.log(response)
+        if (response.status === 200) {
+          window.location.reload()
+        }
+      })
+    })
+  }
+
 
   const displayError = (message) => {
     alert(message)
@@ -64,18 +83,7 @@
     })
     const screenshots = document.querySelectorAll('.screenshots .screenshot')
     screenshots.forEach(screenshot => {
-      const id = screenshot.dataset.id
-      const deleteBtn = screenshot.querySelector('button')
-      deleteBtn.addEventListener('click', (event) => {
-        event.preventDefault
-        console.log(id)
-        doJSONRequest('DELETE', '/screenshot/'+id, {}, {}).then(response => {
-          console.log(response)
-          if (response.status === 200) {
-            window.location.reload()
-          }
-        })
-      })
+      handleImage(screenshot)
     })
 
   }

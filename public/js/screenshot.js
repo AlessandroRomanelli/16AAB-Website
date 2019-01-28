@@ -1,5 +1,11 @@
 (function () {
   const form = document.querySelector('form')
+  const method = form.dataset.method
+
+  let id = ""
+  if (method === 'PUT') {
+    id = "/"+form.dataset.id
+  }
 
   const displayError = (message) => {
     alert(message)
@@ -16,7 +22,7 @@
       return
     }
 
-    doJSONRequest('POST', '/screenshot', {}, {title, image, description}).then(response => {
+    doJSONRequest(method, '/screenshot'+id, {}, {title, image, description}).then(response => {
       if (response.status === 200 || response.status === 201) {
         window.location.pathname = '/admin'
       } else {

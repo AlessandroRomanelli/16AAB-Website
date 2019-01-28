@@ -4,14 +4,25 @@ block content
   main.screenshot-edit
     section
       .content
-        h1 Add Screenshot
-        form(autocomplete='off')
-          input(type='text' name='title' placeholder='Insert Title Here')
-          .fileUpload
-            label(for='image') Upload a context image (Max 2MB):
-            input(type='file' name='image')
-          img.preview(src='')
-          textarea(name='description' rows='3' placeholder='Insert a description')
-          input(type='submit' value='Post Screenshot')
+        if screenshot
+          h1 Edit Screenshot
+          form(data-method='PUT', data-id=screenshot._id, autocomplete='off')
+            input(type='text' name='title' value=screenshot.title)
+            .fileUpload
+              label(for='image') Upload a context image (Max 2MB):
+              input(type='file' name='image')
+            img.preview(src=screenshot.path)
+            textarea(name='description' rows='3' value=screenshot.description placeholder='Insert a description here')
+            input(type='submit' value='Post Screenshot')
+        else
+          h1 Add Screenshot
+          form(data-method='POST' autocomplete='off')
+            input(type='text' name='title' placeholder='Insert Title Here')
+            .fileUpload
+              label(for='image') Upload a context image (Max 2MB):
+              input(type='file' name='image')
+            img.preview(src='')
+            textarea(name='description' rows='3' placeholder='Insert a description here')
+            input(type='submit' value='Post Screenshot')
   script(src='/js/utils.js')
   script(src='/js/screenshot.js')

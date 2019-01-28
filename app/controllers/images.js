@@ -55,11 +55,22 @@ router.post('/', (req, res, next) => {
   const imageBuffer = decodeBase64Image(image);
   const id = mongoose.Types.ObjectId();
   const fileName = `${id}.${ext}`
+  const dirExists = fs.existsSync(`${root}/public/img/uploads`);
+  if (!dirExists) {
+    fs.mkdirSync(`${root}/public/img/uploads`);
+  }
   fs.writeFile(`${root}/public/img/uploads/${fileName}`, imageBuffer.data, (err) => {
     if (err) return next(err);
     Image.create({_id: id, path: `/img/uploads/${fileName}`, title, description }).then(created => {
       res.status(201).json({status: 201, message: 'Created'})
     }).catch(err => next(err))
+  })
+})
+
+router.get('/:imageid/edit', (req, res, next) => {
+  const { imageid } = req.params
+  Image.findById(imageid).then(screenshot => {
+    res.status(200).render('screenshot', { title: config.app.title, year: new Date().getFullYear(), screenshot })
   })
 })
 
@@ -69,6 +80,14 @@ router.get('/:imageid', (req, res, next) => {
     if (screenshot === null) { return res.status(404).json({status: 404, message: 'Not Found'}) }
     return res.status(200).json({status: 200, screenshot})
   })
+})
+
+router.put('/:imageid', (req, res, next) => {
+  const { title, description } = req.body
+  const { imageid } = req.params
+  Image.findByIdAndUpdate(imageid, { title, description }).then(() => {
+    res.status(200).json({status: 200, message: "OK"});
+  }).catch(err => next(err))
 })
 
 router.delete('/:imageid', (req, res, next) => {
