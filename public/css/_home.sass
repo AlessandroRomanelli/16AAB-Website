@@ -410,7 +410,8 @@ section.screenshots
     overflow: hidden
     border: 1px solid transparent
     .description
-      width: 100%
+      width: calc(100% - 0.5em)
+      right: 0
       position: absolute
       bottom: 0
       transform: translateY(100%)
@@ -423,16 +424,21 @@ section.screenshots
       p
         display: none
     img
+      max-width: 100%
       max-height: 210px
+      border: 1px solid transparent
+      transition: 0.2s ease-in-out
     &:hover
       opacity: 1
       cursor: pointer
-      border: 1px solid transparentize($white, 0.5)
-      border-left: 0.5em solid $primary
+      img
+        border: 1px solid transparentize($white, 0.5)
+        border-left: 0.5em solid $primary
       .description
         transform: translateY(0)
-        border-top: 1px solid transparentize($primary, 0.5)
         background: transparentize($black, 0.5)
+        img
+          border-top: 1px solid transparentize($primary, 0.5)
 
 #modal
   overflow-y: scroll

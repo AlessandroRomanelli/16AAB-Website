@@ -506,7 +506,8 @@ section.screenshots {
     overflow: hidden;
     border: 1px solid transparent; }
     section.screenshots .screenshot .description {
-      width: 100%;
+      width: calc(100% - 0.5em);
+      right: 0;
       position: absolute;
       bottom: 0;
       transform: translateY(100%);
@@ -519,16 +520,21 @@ section.screenshots {
       section.screenshots .screenshot .description p {
         display: none; }
     section.screenshots .screenshot img {
-      max-height: 210px; }
+      max-width: 100%;
+      max-height: 210px;
+      border: 1px solid transparent;
+      transition: 0.2s ease-in-out; }
     section.screenshots .screenshot:hover {
       opacity: 1;
-      cursor: pointer;
-      border: 1px solid rgba(254, 253, 255, 0.5);
-      border-left: 0.5em solid #cf0005; }
+      cursor: pointer; }
+      section.screenshots .screenshot:hover img {
+        border: 1px solid rgba(254, 253, 255, 0.5);
+        border-left: 0.5em solid #cf0005; }
       section.screenshots .screenshot:hover .description {
         transform: translateY(0);
-        border-top: 1px solid rgba(207, 0, 5, 0.5);
         background: rgba(10, 16, 13, 0.5); }
+        section.screenshots .screenshot:hover .description img {
+          border-top: 1px solid rgba(207, 0, 5, 0.5); }
 
 #modal {
   overflow-y: scroll;
