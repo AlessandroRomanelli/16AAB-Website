@@ -1,7 +1,8 @@
 (function () {
   if (window.location.pathname !== "/") {return}
-  
+
   AOS.init();
+  document.addEventListener("DOMContentLoaded", yall);
 
   const toggleButton = (button) => {
     const opacity = (button.style.opacity !== "") ? Math.abs(parseInt(button.style.opacity) - 1) : 0
@@ -108,6 +109,23 @@
     date.innerHTML = timeAgo + ' ago'
   }
 
+  populateModal = (html, wide=false) => {
+    const content = modal.querySelector('.content')
+    content.innerHTML = ""
+    content.innerHTML += `<i class='close fas fa-times'></i>`
+    content.innerHTML += html
+    modal.classList.add('show')
+    if (wide) {
+      modal.classList.add('wide')
+    }
+    document.body.style.overflow = 'hidden'
+    content.querySelector('i').addEventListener('click', (event) => {
+      document.body.style.overflow = 'auto'
+      modal.classList.remove('show')
+      modal.classList.remove('wide')
+    })
+  }
+
   handleContent = (article) => {
     const id = article.dataset.id
     const content = article.querySelector('.main')
@@ -127,24 +145,22 @@
         doJSONRequest('GET', '/news/'+id, {}, null).then(response => {
           if (response.status !== 200) { return }
           const html = templates.article({news: response.article})
-          const modal = document.getElementById('modal')
+          populateModal(html);
           const content = modal.querySelector('.content')
-          content.innerHTML = ""
-          content.innerHTML += `<i class='close fas fa-times'></i>`
-          content.innerHTML += html
-          modal.classList.add('show')
-          document.body.style.overflow = 'hidden'
           handleDate(content.querySelector('article'))
-          content.querySelector('i').addEventListener('click', (event) => {
-            document.body.style.overflow = 'auto'
-            modal.classList.remove('show')
-          })
-          modal.addEventListener('click', (event) => {
-            document.body.style.overflow = 'auto'
-            event.target.classList.remove('show')
-          })
         })
       })
+    }
+  }
+
+  const modal = document.getElementById('modal')
+  document.body.onclick = (event) => {
+    document.body.style.overflow = 'auto'
+    console.log(event.target)
+    const content = modal.querySelector('.content')
+    if (!(content.contains(event.target))) {
+      modal.classList.remove('show')
+      modal.classList.remove('wide')
     }
   }
 
@@ -155,5 +171,16 @@
     handleContent(article)
   })
 
+  const screenshots = document.querySelectorAll('.screenshots .screenshot')
+  screenshots.forEach(screenshot => {
+    screenshot.addEventListener('click', (event) => {
+      const id = screenshot.dataset.id
+      doJSONRequest('GET', '/screenshot/'+id, {}, null).then(response => {
+        const { screenshot } = response
+        const html = `<div class='container'>${templates.screenshot({ screenshot })}</div>`
+        populateModal(html, true)
+      })
+    })
+  })
 
 }());

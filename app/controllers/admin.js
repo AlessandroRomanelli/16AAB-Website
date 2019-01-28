@@ -8,6 +8,7 @@ const config = require('../../config/config');
 
 const User = mongoose.model('User');
 const News = mongoose.model('Article');
+const Image = mongoose.model('Image');
 
 module.exports = (app) => {
   app.use('/admin', router);
@@ -16,9 +17,12 @@ module.exports = (app) => {
 
 router.get('/', (req, res) => {
   if (req.user) {
+    const data = {};
     return News.find({}).populate('author').then((news) => {
-      console.log(news);
-      return res.render('admin', { year: new Date().getFullYear(), articles: news, title: config.app.title });
+      data.news = news;
+      return Image.find({});
+    }).then(screenshots => {
+      return res.render('admin', { year: new Date().getFullYear(), articles: data.news, screenshots, title: config.app.title });
     });
   }
   return res.redirect('/admin/login');

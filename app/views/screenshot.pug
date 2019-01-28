@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  main.screenshot-edit
+    section
+      .content
+        h1 Add Screenshot
+        form(autocomplete='off')
+          input(type='text' name='title' placeholder='Insert Title Here')
+          .fileUpload
+            label(for='image') Upload a context image (Max 2MB):
+            input(type='file' name='image')
+          img.preview(src='')
+          textarea(name='description' rows='3' placeholder='Insert a description')
+          input(type='submit' value='Post Screenshot')
+  script(src='/js/utils.js')
+  script(src='/js/screenshot.js')

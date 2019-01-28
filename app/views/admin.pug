@@ -16,5 +16,21 @@ block content
           p At the moment there aren't any news to display.
         .add-news
           a(href='/news/add') Add News
+    section
+      .content
+        h1 Screenshots
+        if screenshots.length > 0
+          .screenshots
+            each screenshot, index in screenshots
+              include includes/lazyscreen.pug
+                .controls
+                  button Delete
+        else
+          p At the moment there aren't any screenshots posted.
+        .add-screenshot
+          a(href='/screenshot/add') Add Screenshot
+  script(src="/js/vendors/yall-2.2.1.min.js")
+  script.
+    document.addEventListener("DOMContentLoaded", yall);
   script(src='/js/utils.js')
   script(src='/js/admin.js')

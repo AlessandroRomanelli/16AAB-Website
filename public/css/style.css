@@ -489,6 +489,47 @@ section {
         text-align: right;
         margin-right: 0.5em; }
 
+section.screenshots {
+  text-align: center; }
+  section.screenshots .content {
+    grid-column: -1 / 1; }
+  section.screenshots .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: stretch; }
+  section.screenshots .screenshot {
+    position: relative;
+    opacity: 0.75;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+    border: 1px solid transparent; }
+    section.screenshots .screenshot .description {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      transform: translateY(100%);
+      opacity: 1;
+      background: transparent;
+      transition: 0.2s ease-in-out; }
+      section.screenshots .screenshot .description .header {
+        text-transform: uppercase;
+        font-family: "Raleway", sans-serif; }
+      section.screenshots .screenshot .description p {
+        display: none; }
+    section.screenshots .screenshot img {
+      max-height: 210px; }
+    section.screenshots .screenshot:hover {
+      opacity: 1;
+      cursor: pointer;
+      border: 1px solid rgba(254, 253, 255, 0.5);
+      border-left: 0.5em solid #cf0005; }
+      section.screenshots .screenshot:hover .description {
+        transform: translateY(0);
+        border-top: 1px solid rgba(207, 0, 5, 0.5);
+        background: rgba(10, 16, 13, 0.5); }
+
 #modal {
   overflow-y: scroll;
   display: grid;
@@ -508,15 +549,16 @@ section {
     pointer-events: all; }
   @media screen and (min-width: 1024px) {
     #modal {
-      grid-template-columns: 1fr 1024px 1fr; } }
+      grid-template-columns: 2rem 1fr 1024px 1fr 2rem; } }
   #modal > .content {
     position: relative;
-    grid-column-start: 2;
-    grid-column: 2;
+    grid-column: 3 / 4;
     grid-row: 2;
     display: flex;
     align-items: center;
     flex-direction: column; }
+  #modal.wide .content {
+    grid-column: 2 / 5; }
   #modal i.close {
     position: absolute;
     top: 0;
@@ -540,6 +582,34 @@ section {
     width: 100%; }
     #modal .content article .main h2, #modal .content article .header h2 {
       font-size: 3em; }
+
+#modal .content .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
+  #modal .content .container .screenshot {
+    position: relative; }
+  #modal .content .container img {
+    position: relative;
+    max-width: 100%;
+    max-height: calc(100vh - 50px - 2rem); }
+  #modal .content .container .description {
+    width: 100%;
+    position: absolute;
+    bottom: 0; }
+    #modal .content .container .description h2 {
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
+      font-size: 2.5em;
+      -webkit-text-stroke: 1px #0f171c; }
+    #modal .content .container .description p {
+      text-align: center;
+      margin: 0.5em 0;
+      padding: 0 0.5em; }
 
 footer {
   grid-area: footer;
@@ -686,6 +756,40 @@ main.login .content, main.signup .content, main.news-edit .content {
           background: #FEFDFF;
           color: #0A100D; }
 
+main.screenshot-edit form {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  main.screenshot-edit form input, main.screenshot-edit form textarea {
+    color: #FEFDFF;
+    outline: 0; }
+  main.screenshot-edit form input[type='text'] {
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    text-align: center; }
+  main.screenshot-edit form input[type='file'] {
+    margin-left: 1em;
+    width: 250px; }
+  main.screenshot-edit form input[type='submit'] {
+    display: block;
+    color: #0A100D; }
+  main.screenshot-edit form textarea {
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-family: "Work Sans", sans-serif;
+    resize: vertical; }
+  main.screenshot-edit form img.preview {
+    width: 100%;
+    margin: 1em 0;
+    border-radius: 5px;
+    background: linear-gradient(15deg, rgba(254, 253, 255, 0.2), transparent, rgba(254, 253, 255, 0.2)); }
+  main.screenshot-edit form .fileUpload {
+    display: flex;
+    justify-content: center; }
+
 main.news-edit form {
   width: 100%; }
   main.news-edit form input {
@@ -706,7 +810,7 @@ main.news-edit form {
       position: absolute;
       max-width: 300px;
       left: 0;
-      top: calc(100% + 0.5em);
+      top: 100%;
       border-radius: 5px;
       border: 1px solid rgba(254, 253, 255, 0.25); }
 
@@ -716,16 +820,36 @@ main.admin-area .news {
   main.admin-area .news article.carousel-item {
     flex: 1 0 50%; }
 
-main.admin-area .add-news {
+main.admin-area .screenshots {
+  display: flex;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap; }
+  main.admin-area .screenshots .screenshot {
+    position: relative;
+    text-align: center; }
+  main.admin-area .screenshots .description {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    main.admin-area .screenshots .description p {
+      display: none; }
+    main.admin-area .screenshots .description h2 {
+      text-transform: uppercase; }
+  main.admin-area .screenshots img {
+    max-height: 200px; }
+
+main.admin-area .add-news, main.admin-area .add-screenshot {
   margin-top: 1em;
   display: flex;
   justify-content: center; }
-  main.admin-area .add-news a {
+  main.admin-area .add-news a, main.admin-area .add-screenshot a {
     padding: 0.5em;
     background: #FEFDFF;
     color: #0A100D;
     border-radius: 0.25em;
     text-transform: uppercase;
     transition: 0.2s ease-in-out; }
-    main.admin-area .add-news a:hover {
+    main.admin-area .add-news a:hover, main.admin-area .add-screenshot a:hover {
       filter: drop-shadow(0 0 5px rgba(254, 253, 255, 0.34)); }

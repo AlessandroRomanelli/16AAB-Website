@@ -34,7 +34,7 @@
     date.innerHTML = timeAgo + ' ago'
   }
 
-  handleButtons = (article) => {
+  handleNews = (article) => {
     const editBtn = article.querySelector('button:first-child')
     const deleteBtn = article.querySelector('button:last-child')
     editBtn.addEventListener('click', (event) => {
@@ -51,6 +51,7 @@
     })
   }
 
+
   const displayError = (message) => {
     alert(message)
   }
@@ -59,9 +60,23 @@
     const articles = document.querySelectorAll('article.carousel-item')
     articles.forEach(article => {
       handleDate(article)
-      handleButtons(article)
+      handleNews(article)
     })
-
+    const screenshots = document.querySelectorAll('.screenshots .screenshot')
+    screenshots.forEach(screenshot => {
+      const id = screenshot.dataset.id
+      const deleteBtn = screenshot.querySelector('button')
+      deleteBtn.addEventListener('click', (event) => {
+        event.preventDefault
+        console.log(id)
+        doJSONRequest('DELETE', '/screenshot/'+id, {}, {}).then(response => {
+          console.log(response)
+          if (response.status === 200) {
+            window.location.reload()
+          }
+        })
+      })
+    })
 
   }
 }());

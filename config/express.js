@@ -42,6 +42,7 @@ module.exports = (app, config) => {
 
   if (app.get('env') === 'development') {
     app.use((err, req, res, next) => {
+      console.error(err)
       res.status(err.status || 500);
       res.render('error', {
         message: err.message,
@@ -53,6 +54,7 @@ module.exports = (app, config) => {
 
 
   app.use((err, req, res, next) => {
+    console.error(err)
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,

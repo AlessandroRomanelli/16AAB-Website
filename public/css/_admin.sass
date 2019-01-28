@@ -1,3 +1,36 @@
+main.screenshot-edit form
+  width: 100%
+  display: flex
+  flex-direction: column
+  input, textarea
+    color: $white
+    outline: 0
+  input[type='text']
+    text-transform: uppercase
+    background: none
+    border: none
+    font-size: 1.5em
+    text-align: center
+  input[type='file']
+    margin-left: 1em
+    width: 250px
+  input[type='submit']
+    display: block
+    color: $black
+  textarea
+    background: none
+    border: none
+    font-size: 1em
+    font-family: $text-font
+    resize: vertical
+  img.preview
+    width: 100%
+    margin: 1em 0
+    border-radius: 5px
+    background: linear-gradient(15deg, transparentize($white, 0.8), transparent, transparentize($white, 0.8))
+  .fileUpload
+    display: flex
+    justify-content: center
 main.news-edit
   form
     width: 100%
@@ -19,7 +52,7 @@ main.news-edit
         position: absolute
         max-width: 300px
         left: 0
-        top: calc(100% + 0.5em)
+        top: 100%
         border-radius: 5px
         border: 1px solid transparentize($white, 0.75)
 
@@ -29,7 +62,28 @@ main.admin-area .news
   article.carousel-item
     flex: 1 0 50%
 
-main.admin-area .add-news
+main.admin-area .screenshots
+  display: flex
+  align-content: stretch
+  align-items: stretch
+  justify-content: center
+  flex-wrap: wrap
+  .screenshot
+    position: relative
+    text-align: center
+  .description
+    position: absolute
+    bottom: 0
+    width: 100%
+    p
+      display: none
+    h2
+      text-transform: uppercase
+
+  img
+    max-height: 200px
+
+main.admin-area .add-news, main.admin-area .add-screenshot
   margin-top: 1em
   display: flex
   justify-content: center

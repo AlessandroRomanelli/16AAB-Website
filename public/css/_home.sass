@@ -393,6 +393,47 @@ section
         text-align: right
         margin-right: 0.5em
 
+section.screenshots
+  text-align: center
+  .content
+    grid-column: -1 / 1
+  .gallery
+    display: flex
+    flex-wrap: wrap
+    align-content: stretch
+    justify-content: center
+    align-items: stretch
+  .screenshot
+    position: relative
+    opacity: 0.75
+    transition: 0.2s ease-in-out
+    overflow: hidden
+    border: 1px solid transparent
+    .description
+      width: 100%
+      position: absolute
+      bottom: 0
+      transform: translateY(100%)
+      opacity: 1
+      background: transparent
+      transition: 0.2s ease-in-out
+      .header
+        text-transform: uppercase
+        font-family: $title-font
+      p
+        display: none
+    img
+      max-height: 210px
+    &:hover
+      opacity: 1
+      cursor: pointer
+      border: 1px solid transparentize($white, 0.5)
+      border-left: 0.5em solid $primary
+      .description
+        transform: translateY(0)
+        border-top: 1px solid transparentize($primary, 0.5)
+        background: transparentize($black, 0.5)
+
 #modal
   overflow-y: scroll
   display: grid
@@ -411,15 +452,16 @@ section
     opacity: 1
     pointer-events: all
   @media screen and (min-width: 1024px)
-    grid-template-columns: 1fr 1024px 1fr
+    grid-template-columns: 2rem 1fr 1024px 1fr 2rem
   & > .content
     position: relative
-    grid-column-start: 2
-    grid-column: 2
+    grid-column: 3 / 4
     grid-row: 2
     display: flex
     align-items: center
     flex-direction: column
+  &.wide .content
+    grid-column: 2 / 5
   i.close
     position: absolute
     top: 0
@@ -443,3 +485,31 @@ section
     width: 100%
     h2
       font-size: 3em
+
+#modal .content .container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100%
+  .screenshot
+    position: relative
+  img
+    position: relative
+    max-width: 100%
+    max-height: calc(100vh - 50px - 2rem)
+  .description
+    width: 100%
+    position: absolute
+    bottom: 0
+    h2
+      margin: 0
+      text-align: center
+      text-transform: uppercase
+      font-family: $title-font
+      font-size: 2.5em
+      -webkit-text-stroke: 1px $background-color-dark
+    p
+      text-align: center
+      margin: 0.5em 0
+      padding: 0 0.5em

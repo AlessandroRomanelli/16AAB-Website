@@ -76,7 +76,7 @@ block content
           b.time 19:30 
           a(href="https://www.timeanddate.com/worldclock/uk/london", target="_blank") British Time
           |  and last approximately 2H 30M.
-    section.joining
+    section.joining.lazy-bg
       .content
         h1 How to 
          span join
@@ -100,8 +100,16 @@ block content
         .call-to-action
           button 
             a(href='https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk' target="_blank") Enlist now
+    section.screenshots
+      .content
+        h1 Screenshots
+        p Some memorable moments from our operations
+        .gallery
+          each screenshot, index in screenshots
+            include includes/lazyscreen.pug
   #modal
     .content
   script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+  script(src="/js/vendors/yall-2.2.1.min.js")
   script(src='/js/utils.js')
   script(src='/js/app.js')
