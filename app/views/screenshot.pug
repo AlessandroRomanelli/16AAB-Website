@@ -24,5 +24,8 @@ block content
             img.preview(src='')
             textarea(name='description' rows='3' placeholder='Insert a description here')
             input(type='submit' value='Post Screenshot')
+  if screenshot
+    script.
+      document.querySelector('textarea').value = "#{screenshot.description}"
   script(src='/js/utils.js')
   script(src='/js/screenshot.js')
