@@ -98,6 +98,10 @@ main {
     main a:hover::after {
       background: #da3f43;
       width: 100%; }
+  main button a::after {
+    display: none; }
+  main button a:hover {
+    transform: none; }
 
 .home-page {
   display: grid;
