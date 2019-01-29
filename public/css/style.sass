@@ -35,13 +35,27 @@ main
 
   a:link,
   a:visited
+    display: inline-block
+    position: relative
     text-decoration: none
     color: $primary
     font-weight: bold
     transition: 0.2s ease-in-out
-
+    &::after
+      position: absolute
+      content: ''
+      bottom: 0
+      width: 0
+      left: 0
+      height: 1px
+      transition: 0.2s ease-in-out
+      background: transparent
   a:hover
+    transform: translateY(-2px)
     color: mix($primary, $white, 75%)
+    &::after
+      background: mix($primary, $white, 75%)
+      width: 100%
 
 @import home
 

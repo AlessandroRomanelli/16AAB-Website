@@ -76,12 +76,28 @@ main {
   display: grid; }
   main a:link,
   main a:visited {
+    display: inline-block;
+    position: relative;
     text-decoration: none;
     color: #cf0005;
     font-weight: bold;
     transition: 0.2s ease-in-out; }
+    main a:link::after,
+    main a:visited::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      width: 0;
+      left: 0;
+      height: 1px;
+      transition: 0.2s ease-in-out;
+      background: transparent; }
   main a:hover {
+    transform: translateY(-2px);
     color: #da3f43; }
+    main a:hover::after {
+      background: #da3f43;
+      width: 100%; }
 
 .home-page {
   display: grid;
@@ -612,6 +628,7 @@ section.screenshots {
     position: relative;
     overflow: hidden; }
   #modal .content .container img {
+    display: flex;
     position: relative;
     max-width: 100%;
     max-height: calc(100vh - 50px - 2rem); }
