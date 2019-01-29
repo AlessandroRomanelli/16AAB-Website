@@ -213,31 +213,35 @@ pug_html = pug_html + "\u003Cdiv class=\"screenshots\"\u003E";
   if ('number' == typeof $$obj.length) {
       for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
         var screenshot = $$obj[index];
-;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id , true, true)+pug_attr("data-timestamp", screenshot.timestamp, true, true)) + "\u003E";
-;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E";
-;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cimg" + (" class=\"lazy\""+pug_attr("data-src", screenshot.path, true, true)) + "\u003E";
+;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv class=\"description\"\u003E";
-;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv class=\"header\"\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Ch2\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.title) ? "" : pug_interp)) + "\u003C\u002Fh2\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cspan class=\"date\"\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + " \u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E";
-;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cp\u003E";
-;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.description) ? "" : pug_interp));
 ;pug_debug_line = 26;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cdiv class=\"controls\"\u003E";
 ;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cbutton\u003E";
 ;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
+pug_html = pug_html + "Edit\u003C\u002Fbutton\u003E";
+;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
+pug_html = pug_html + "\u003Cbutton\u003E";
+;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "Delete\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -245,31 +249,35 @@ pug_html = pug_html + "Delete\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C
     for (var index in $$obj) {
       $$l++;
       var screenshot = $$obj[index];
-;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id , true, true)+pug_attr("data-timestamp", screenshot.timestamp, true, true)) + "\u003E";
-;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E";
-;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cimg" + (" class=\"lazy\""+pug_attr("data-src", screenshot.path, true, true)) + "\u003E";
+;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv class=\"description\"\u003E";
-;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv class=\"header\"\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Ch2\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.title) ? "" : pug_interp)) + "\u003C\u002Fh2\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cspan class=\"date\"\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + " \u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E";
-;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cp\u003E";
-;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.description) ? "" : pug_interp));
 ;pug_debug_line = 26;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cdiv class=\"controls\"\u003E";
 ;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cbutton\u003E";
 ;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
+pug_html = pug_html + "Edit\u003C\u002Fbutton\u003E";
+;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
+pug_html = pug_html + "\u003Cbutton\u003E";
+;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "Delete\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
     }
   }
@@ -278,26 +286,26 @@ pug_html = pug_html + "Delete\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C
 pug_html = pug_html + "\u003C\u002Fdiv\u003E";
 }
 else {
-;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
+;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cp\u003E";
-;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
+;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "At the moment there aren't any screenshots posted.\u003C\u002Fp\u003E";
 }
-;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
+;pug_debug_line = 31;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cdiv class=\"add-screenshot\"\u003E";
-;pug_debug_line = 31;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
-pug_html = pug_html + "\u003Ca href=\"\u002Fscreenshot\u002Fadd\"\u003E";
-;pug_debug_line = 31;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
-pug_html = pug_html + "Add Screenshot\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003C\u002Fmain\u003E";
 ;pug_debug_line = 32;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fyall-2.2.1.min.js\"\u003E\u003C\u002Fscript\u003E";
+pug_html = pug_html + "\u003Ca href=\"\u002Fscreenshot\u002Fadd\"\u003E";
+;pug_debug_line = 32;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
+pug_html = pug_html + "Add Screenshot\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003C\u002Fmain\u003E";
 ;pug_debug_line = 33;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
-pug_html = pug_html + "\u003Cscript\u003E";
+pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fyall-2.2.1.min.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 34;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
-pug_html = pug_html + "document.addEventListener(\"DOMContentLoaded\", yall);\u003C\u002Fscript\u003E";
+pug_html = pug_html + "\u003Cscript\u003E";
 ;pug_debug_line = 35;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Futils.js\"\u003E\u003C\u002Fscript\u003E";
+pug_html = pug_html + "document.addEventListener(\"DOMContentLoaded\", yall);\u003C\u002Fscript\u003E";
 ;pug_debug_line = 36;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
+pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Futils.js\"\u003E\u003C\u002Fscript\u003E";
+;pug_debug_line = 37;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fadmin.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cdiv class=\"frame right\"\u003E\u003C\u002Fdiv\u003E";
@@ -908,25 +916,25 @@ pug_html = pug_html + "\u003Cdiv class=\"gallery\"\u003E";
   if ('number' == typeof $$obj.length) {
       for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
         var screenshot = $$obj[index];
-;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id , true, true)+pug_attr("data-timestamp", screenshot.timestamp, true, true)) + "\u003E";
-;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E";
-;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cimg" + (" class=\"lazy\""+pug_attr("data-src", screenshot.path, true, true)) + "\u003E";
+;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv class=\"description\"\u003E";
-;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv class=\"header\"\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Ch2\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.title) ? "" : pug_interp)) + "\u003C\u002Fh2\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cspan class=\"date\"\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + " \u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E";
-;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cp\u003E";
-;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.description) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -934,25 +942,25 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.description) 
     for (var index in $$obj) {
       $$l++;
       var screenshot = $$obj[index];
-;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id , true, true)+pug_attr("data-timestamp", screenshot.timestamp, true, true)) + "\u003E";
-;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E";
-;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cimg" + (" class=\"lazy\""+pug_attr("data-src", screenshot.path, true, true)) + "\u003E";
+;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv class=\"description\"\u003E";
-;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cdiv class=\"header\"\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Ch2\u003E";
-;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.title) ? "" : pug_interp)) + "\u003C\u002Fh2\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cspan class=\"date\"\u003E";
-;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + " \u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E";
-;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + "\u003Cp\u003E";
-;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fscreenshot.pug";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.description) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
     }
   }
@@ -1358,7 +1366,7 @@ pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fpug.min.js\
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Ftemplates.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 34;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fsmooth.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"article" in locals_for_with?locals_for_with.article:typeof article!=="undefined"?article:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
-"screenshot":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
+"screenshot":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, screenshot, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003C!DOCTYPE html\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Chtml lang=\"en\"\u003E";
@@ -1428,30 +1436,69 @@ pug_html = pug_html + "\u003Csection\u003E";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
 pug_html = pug_html + "\u003Cdiv class=\"content\"\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Ch1\u003E";
-;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "Add Screenshot\u003C\u002Fh1\u003E";
+if (screenshot) {
 ;pug_debug_line = 8;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Cform autocomplete=\"off\"\u003E";
+pug_html = pug_html + "\u003Ch1\u003E";
+;pug_debug_line = 8;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "Edit Screenshot\u003C\u002Fh1\u003E";
 ;pug_debug_line = 9;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Cinput type=\"text\" name=\"title\" placeholder=\"Insert Title Here\"\u003E";
+pug_html = pug_html + "\u003Cform" + (" data-method=\"PUT\""+pug_attr("data-id", screenshot._id, true, true)+" autocomplete=\"off\"") + "\u003E";
 ;pug_debug_line = 10;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Cinput" + (" type=\"text\" name=\"title\""+pug_attr("value", screenshot.title, true, true)) + "\u003E";
+;pug_debug_line = 11;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
 pug_html = pug_html + "\u003Cdiv class=\"fileUpload\"\u003E";
-;pug_debug_line = 11;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Clabel for=\"image\"\u003E";
-;pug_debug_line = 11;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "Upload a context image (Max 2MB):\u003C\u002Flabel\u003E";
 ;pug_debug_line = 12;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Cinput type=\"file\" name=\"image\"\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003Clabel for=\"image\"\u003E";
+;pug_debug_line = 12;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "Upload a context image (Max 2MB):\u003C\u002Flabel\u003E";
 ;pug_debug_line = 13;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Cimg class=\"preview\" src=\"\"\u003E";
+pug_html = pug_html + "\u003Cinput type=\"file\" name=\"image\"\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Ctextarea name=\"description\" rows=\"3\" placeholder=\"Insert a description\"\u003E\u003C\u002Ftextarea\u003E";
+pug_html = pug_html + "\u003Cimg" + (" class=\"preview\""+pug_attr("src", screenshot.path, true, true)) + "\u003E";
 ;pug_debug_line = 15;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
-pug_html = pug_html + "\u003Cinput type=\"submit\" value=\"Post Screenshot\"\u003E\u003C\u002Fform\u003E\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003C\u002Fmain\u003E";
+pug_html = pug_html + "\u003Ctextarea" + (" name=\"description\" rows=\"3\""+pug_attr("value", screenshot.description, true, true)+" placeholder=\"Insert a description here\"") + "\u003E\u003C\u002Ftextarea\u003E";
 ;pug_debug_line = 16;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Cinput type=\"submit\" value=\"Post Screenshot\"\u003E\u003C\u002Fform\u003E";
+}
+else {
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Ch1\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "Add Screenshot\u003C\u002Fh1\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Cform data-method=\"POST\" autocomplete=\"off\"\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Cinput type=\"text\" name=\"title\" placeholder=\"Insert Title Here\"\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Cdiv class=\"fileUpload\"\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Clabel for=\"image\"\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "Upload a context image (Max 2MB):\u003C\u002Flabel\u003E";
+;pug_debug_line = 23;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Cinput type=\"file\" name=\"image\"\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 24;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Cimg class=\"preview\" src=\"\"\u003E";
+;pug_debug_line = 25;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Ctextarea name=\"description\" rows=\"3\" placeholder=\"Insert a description here\"\u003E\u003C\u002Ftextarea\u003E";
+;pug_debug_line = 26;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Cinput type=\"submit\" value=\"Post Screenshot\"\u003E\u003C\u002Fform\u003E";
+}
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003C\u002Fmain\u003E";
+;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+if (screenshot) {
+;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\u003Cscript\u003E";
+;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "document.querySelector('textarea').value = \"";
+;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.description) ? "" : pug_interp));
+;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+pug_html = pug_html + "\"\u003C\u002Fscript\u003E";
+}
+;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Futils.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
+;pug_debug_line = 31;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fscreenshot.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fscreenshot.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cdiv class=\"frame right\"\u003E\u003C\u002Fdiv\u003E";
@@ -1478,7 +1525,7 @@ pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fpug.min.js\
 ;pug_debug_line = 33;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Ftemplates.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 34;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fsmooth.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
+pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fsmooth.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"screenshot" in locals_for_with?locals_for_with.screenshot:typeof screenshot!=="undefined"?screenshot:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
 "article":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (news) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Farticle.pug";
 pug_html = pug_html + "\u003Carticle" + (" class=\"carousel-item\""+pug_attr("data-id", news._id , true, false)+pug_attr("data-timestamp", news.timestamp, true, false)) + "\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Farticle.pug";
@@ -1520,6 +1567,26 @@ pug_html = pug_html + " &copy; ";
 pug_html = pug_html + "\u003Ca href=\"https:\u002F\u002Fromanelli.herokuapp.com\" target=\"_blank\"\u003E";
 ;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Ffooter.pug";
 pug_html = pug_html + "Alessandro Romanelli\u003C\u002Fa\u003E\u003C\u002Fspan\u003E\u003C\u002Ffooter\u003E";}.call(this,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
+"lazyscreen":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (screenshot) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id , true, false)+pug_attr("data-timestamp", screenshot.timestamp, true, false)) + "\u003E";
+;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cimg" + (" class=\"lazy\""+pug_attr("data-src", screenshot.path, true, false)) + "\u002F\u003E";
+;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cdiv class=\"description\"\u003E";
+;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cdiv class=\"header\"\u003E";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Ch2\u003E";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.title) ? "" : pug_interp)) + "\u003C\u002Fh2\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cspan class=\"date\"\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + " \u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + "\u003Cp\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Flazyscreen.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot.description) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";}.call(this,"screenshot" in locals_for_with?locals_for_with.screenshot:typeof screenshot!=="undefined"?screenshot:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
 "navbar":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fnavbar.pug";
 pug_html = pug_html + "\u003Cnav class=\"navbar\"\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fnavbar.pug";
