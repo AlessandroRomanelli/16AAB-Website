@@ -485,17 +485,26 @@ section.screenshots
   &.wide .content
     grid-column: 2 / 5
   i.close
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 50px
+    height: 50px
+    text-align: center
+    background: $background-color-dark
+    border-radius: 50%
     position: absolute
     top: 0
     right: 0
     margin: 1em
     font-size: 3em
-    opacity: 0.85
+    opacity: 1
     transition: 0.2s ease-in-out
     z-index: 100
+    color: transparentize($white, 0.25)
     &:hover
       cursor: pointer
-      opacity: 1
+      color: $white
       transform: scale(1.1)
 
 #modal .content article
