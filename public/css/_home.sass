@@ -500,6 +500,7 @@ section.screenshots
   height: 100%
   .screenshot
     position: relative
+    overflow: hidden
   img
     position: relative
     max-width: 100%
@@ -508,6 +509,10 @@ section.screenshots
     width: 100%
     position: absolute
     bottom: 0
+    margin: 1em 0 0
+    padding: 0.5em 0
+    background: transparentize($background-color-light, 0.5)
+    border-top: 1px solid $white
     h2
       margin: 0
       text-align: center
@@ -517,5 +522,4 @@ section.screenshots
       -webkit-text-stroke: 1px $background-color-dark
     p
       text-align: center
-      margin: 0.5em 0
-      padding: 0 0.5em
+      margin: 0 1em

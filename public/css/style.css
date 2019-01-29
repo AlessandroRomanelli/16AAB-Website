@@ -596,7 +596,8 @@ section.screenshots {
   justify-content: center;
   height: 100%; }
   #modal .content .container .screenshot {
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
   #modal .content .container img {
     position: relative;
     max-width: 100%;
@@ -604,7 +605,11 @@ section.screenshots {
   #modal .content .container .description {
     width: 100%;
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    margin: 1em 0 0;
+    padding: 0.5em 0;
+    background: rgba(19, 28, 35, 0.5);
+    border-top: 1px solid #FEFDFF; }
     #modal .content .container .description h2 {
       margin: 0;
       text-align: center;
@@ -614,8 +619,7 @@ section.screenshots {
       -webkit-text-stroke: 1px #0f171c; }
     #modal .content .container .description p {
       text-align: center;
-      margin: 0.5em 0;
-      padding: 0 0.5em; }
+      margin: 0 1em; }
 
 footer {
   grid-area: footer;
