@@ -405,6 +405,7 @@ section.screenshots
     align-items: stretch
   .screenshot
     position: relative
+    display: flex
     opacity: 0.75
     transition: 0.2s ease-in-out
     overflow: hidden
@@ -428,12 +429,27 @@ section.screenshots
       max-height: 210px
       border: 1px solid transparent
       transition: 0.2s ease-in-out
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 0
+      background: $primary
+      z-index: 100
+      transition: 0.2s ease-in-out
     &:hover
       opacity: 1
       cursor: pointer
+      &::before
+        width: 0.5em
+
       img
+        position: relative
         border: 1px solid transparentize($white, 0.5)
-        border-left: 0.5em solid $primary
+        // border-left: 0.5em solid $primary
+
       .description
         transform: translateY(0)
         background: transparentize($black, 0.5)

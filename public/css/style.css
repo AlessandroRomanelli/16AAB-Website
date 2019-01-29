@@ -501,6 +501,7 @@ section.screenshots {
     align-items: stretch; }
   section.screenshots .screenshot {
     position: relative;
+    display: flex;
     opacity: 0.75;
     transition: 0.2s ease-in-out;
     overflow: hidden;
@@ -524,12 +525,24 @@ section.screenshots {
       max-height: 210px;
       border: 1px solid transparent;
       transition: 0.2s ease-in-out; }
+    section.screenshots .screenshot::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background: #cf0005;
+      z-index: 100;
+      transition: 0.2s ease-in-out; }
     section.screenshots .screenshot:hover {
       opacity: 1;
       cursor: pointer; }
+      section.screenshots .screenshot:hover::before {
+        width: 0.5em; }
       section.screenshots .screenshot:hover img {
-        border: 1px solid rgba(254, 253, 255, 0.5);
-        border-left: 0.5em solid #cf0005; }
+        position: relative;
+        border: 1px solid rgba(254, 253, 255, 0.5); }
       section.screenshots .screenshot:hover .description {
         transform: translateY(0);
         background: rgba(10, 16, 13, 0.5); }
