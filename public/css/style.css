@@ -626,7 +626,8 @@ section.screenshots {
   height: 100%; }
   #modal .content .container .screenshot {
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    border: 1px solid rgba(254, 253, 255, 0.5); }
   #modal .content .container img {
     display: flex;
     position: relative;
@@ -639,7 +640,7 @@ section.screenshots {
     margin: 1em 0 0;
     padding: 0.5em 0;
     background: rgba(19, 28, 35, 0.5);
-    border-top: 1px solid #FEFDFF; }
+    border-top: 1px solid rgba(254, 253, 255, 0.5); }
     #modal .content .container .description h2 {
       margin: 0;
       text-align: center;
