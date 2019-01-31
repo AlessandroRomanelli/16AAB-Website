@@ -8,7 +8,9 @@ const config = require('../../config/config');
 const fs = require('fs')
 const path = require('path')
 
-const User = mongoose.model('User');
+const emitter = require('./utils/event')
+const { images } = require('./utils/data')
+
 const Image = mongoose.model('Image');
 
 const getExtension = (base64) => {
@@ -40,13 +42,17 @@ module.exports = (app) => {
 };
 
 router.get('/', (req, res, next) => {
-  Image.find({}).then(images => {
-    res.status(200).json({status:200, images})
-  }).catch(err => next(err))
+  if (req.accepts('html')) {
+    return res.redirect('back')
+  }
+  res.status(200).json({ status: 200, images})
 })
 
 router.get('/add', (req, res) => {
-  res.status(200).render('screenshot', { title: config.app.title, year: new Date().getFullYear() })
+  res.status(200).render('screenshot', {
+    title: config.app.title,
+    year: new Date().getFullYear()
+  })
 })
 
 router.post('/', (req, res, next) => {
@@ -62,6 +68,7 @@ router.post('/', (req, res, next) => {
   fs.writeFile(`${root}/public/img/uploads/${fileName}`, imageBuffer.data, (err) => {
     if (err) return next(err);
     Image.create({_id: id, path: `/img/uploads/${fileName}`, title, description }).then(created => {
+      emitter.emit('imageChanged', created._id)
       res.status(201).json({status: 201, message: 'Created'})
     }).catch(err => next(err))
   })
@@ -69,23 +76,26 @@ router.post('/', (req, res, next) => {
 
 router.get('/:imageid/edit', (req, res, next) => {
   const { imageid } = req.params
-  Image.findById(imageid).then(screenshot => {
-    res.status(200).render('screenshot', { title: config.app.title, year: new Date().getFullYear(), screenshot })
+  const screenshot = images[imageid]
+  res.status(200).render('screenshot', {
+    title: config.app.title,
+    year: new Date().getFullYear(),
+    screenshot
   })
 })
 
 router.get('/:imageid', (req, res, next) => {
   const { imageid } = req.params
-  Image.findById(imageid).then(screenshot => {
-    if (screenshot === null) { return res.status(404).json({status: 404, message: 'Not Found'}) }
-    return res.status(200).json({status: 200, screenshot})
-  })
+  const screenshot = images[imageid]
+  if (screenshot === null) { return res.status(404).json({status: 404, message: 'Not Found'}) }
+  return res.status(200).json({status: 200, screenshot})
 })
 
 router.put('/:imageid', (req, res, next) => {
   const { title, description } = req.body
   const { imageid } = req.params
-  Image.findByIdAndUpdate(imageid, { title, description }).then(() => {
+  Image.findByIdAndUpdate(imageid, { title, description }, { new: true, upsert: true}).then((image) => {
+    emitter.emit('imageChanged', imageid)
     res.status(200).json({status: 200, message: "OK"});
   }).catch(err => next(err))
 })
@@ -95,7 +105,7 @@ router.delete('/:imageid', (req, res, next) => {
   Image.findByIdAndRemove(imageid).then(image => {
     fs.unlink(root+'/public'+image.path, (err) => {
       if (err) return next(err)
-      console.log('File deleted')
+      emitter.emit('imageDeleted', imageid)
       return res.status(200).json({status: 200, message: "OK"})
     })
   })

@@ -6,9 +6,9 @@ const bcrypt = require('bcrypt');
 const passport = require('passport');
 const config = require('../../config/config');
 
+const { news, images } = require('./utils/data')
+
 const User = mongoose.model('User');
-const News = mongoose.model('Article');
-const Image = mongoose.model('Image');
 
 module.exports = (app) => {
   app.use('/admin', router);
@@ -16,25 +16,27 @@ module.exports = (app) => {
 
 
 router.get('/', (req, res) => {
-  if (req.user) {
-    const data = {};
-    return News.find({}).populate('author').then((news) => {
-      data.news = news;
-      return Image.find({});
-    }).then(screenshots => {
-      return res.render('admin', { year: new Date().getFullYear(), articles: data.news, screenshots, title: config.app.title });
-    });
-  }
-  return res.redirect('/admin/login');
+  if (!req.user) { return res.redirect('/admin/login') }
+  const articles = Object.values(news)
+  const screenshots = Object.values(images)
+  return res.render('admin', {
+    year: new Date().getFullYear(),
+    articles,
+    screenshots,
+    title: config.app.title
+  });
 });
 
 
 router.get('/login', (req, res) => {
-  res.render('login', { year: new Date().getFullYear(), title: config.app.title });
+  res.render('login', {
+    year: new Date().getFullYear(),
+    title: config.app.title
+  });
 });
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
-  res.status(200).json({ status: 200 });
+  res.status(200).json({ status: 200, message: "OK" });
 });
 
 router.post('/signup', (req, res) => {
