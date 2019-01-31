@@ -9,7 +9,10 @@
     const hash = anchor.href.split('/').pop()
     if (hash[0] === '#') {
       const element = document.querySelector(hash);
-      element.scrollIntoView()
+      anchor.addEventListener('click', (event) => {
+        event.preventDefault()
+        element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest'});
+      })
     }
   })
 
