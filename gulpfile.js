@@ -5,6 +5,7 @@ const livereload = require('gulp-livereload');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 const pugConcat = require('gulp-pug-template-concat');
+const imagemin = require('gulp-imagemin')
 
 gulp.task('sass', () => {
   gulp.src('./public/css/*.sass')
@@ -25,7 +26,15 @@ gulp.task('pug', () => {
 
 gulp.task('watch', () => {
   gulp.watch('./public/css/**/*.sass', ['sass']);
+  gulp.watch('./src/images/*', ['images'])
 });
+
+gulp.task('images', () => {
+  gulp.src('./src/images/*')
+      .pipe(imagemin())
+      .pipe(gulp.dest('public/img'))
+})
+
 
 gulp.task('develop', () => {
   livereload.listen();
@@ -49,4 +58,5 @@ gulp.task('default', [
   'develop',
   'watch',
   'pug',
+  'images'
 ]);
