@@ -11,6 +11,9 @@ const path = require('path')
 const emitter = require('./utils/event')
 const { images } = require('./utils/data')
 
+const imagemin = require('imagemin');
+const imageminWebp = require('imagemin-webp');
+
 const Image = mongoose.model('Image');
 
 const getExtension = (base64) => {
@@ -67,10 +70,17 @@ router.post('/', (req, res, next) => {
   }
   fs.writeFile(`${root}/public/img/uploads/${fileName}`, imageBuffer.data, (err) => {
     if (err) return next(err);
-    Image.create({_id: id, path: `/img/uploads/${fileName}`, title, description }).then(created => {
-      emitter.emit('imageChanged', created._id)
-      res.status(201).json({status: 201, message: 'Created'})
-    }).catch(err => next(err))
+    imagemin([`${root}/public/img/uploads/${fileName}`], `${root}/public/img/uploads`, {
+    	use: [
+    		imageminWebp({quality: 50})
+    	]
+    }).then(() => {
+    	console.log('Uploaded image was optimized');
+      Image.create({_id: id, path: `/img/uploads/${fileName}`, pathMin: `/img/uploads/${id}.webp`, title, description }).then(created => {
+        emitter.emit('imageChanged', created._id)
+        res.status(201).json({status: 201, message: 'Created'})
+      }).catch(err => next(err))
+    });
   })
 })
 
@@ -103,10 +113,14 @@ router.put('/:imageid', (req, res, next) => {
 router.delete('/:imageid', (req, res, next) => {
   const { imageid } = req.params
   Image.findByIdAndRemove(imageid).then(image => {
-    fs.unlink(root+'/public'+image.path, (err) => {
-      if (err) return next(err)
-      emitter.emit('imageDeleted', imageid)
-      return res.status(200).json({status: 200, message: "OK"})
-    })
+    try {
+      fs.unlink(root+'/public'+image.path, (err) => {
+        if (err) throw err;
+        emitter.emit('imageDeleted', imageid)
+        return res.status(200).json({status: 200, message: "OK"})
+      })
+    } catch (err) {
+      console.error(err)
+    }
   })
 })
