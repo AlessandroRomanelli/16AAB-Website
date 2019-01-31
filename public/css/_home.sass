@@ -47,7 +47,7 @@ main > .header
     cursor: default
   @include fullSizeBeforeAfter()
   &::before
-    background: url(/img/mainbg.jpg) no-repeat
+    background-position: center
     background-size: cover
     background-attachment: fixed
     background-position: center
@@ -62,6 +62,13 @@ main > .header
     z-index: 0
   .title, .subtitle, .call-to-action
     filter: drop-shadow(0 0 3px $shadow-dark)
+
+.no-webp .header::before
+  background-image: url(/img/mainbg.jpg)
+
+.webp .header::before
+  background-image: url(/img/mainbg.webp)
+
 
 main > .header .title
   font-family: $title-font
@@ -311,10 +318,19 @@ section
         transform: scale(1.05)
   @include fullSizeBeforeAfter()
   &::before
-    background: url('/img/heli.png') no-repeat center fixed / cover
+    background-repeat: none
+    background-position: center
+    background-size: cover
+    background-attachment: fixed
     opacity: 0.33
   &::after
     @include backgroundFadeInFadeOut($background-color-dark, 20%, 5%)
+
+.no-webp .about::before
+  background-image: url('/img/heli.png')
+
+.webp .about::before
+  background-image: url('/img/heli.webp')
 
 .operations
   text-align: center
@@ -366,7 +382,7 @@ section
   text-align: center
   @include fullSizeBeforeAfter()
   &::before
-    background: url('/img/joinpara.jpg') no-repeat
+    background-position: center
     background-attachment: fixed
     background-size: cover
     background-position: center
@@ -392,6 +408,12 @@ section
         font-size: 1em
         text-align: right
         margin-right: 0.5em
+
+.no-webp .joining::before
+  background-image: url('/img/joinpara.jpg')
+
+.webp .joining::before
+  background-image: url('/img/joinpara.webp')
 
 section.screenshots
   text-align: center

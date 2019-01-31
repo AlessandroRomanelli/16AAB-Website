@@ -143,7 +143,7 @@ main > .header {
     pointer-events: none;
     z-index: -1; }
   main > .header::before {
-    background: url(/img/mainbg.jpg) no-repeat;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -160,6 +160,12 @@ main > .header {
     z-index: 0; }
   main > .header .title, main > .header .subtitle, main > .header .call-to-action {
     filter: drop-shadow(0 0 3px rgba(10, 16, 13, 0.75)); }
+
+.no-webp .header::before {
+  background-image: url(/img/mainbg.jpg); }
+
+.webp .header::before {
+  background-image: url(/img/mainbg.webp); }
 
 main > .header .title {
   font-family: "Raleway", sans-serif;
@@ -419,10 +425,19 @@ section {
     pointer-events: none;
     z-index: -1; }
   .about::before {
-    background: url("/img/heli.png") no-repeat center fixed/cover;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     opacity: 0.33; }
   .about::after {
     background: linear-gradient(0deg, #0f171c -5%, transparent 20%, transparent 80%, #0f171c 105%); }
+
+.no-webp .about::before {
+  background-image: url("/img/heli.png"); }
+
+.webp .about::before {
+  background-image: url("/img/heli.webp"); }
 
 .operations {
   text-align: center; }
@@ -480,7 +495,7 @@ section {
     pointer-events: none;
     z-index: -1; }
   .joining::before {
-    background: url("/img/joinpara.jpg") no-repeat;
+    background-position: center;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -508,6 +523,12 @@ section {
         font-size: 1em;
         text-align: right;
         margin-right: 0.5em; }
+
+.no-webp .joining::before {
+  background-image: url("/img/joinpara.jpg"); }
+
+.webp .joining::before {
+  background-image: url("/img/joinpara.webp"); }
 
 section.screenshots {
   text-align: center; }
