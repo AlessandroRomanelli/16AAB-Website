@@ -21,7 +21,7 @@ body {
   color: #FEFDFF;
   overflow-x: hidden;
   margin-bottom: 2rem; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1088px) {
     body {
       grid-template-areas: ". content content content ." ". footer footer footer .";
       grid-template-columns: 2rem 1fr 1024px 1fr 2rem; } }
@@ -36,7 +36,7 @@ nav.navbar {
   z-index: 999;
   background: linear-gradient(0deg, #131c23, #162229);
   grid-template-areas: "navbar"; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1088px) {
     nav.navbar {
       grid-template-areas: ". navbar navbar navbar .";
       grid-template-columns: 2rem 1fr 1024px 1fr 2rem; } }
@@ -45,7 +45,7 @@ nav.navbar {
     align-items: center;
     grid-area: navbar;
     border-bottom: 1px solid rgba(254, 253, 255, 0.25); }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1088px) {
       nav.navbar .wrapper {
         display: grid;
         grid-template-columns: 1fr 1024px 1fr; } }
@@ -54,11 +54,11 @@ nav.navbar {
     font-weight: 900;
     text-transform: uppercase;
     transition: 0.2s ease-in-out; }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1088px) {
       nav.navbar a.name {
         grid-column: 1;
         grid-column-start: 2; } }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1088px) {
       nav.navbar a.name {
         margin-left: 1em; } }
     nav.navbar a.name:link, nav.navbar a.name:visited {
@@ -110,7 +110,7 @@ main {
   @media screen and (min-height: 720px) {
     .home-page {
       grid-template-rows: calc(100vh - 50px - 350px) 350px 1fr; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1088px) {
     .home-page {
       grid-template-rows: calc(100vh - 2rem - 50px - 350px) 350px 1fr; } }
 
@@ -155,7 +155,7 @@ main > .header {
     background-position: center;
     opacity: 0.66;
     z-index: 0; }
-    @media screen and (min-width: 1024px) and (max-width: 1680px) {
+    @media screen and (min-width: 1088px) and (max-width: 1680px) {
       main > .header::before {
         background-position: 0% 50%; } }
     @media screen and (min-width: 1680px) {
@@ -206,7 +206,7 @@ main > .header .call-to-action {
   top: calc(100% + 1em);
   left: 50%;
   transform: translateX(-50%); }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1088px) {
     main > .header .call-to-action {
       width: calc(100vw - 4rem); } }
 
@@ -268,7 +268,7 @@ main > .header .call-to-action {
 
 section {
   padding: 2em 1em; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1088px) {
     section {
       display: grid;
       grid-template-columns: 1fr 1024px 1fr; }
@@ -324,7 +324,7 @@ section {
   flex: 1 0 100%;
   border-top: 1px solid rgba(254, 253, 255, 0.5);
   border-bottom: 1px solid rgba(254, 253, 255, 0.5); }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1088px) {
     .carousel-item {
       flex: 1 0 50%; } }
   .carousel-item:nth-child(2n-1) {
@@ -512,7 +512,7 @@ section {
     background-size: cover;
     background-position: center;
     opacity: 0.33; }
-    @media screen and (min-width: 1024px) and (max-width: 1680px) {
+    @media screen and (min-width: 1088px) and (max-width: 1680px) {
       .joining::before {
         background-position: 0% 80%; } }
     @media screen and (min-width: 1680px) {
@@ -619,7 +619,7 @@ section.screenshots {
   #modal.show {
     opacity: 1;
     pointer-events: all; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1088px) {
     #modal {
       grid-template-columns: 2rem 1fr 1024px 1fr 2rem; } }
   #modal > .content {
@@ -711,11 +711,11 @@ footer {
   footer a:hover {
     color: #FEFDFF; }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1088px) {
   .frame {
     display: none; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1088px) {
   .frame {
     z-index: 50;
     position: fixed;
@@ -796,7 +796,7 @@ footer {
     line-height: 0.8em;
     margin: 0;
     font-size: 5em; }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1088px) {
       .error .content h1 {
         font-size: 20em; } }
   .error .content h2 {

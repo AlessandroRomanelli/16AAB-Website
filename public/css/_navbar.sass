@@ -8,7 +8,7 @@ nav.navbar
   z-index: 999
   background: linear-gradient(0deg, $background-color-light, lighten($background-color-light, 2%))
   grid-template-areas: "navbar"
-  @media screen and (min-width: 1024px)
+  @media screen and (min-width: 1088px)
     grid-template-areas: ". navbar navbar navbar ."
     grid-template-columns: 2rem 1fr 1024px 1fr 2rem
   .wrapper
@@ -16,7 +16,7 @@ nav.navbar
     align-items: center
     grid-area: navbar
     border-bottom: 1px solid transparentize($white, 0.75)
-    @media screen and (min-width: 1024px)
+    @media screen and (min-width: 1088px)
       display: grid
       grid-template-columns: 1fr 1024px 1fr
 
@@ -25,10 +25,10 @@ nav.navbar
     font-weight: $title-font-bold
     text-transform: uppercase
     transition: 0.2s ease-in-out
-    @media screen and (min-width: 1024px)
+    @media screen and (min-width: 1088px)
       grid-column: 1
       grid-column-start: 2
-    @media screen and (max-width: 1024px)
+    @media screen and (max-width: 1088px)
       margin-left: 1em
     &:link, &:visited
       text-decoration: none
