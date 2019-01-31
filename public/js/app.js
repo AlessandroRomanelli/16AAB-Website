@@ -4,6 +4,15 @@
   AOS.init();
   document.addEventListener("DOMContentLoaded", yall);
 
+  const anchors = document.querySelectorAll('a')
+  anchors.forEach(anchor => {
+    const hash = anchor.href.split('/').pop()
+    if (hash[0] === '#') {
+      const element = document.querySelector(hash);
+      element.scrollIntoView()
+    }
+  })
+
   const toggleButton = (button) => {
     const opacity = (button.style.opacity !== "") ? Math.abs(parseInt(button.style.opacity) - 1) : 0
     button.style.opacity = opacity

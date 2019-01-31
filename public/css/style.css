@@ -1,4 +1,51 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:900,800,500|Work+Sans:200,300");
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Raleway Medium"), local("Raleway-Medium"), url(../fonts/Raleway/medium-ext.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Raleway Medium"), local("Raleway-Medium"), url(../fonts/Raleway/medium.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Raleway Black"), local("Raleway-Black"), url(../fonts/Raleway/black-ext.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Raleway Black"), local("Raleway-Black"), url(../fonts/Raleway/black.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Work Sans ExtraLight"), local("WorkSans-ExtraLight"), url(../fonts/Work_Sans/light-ext.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Work Sans ExtraLight"), local("WorkSans-ExtraLight"), url(../fonts/Work_Sans/light.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 * {
   box-sizing: border-box; }
 
@@ -51,7 +98,7 @@ nav.navbar {
         grid-template-columns: 1fr 1024px 1fr; } }
   nav.navbar a.name {
     font-family: "Raleway", sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
     transition: 0.2s ease-in-out; }
     @media screen and (min-width: 1088px) {
@@ -179,12 +226,11 @@ main > .header .title {
   main > .header .title h1 {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
-    font-weight: 800;
     font-size: 2.75em;
     margin: 0; }
     main > .header .title h1 span {
       color: #cf0005;
-      font-weight: 900; }
+      font-weight: 800; }
     main > .header .title h1:first-of-type {
       margin-right: 1em; }
     main > .header .title h1:last-of-type {
@@ -210,7 +256,11 @@ main > .header .call-to-action {
     main > .header .call-to-action {
       width: calc(100vw - 4rem); } }
 
-.call-to-action button {
+.call-to-action a {
+  box-sizing: border-box;
+  font-weight: lighter;
+  display: inline-block;
+  padding: 0.6em 1em;
   font-size: 1em;
   color: #FEFDFF;
   font-family: "Work Sans", sans-serif;
@@ -222,49 +272,45 @@ main > .header .call-to-action {
   position: relative;
   transition: all 0.2s ease-in-out;
   border-radius: 2px; }
-  .call-to-action button:last-of-type {
-    background: rgba(111, 12, 16, 0.2);
-    border-color: rgba(207, 0, 5, 0.2);
-    margin-left: 1em; }
-  .call-to-action button::before, .call-to-action button::after {
-    position: absolute;
-    content: '';
-    background: #FEFDFF;
-    width: 0;
-    height: 2px;
-    left: 50%;
-    opacity: 0;
-    transition: 0.2s ease-in-out; }
-  .call-to-action button::before {
-    top: 0;
-    border-radius: 2px 2px 0 0; }
-  .call-to-action button::after {
-    bottom: 0;
-    border-radius: 0 0 2px 2px; }
-  .call-to-action button:hover {
+  .call-to-action a:link, .call-to-action a:visited {
+    color: #FEFDFF; }
+    .call-to-action a:link:last-of-type, .call-to-action a:visited:last-of-type {
+      background: rgba(111, 12, 16, 0.2);
+      border-color: rgba(207, 0, 5, 0.2);
+      margin-left: 1em; }
+      .call-to-action a:link:last-of-type:hover, .call-to-action a:visited:last-of-type:hover {
+        border-left-color: rgba(207, 0, 5, 0.25);
+        border-right-color: rgba(207, 0, 5, 0.25);
+        background: rgba(207, 0, 5, 0.25); }
+        .call-to-action a:link:last-of-type:hover::before, .call-to-action a:link:last-of-type:hover::after, .call-to-action a:visited:last-of-type:hover::before, .call-to-action a:visited:last-of-type:hover::after {
+          background: #cf0005; }
+    .call-to-action a:link::before, .call-to-action a:link::after, .call-to-action a:visited::before, .call-to-action a:visited::after {
+      content: '';
+      position: absolute;
+      background: #FEFDFF;
+      width: 0;
+      height: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: 0.2s ease-in-out; }
+    .call-to-action a:link::before, .call-to-action a:visited::before {
+      top: 0;
+      border-radius: 2px 2px 0 0; }
+    .call-to-action a:link::after, .call-to-action a:visited::after {
+      bottom: 0;
+      border-radius: 0 0 2px 2px; }
+  .call-to-action a:hover {
     cursor: pointer;
     letter-spacing: 1px;
     border-left-color: rgba(254, 253, 255, 0.25);
     border-right-color: rgba(254, 253, 255, 0.25);
-    background: rgba(254, 253, 255, 0.1); }
-    .call-to-action button:hover:last-of-type {
-      border-left-color: rgba(207, 0, 5, 0.25);
-      border-right-color: rgba(207, 0, 5, 0.25);
-      background: rgba(207, 0, 5, 0.1); }
-      .call-to-action button:hover:last-of-type::before, .call-to-action button:hover:last-of-type::after {
-        background: #cf0005; }
-    .call-to-action button:hover::before, .call-to-action button:hover::after {
-      left: 0;
-      opacity: 1;
-      width: 100%; }
-  .call-to-action button a {
-    font-weight: lighter;
-    padding: 0.6em 1em;
-    display: inline-block;
-    width: 100%;
-    height: 100%; }
-    .call-to-action button a:link, .call-to-action button a:visited {
-      color: #FEFDFF; }
+    background: rgba(254, 253, 255, 0.25);
+    transform: none; }
+    .call-to-action a:hover::before, .call-to-action a:hover::after {
+      width: 100%;
+      height: 2px;
+      opacity: 1; }
 
 section {
   padding: 2em 1em; }

@@ -81,7 +81,6 @@ main > .header .title
   h1
     font-family: $title-font
     text-transform: uppercase
-    font-weight: $title-font-medium
     font-size: 2.75em
     margin: 0
     span
@@ -111,7 +110,11 @@ main > .header .call-to-action
   left: 50%
   transform: translateX(-50%)
 
-.call-to-action button
+.call-to-action a
+  box-sizing: border-box
+  font-weight: lighter
+  display: inline-block
+  padding: 0.6em 1em
   font-size: 1em
   color: $white
   font-family: $text-font
@@ -123,50 +126,48 @@ main > .header .call-to-action
   position: relative
   transition: all 0.2s ease-in-out
   border-radius: 2px
-  &:last-of-type
-    background: transparentize(mix($primary, $background-color-dark, 50%), 0.8)
-    border-color: transparentize($primary, 0.8)
-    margin-left: 1em
-  &::before, &::after
-    position: absolute
-    content: ''
-    background: $white
-    width: 0
-    height: 2px
-    left: 50%
-    opacity: 0
-    transition: 0.2s ease-in-out
-  &::before
-    top: 0
-    border-radius: 2px 2px 0 0
-  &::after
-    bottom: 0
-    border-radius: 0 0 2px 2px
+  &:link, &:visited
+    color: $white
+    &:last-of-type
+      background: transparentize(mix($primary, $background-color-dark, 50%), 0.8)
+      border-color: transparentize($primary, 0.8)
+      margin-left: 1em
+      &:hover
+        border-left-color: transparentize($primary, 0.75)
+        border-right-color: transparentize($primary, 0.75)
+        background: transparentize($primary, 0.75)
+        &::before, &::after
+          background: $primary
+    &::before, &::after
+      content: ''
+      position: absolute
+      background: $white
+      width: 0
+      height: 0
+      left: 50%
+      transform: translateX(-50%)
+      opacity: 0
+      transition: 0.2s ease-in-out
+    &::before
+      top: 0
+      border-radius: 2px 2px 0 0
+    &::after
+      bottom: 0
+      border-radius: 0 0 2px 2px
   &:hover
     cursor: pointer
     letter-spacing: 1px
     border-left-color: transparentize($white, 0.75)
     border-right-color: transparentize($white, 0.75)
-    background: transparentize($white, 0.9)
-    &:last-of-type
-      border-left-color: transparentize($primary, 0.75)
-      border-right-color: transparentize($primary, 0.75)
-      background: transparentize($primary, 0.9)
-      &::before, &::after
-        background: $primary
-
+    background: transparentize($white, 0.75)
+    transform: none
     &::before, &::after
-      left: 0
-      opacity: 1
       width: 100%
-  a
-    font-weight: lighter
-    padding: 0.6em 1em
-    display: inline-block
-    width: 100%
-    height: 100%
-    &:link, &:visited
-      color: $white
+      height: 2px
+      opacity: 1
+
+
+
 
 section
   padding: 2em 1em
@@ -184,7 +185,7 @@ section
     font-weight: $title-font-regular
     & > span
       color: $primary
-      font-weight: $title-font-medium
+      font-weight: $title-font-bold
     div
       position: relative
       font-size: 0.8rem
