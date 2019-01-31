@@ -328,6 +328,7 @@ section
         transform: scale(1.05)
   @include fullSizeBeforeAfter()
   &::before
+    background-image: $background-color-dark
     background-repeat: none
     background-position: center
     background-size: cover
@@ -336,10 +337,10 @@ section
   &::after
     @include backgroundFadeInFadeOut($background-color-dark, 20%, 5%)
 
-.no-webp .about::before
+.no-webp .about.lazy-bg-loaded::before
   background-image: url('/img/heli.png')
 
-.webp .about::before
+.webp .about.lazy-bg-loaded::before
   background-image: url('/img/heli.webp')
 
 .operations
@@ -392,6 +393,7 @@ section
   text-align: center
   @include fullSizeBeforeAfter()
   &::before
+    background-image: $background-color-dark
     background-position: center
     background-attachment: fixed
     background-size: cover
@@ -419,10 +421,10 @@ section
         text-align: right
         margin-right: 0.5em
 
-.no-webp .joining::before
+.no-webp .joining.lazy-bg-loaded::before
   background-image: url('/img/joinpara.jpg')
 
-.webp .joining::before
+.webp .joining.lazy-bg-loaded::before
   background-image: url('/img/joinpara.webp')
 
 section.screenshots

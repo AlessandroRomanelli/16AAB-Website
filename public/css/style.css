@@ -437,6 +437,7 @@ section {
     pointer-events: none;
     z-index: -1; }
   .about::before {
+    background-image: #0f171c;
     background-repeat: none;
     background-position: center;
     background-size: cover;
@@ -445,10 +446,10 @@ section {
   .about::after {
     background: linear-gradient(0deg, #0f171c -5%, transparent 20%, transparent 80%, #0f171c 105%); }
 
-.no-webp .about::before {
+.no-webp .about.lazy-bg-loaded::before {
   background-image: url("/img/heli.png"); }
 
-.webp .about::before {
+.webp .about.lazy-bg-loaded::before {
   background-image: url("/img/heli.webp"); }
 
 .operations {
@@ -507,6 +508,7 @@ section {
     pointer-events: none;
     z-index: -1; }
   .joining::before {
+    background-image: #0f171c;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -536,10 +538,10 @@ section {
         text-align: right;
         margin-right: 0.5em; }
 
-.no-webp .joining::before {
+.no-webp .joining.lazy-bg-loaded::before {
   background-image: url("/img/joinpara.jpg"); }
 
-.webp .joining::before {
+.webp .joining.lazy-bg-loaded::before {
   background-image: url("/img/joinpara.webp"); }
 
 section.screenshots {
