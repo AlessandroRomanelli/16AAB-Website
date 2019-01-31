@@ -106,7 +106,13 @@ main {
 .home-page {
   display: grid;
   grid-template-areas: "title" "news" "about" "operations" "joining" "teamspeak";
-  grid-template-rows: 400px 1fr; }
+  grid-template-rows: 350px 1fr; }
+  @media screen and (min-height: 720px) {
+    .home-page {
+      grid-template-rows: calc(100vh - 50px - 350px) 350px 1fr; } }
+  @media screen and (min-width: 1024px) {
+    .home-page {
+      grid-template-rows: calc(100vh - 2rem - 50px - 350px) 350px 1fr; } }
 
 .news {
   grid-area: news; }
@@ -168,11 +174,12 @@ main > .header {
   background-image: url(/img/mainbg.webp); }
 
 main > .header .title {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: 800;
+  position: relative;
   z-index: 1; }
   main > .header .title h1 {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     font-size: 2.75em;
     margin: 0; }
     main > .header .title h1 span {
@@ -194,9 +201,14 @@ main > .header .subtitle {
 main > .header .call-to-action {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   position: absolute;
-  bottom: 25%; }
+  top: calc(100% + 1em);
+  left: 50%;
+  transform: translateX(-50%); }
+  @media screen and (min-width: 1024px) {
+    main > .header .call-to-action {
+      width: calc(100vw - 4rem); } }
 
 .call-to-action button {
   font-size: 1em;

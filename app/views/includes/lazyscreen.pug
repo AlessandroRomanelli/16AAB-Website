@@ -1,7 +1,7 @@
 .screenshot(data-id=screenshot._id ,data-timestamp=screenshot.timestamp)
   picture
-    source(srcset=screenshot.pathMin, type='image/webp')
-    source(srcset=screenshot.path, type='image/jpeg')
+    source(data-srcset=screenshot.pathMin, type='image/webp')
+    source(data-srcset=screenshot.path, type='image/jpeg')
     img.lazy(data-src=screenshot.path)
   .description
     .header

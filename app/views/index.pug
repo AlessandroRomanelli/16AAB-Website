@@ -9,12 +9,12 @@ block content
         h1 
           span Last 
           | out
-      .subtitle ArmA 3 UK Relaxed Milsim Unit
-      .call-to-action
-        button
-          a(href="#about") About Us
-        button 
-          a(href="https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk" target='_blank') Enlist now
+        .subtitle ArmA 3 UK Relaxed Milsim Unit
+        .call-to-action
+          button
+            a(href="#about") About Us
+          button 
+            a(href="https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk" target='_blank') Enlist now
     section.news
       .content
         h1 Latest 
@@ -34,7 +34,7 @@ block content
         .controls
           i.fas.fa-long-arrow-alt-left
           i.fas.fa-long-arrow-alt-right
-    section#about.about
+    section#about.about.lazy-bg
       .content
         h1 
           span Who 
@@ -45,28 +45,28 @@ block content
           a(href="https://en.wikipedia.org/wiki/16_Air_Assault_Brigade" target='_blank') 16 Air Assault Brigade
           | .
         picture.logo.lazy(data-aos="fade-left" data-aos-duration='1000')
-          source(srcset='/img/unitlogobg.webp' type='image/webp')
-          source(srcset='/img/unitlogobg.png' type='image/png')
+          source(data-srcset='/img/unitlogobg.webp' type='image/webp')
+          source(data-srcset='/img/unitlogobg.png' type='image/png')
           img.logo.lazy(data-src="/img/unitlogobg.png" data-aos="fade-left" data-aos-duration='1000')
         p The Platoon acts as the Brigade's advance and reconnaissance force. The Platoon was deployed on a wide variety of operations between 1948 and 1977.
         p Our roles include locating and marking drop zones, helicopter landing zones for air landing operations, forward reconnaissance, convoy guidance, unconventional military support, hostage rescue preparation, guiding air support and artillery and working with special forces teams from various nations and being the first unit into the combat zone.
         .duties
           .duty
             picture.lazy
-              source(srcset='/img/recon.webp', type='image/webp')
-              source(srcset='/img/recon.png', type='image/png')
+              source(data-srcset='/img/recon.webp', type='image/webp')
+              source(data-srcset='/img/recon.png', type='image/png')
               img.lazy(data-src='/img/recon.png')
             span Recon
           .duty
             picture.lazy
-              source(srcset='/img/guidance.webp', type='image/webp')
-              source(srcset='/img/guidance.png', type='image/png')
+              source(data-srcset='/img/guidance.webp', type='image/webp')
+              source(data-srcset='/img/guidance.png', type='image/png')
               img.lazy(data-src='/img/guidance.png')
             span Guidance
           .duty
             picture.lazy
-              source(srcset='/img/fight.webp', type='image/webp')
-              source(srcset='/img/fight.png', type='image/png')
+              source(data-srcset='/img/fight.webp', type='image/webp')
+              source(data-srcset='/img/fight.png', type='image/png')
               img.lazy(data-src='/img/fight.png')
             span Fight
         p We started our campaign timeline from early 1970's and will persue it to present day conflicts, built in a realistic atmosphere by expert mission makers who create custom terrains, models and addons for us to enjoy a unique experience. Not only do we care greatly about realism, our main focus is the community that we have passionately built up over 5 years of playing.
