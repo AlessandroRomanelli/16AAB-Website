@@ -13,6 +13,9 @@ module.exports = (app) => {
 router.get('/', (req, res) => {
   const articles = Object.values(news)
   const screenshots = Object.values(images)
+  articles.sort((a,b) => {
+    return b.timestamp - a.timestamp
+  })
   res.render('index', {
     year: new Date().getFullYear(),
     title: config.app.title,
