@@ -7,7 +7,7 @@
   const anchors = document.querySelectorAll('a')
   anchors.forEach(anchor => {
     const hash = anchor.href.split('/').pop()
-    if (hash[0] === '#') {
+    if (hash[0] === '#' && hash.length > 1) {
       const element = document.querySelector(hash);
       anchor.addEventListener('click', (event) => {
         event.preventDefault()
@@ -124,14 +124,14 @@
   populateModal = (html, wide=false) => {
     const content = modal.querySelector('.content')
     content.innerHTML = ""
-    content.innerHTML += `<i class='close fas fa-times'></i>`
+    content.innerHTML += templates.times()
     content.innerHTML += html
     modal.classList.add('show')
     if (wide) {
       modal.classList.add('wide')
     }
     document.body.style.overflow = 'hidden'
-    content.querySelector('i').addEventListener('click', (event) => {
+    content.querySelector('svg').addEventListener('click', (event) => {
       document.body.style.overflow = 'auto'
       modal.classList.remove('show')
       modal.classList.remove('wide')
@@ -150,7 +150,7 @@
       const div = document.createElement('div')
       div.classList.add('read-more')
       content.appendChild(div)
-      div.innerHTML = `<a href='#'>Read More <i class='fas fa-arrow-right'></i></a>`
+      div.innerHTML = `<a href='/'>Read More ${templates['long-arrow-right']()}</a>`
       const anchor = document.querySelector('.read-more a')
       anchor.addEventListener('click', (event) => {
         event.preventDefault()

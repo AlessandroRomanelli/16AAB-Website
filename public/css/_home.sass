@@ -19,9 +19,9 @@
   grid-template-areas: "title" "news" "about" "operations" "joining" "teamspeak"
   grid-template-rows:  350px 1fr
   @media screen and (min-height: 720px)
-    grid-template-rows: calc(100vh - 50px - 350px) 350px 1fr
+    grid-template-rows: calc(100vh - 50px - 375px) 375px 1fr
   @media screen and (min-width: 1088px)
-    grid-template-rows: calc(100vh - 2rem - 50px - 350px) 350px 1fr
+    grid-template-rows: calc(100vh - 2rem - 50px - 375px) 375px 1fr
 
 
 .news
@@ -262,14 +262,19 @@ section
     margin: 0
   .read-more
     margin-top: 0.5em
-    text-align: right
+    display: flex
+    justify-content: flex-end
     a
+      display: flex
+      align-items: center
       position: relative
       transition: 0.2s ease-in-out
-      &:hover i
+      &:hover svg
         opacity: 1
         right: 0
-    i
+    svg
+      margin-left: 0.25em
+      height: 1em
       position: relative
       transition: 0.2s ease-in-out
       right: 20px
@@ -291,6 +296,9 @@ section
       opacity: 0.75
     &:hover
       color: $primary
+    svg
+      width: 1em
+      height: 1em
 
 .about
   position: relative
@@ -414,10 +422,12 @@ section
     li
       display: flex
       align-content: center
+      justify-content: flex-start
       &:not(:first-child)
         margin-top: 0.2em
-      i
-        width: 30px
+      svg
+        max-height: 1.1em
+        width: 1.1em
         font-size: 1em
         text-align: right
         margin-right: 0.5em
@@ -519,20 +529,15 @@ section.screenshots
     flex-direction: column
   &.wide .content
     grid-column: 2 / 5
-  i.close
-    display: flex
-    justify-content: center
-    align-items: center
+  svg
     width: 50px
     height: 50px
-    text-align: center
     background: $background-color-dark
     border-radius: 50%
     position: absolute
     top: 0
     right: 0
     margin: 1em
-    font-size: 3em
     opacity: 1
     transition: 0.2s ease-in-out
     z-index: 100

@@ -7,10 +7,8 @@ html(lang='en')
     link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
     link(rel="icon" href="/favicon.ico" type="image/x-icon")
     block css
-      link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
       link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
       link(rel='stylesheet', href='/css/style.css')
-    block js
       if ENV_DEVELOPMENT === true
         script(src='http://localhost:35729/livereload.js')
   body
@@ -18,18 +16,17 @@ html(lang='en')
     .frame.left
       .social
         a(href='https://discord.gg/mAXUwt', target='_blank')
-          i.fab.fa-discord
+          include includes/icons/discord.pug
         a(href='ts3server://no4commando.com?port=9987&nickname=Web%20Visitor')
-          i.fab.fa-teamspeak
+          include includes/icons/teamspeak.pug
         a(href='https://steamcommunity.com/groups/britishpathfinders', target='_blank')
-          i.fab.fa-steam-square
+          include includes/icons/steam.pug
     block content
     .frame.right
     include includes/footer.pug
     .frame.bottom
       div
+    block js
     script(src='/js/vendors/modernizr-custom.js')
-    script(src="/js/vendors/pug.min.js")
-    script(src="/js/templates.js")
 
   

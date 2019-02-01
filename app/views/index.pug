@@ -30,8 +30,10 @@ block content
           else
             p(style='text-align: center') No news!
         .controls
-          i.fas.fa-long-arrow-alt-left
-          i.fas.fa-long-arrow-alt-right
+          i
+            include includes/icons/long-arrow-left.pug
+          i
+            include includes/icons/long-arrow-right.pug
     section#about.about.lazy-bg
       .content
         h1 
@@ -93,16 +95,16 @@ block content
         p We require you to fullfil the following conditions in order to apply:
         ul
           li(data-aos='fade-up' data-aos-duration='500') 
-            i.fas.fa-microphone
+            include includes/icons/microphone.pug
             span You must have a working microphone;
           li(data-aos='fade-up' data-aos-duration='500') 
-            i.fas.fa-people-carry
+            include includes/icons/people-carry.pug
             span You must be willing to play in team;
           li(data-aos='fade-up' data-aos-duration='500') 
-            i.fas.fa-child 
+            include includes/icons/child.pug
             span You must be 16 years old or older;
           li(data-aos='fade-up' data-aos-duration='500') 
-            i.fas.fa-fire-alt
+            include includes/icons/fire.pug
             span You must have a mature and relaxed attitude.
         p If you'd like to submit your application you can do so by filling out 
           a.enlist-form(href='https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk' target="_blank") this
@@ -119,7 +121,11 @@ block content
             include includes/lazyscreen.pug
   #modal
     .content
+      
+block js
   script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
   script(src="/js/vendors/yall-2.2.1.min.js")
   script(src='/js/utils.js')
+  script(src="/js/vendors/pug.min.js")
+  script(src="/js/templates.js")
   script(src='/js/app.js')
