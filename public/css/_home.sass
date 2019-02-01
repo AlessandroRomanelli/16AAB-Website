@@ -58,8 +58,10 @@ main > .header
     background-position: center
     @media screen and (min-width: 1088px) and (max-width: 1680px)
       background-position: 0% 50%
-    @media screen and (min-width: 1680px)
+    @media screen and (min-width: 1680px) and (max-width: 1920px)
       background-position: 0 150%
+    @media screen and (min-width: 1920px)
+      background-position: 0 60%
     opacity: 0.66
     z-index: 0
   &::after

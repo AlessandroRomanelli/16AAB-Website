@@ -1048,10 +1048,8 @@ pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fyall-2.2.1.
 ;pug_debug_line = 128;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Futils.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 129;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fpug.min.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 130;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Ftemplates.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 131;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
+;pug_debug_line = 130;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fapp.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fmodernizr-custom.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"articles" in locals_for_with?locals_for_with.articles:typeof articles!=="undefined"?articles:undefined,"screenshots" in locals_for_with?locals_for_with.screenshots:typeof screenshots!=="undefined"?screenshots:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},

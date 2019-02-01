@@ -205,9 +205,12 @@ main > .header {
     @media screen and (min-width: 1088px) and (max-width: 1680px) {
       main > .header::before {
         background-position: 0% 50%; } }
-    @media screen and (min-width: 1680px) {
+    @media screen and (min-width: 1680px) and (max-width: 1920px) {
       main > .header::before {
         background-position: 0 150%; } }
+    @media screen and (min-width: 1920px) {
+      main > .header::before {
+        background-position: 0 60%; } }
   main > .header::after {
     background: linear-gradient(0deg, #0f171c -5%, transparent 20%, transparent 80%, #0f171c 105%);
     z-index: 0; }
