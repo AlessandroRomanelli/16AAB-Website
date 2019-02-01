@@ -1036,7 +1036,7 @@ main.news-edit form, main.campaign-edit form {
   main.news-edit form input[type='submit'], main.campaign-edit form input[type='submit'] {
     width: auto;
     margin: 0.5em 0 0 0; }
-  main.news-edit form input[type='text'], main.campaign-edit form input[type='text'] {
+  main.news-edit form input[name='title'], main.campaign-edit form input[name='title'] {
     text-transform: uppercase;
     margin-bottom: 0.5em; }
   main.news-edit form .fileUpload, main.campaign-edit form .fileUpload {
@@ -1100,7 +1100,8 @@ main.campaign-edit .image-select, main.campaign-edit .screenshots-select {
   display: flex;
   align-content: stretch;
   justify-content: center;
-  align-items: stretch; }
+  align-items: stretch;
+  flex-wrap: wrap; }
   main.campaign-edit .image-select .screenshot, main.campaign-edit .screenshots-select .screenshot {
     position: relative;
     display: inline-block;

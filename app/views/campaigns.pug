@@ -51,6 +51,13 @@ block content
               p This short description can be <strong>anything</strong> that you want!
             input(type='text' name='setting' placeholder='Timeframe of the campaign')
             input(type='text' name='region' placeholder='Region of the campaign')
+            div
+              label(for='status') Status:
+              select(name='status' value='planned')
+                option(value='active') Current
+                option(value='finished') Finished
+                option(value='planned') Planned
+                option(value='ongoing') Ongoing
             label(for='image') Choose a image cover for the campaign:
             .image-select
               each screenshot, index in screenshots
@@ -60,13 +67,6 @@ block content
                     source(srcset=screenshot.path type='image/jpeg')
                     img(src=screenshot.path)
                   input(type='radio' name='image' checked value=screenshot._id)
-            div
-              label(for='status') Status:
-              select(name='status' value='planned')
-                option(value='active') Current
-                option(value='finished') Finished
-                option(value='planned') Planned
-                option(value='ongoing') Ongoing
             label(for='screenshots') Select which screenshot to add to the campaign:
             .screenshots-select
               each screenshot, index in screenshots
