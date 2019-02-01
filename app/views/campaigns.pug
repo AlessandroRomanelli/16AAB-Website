@@ -87,4 +87,8 @@ block js
     each screenshot in campaign.screenshots
       script.
           screenshots.push('#{screenshot._id}')
+  else
+    script.
+      const screenshots = null
+      const image = null
   script(src='/js/campaigns.js')

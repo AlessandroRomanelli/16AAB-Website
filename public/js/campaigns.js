@@ -45,7 +45,6 @@
     }
 
     const body = {title, content, setting, region, image, screenshots, status}
-    console.log(body)
 
     const regEx = /<script[^>]*>/gm;
     if (regEx.test(content)) {

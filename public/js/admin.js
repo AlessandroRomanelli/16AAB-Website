@@ -62,7 +62,6 @@
     deleteBtn.addEventListener('click', (event) => {
       event.preventDefault()
       doJSONRequest('DELETE', '/screenshot/'+id, {}, {}).then(response => {
-        console.log(response)
         if (response.status === 200) {
           window.location.reload()
         }
@@ -81,7 +80,6 @@
     deleteBtn.addEventListener('click', (event) => {
       event.preventDefault()
       doJSONRequest('DELETE', '/campaign/'+id, {}, {}).then(response => {
-        console.log(response)
         if (response.status === 200) {
           window.location.reload()
         }

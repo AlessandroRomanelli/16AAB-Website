@@ -443,12 +443,12 @@ section
 section.screenshots, section.campaigns
   text-align: center
   .content
-    grid-column: 2 / 3
+    grid-column: 1 / -1
     & > .gallery
       display: flex
       flex-wrap: wrap
       align-content: stretch
-      justify-content: space-evenly
+      justify-content: center
       align-items: stretch
 
 section.screenshots
@@ -505,30 +505,85 @@ section.screenshots
         img
           border-top: 1px solid transparentize($primary, 0.5)
 
-section.campaigns
-  .campaign
-    padding: 0 1em
-    @media screen and (min-width: 768px)
-      min-width: 32%
-    .header
-      padding: 1em 0
-      h2
-        font-size: 1.75em
-        margin: 0
-        text-transform: uppercase
-        font-family: $title-font
-        font-weight: $title-font-regular
-      & > div
-        display: flex
-        justify-content: space-between
-    p
-      text-align: left
-
+.campaigns .campaign
+  padding: 0 1em
+  @media screen and (min-width: 1088px)
+    max-width: 500px
+  .header
+    padding: 1em 0 0.5em
+    h2
+      margin: 0
+      text-align: center
+      text-transform: uppercase
+      font-family: $title-font
+      font-weight: $title-font-regular
+    & > div
+      display: flex
+      justify-content: space-between
+      b
+        color: $primary
+  .gallery
+    display: flex
+    align-content: stretch
+    justify-content: center
+    align-items: stretch
+    flex-wrap: wrap
     .screenshot img
       max-height: 66px
+      opacity: 0.75
+      transition: 0.2s ease-in-out
+      &:hover
+        opacity: 1
+        cursor: pointer
 
-    .picture
-      max-height: 200px
+  .picture
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    border-radius: 4px
+    max-height: 200px
+    .status
+      position: absolute
+      top: 0
+      left: 5%
+      padding: 0.5em 1em
+      border-radius: 0 0 5px 5px
+      font-family: $title-font
+      box-shadow: 0 0 5px 1px $background-color-dark
+      background: $background-color-light
+      text-transform: uppercase
+
+  img
+    max-width: 100%
+  p
+    text-align: left
+
+  &.planned .picture
+    border: 2px solid $gray
+    .status
+      background: $gray
+      color: $background-color-dark
+
+  &.active .picture
+    border: 2px solid $green
+    .status
+      background: $green
+      color: $background-color-dark
+
+  &.ongoing .picture
+    border: 2px solid $yellow
+    .status
+      background: $yellow
+      color: $background-color-dark
+
+  &.finished .picture
+    border: 2px solid $darkgray
+    .status
+      background: $darkgray
+      color: $white
 
 
 #modal

@@ -8,7 +8,7 @@ var pug_has_own_property=Object.prototype.hasOwnProperty;
 var pug_match_html=/["&<>]/;
 function pug_rethrow(n,e,r,t){if(!(n instanceof Error))throw n;if(!("undefined"==typeof window&&e||t))throw n.message+=" on line "+r,n;try{t=t||require("fs").readFileSync(e,"utf8")}catch(e){pug_rethrow(n,null,r)}var i=3,a=t.split("\n"),o=Math.max(r-i,0),h=Math.min(a.length,r+i),i=a.slice(o,h).map(function(n,e){var t=e+o+1;return(t==r?"  > ":"    ")+t+"| "+n}).join("\n");throw n.path=e,n.message=(e||"Pug")+":"+r+"\n"+i+"\n\n"+n.message,n}
 ;return {
-"admin":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, articles, campaigns, screenshots, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
+"admin":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, articles, campaigns, screenshots, space, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003C!DOCTYPE html\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Chtml lang=\"en\"\u003E";
@@ -352,13 +352,21 @@ pug_html = pug_html + "\u003Cspan class=\"setting\"\u003E";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Time: ";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cspan class=\"region\"\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Region: ";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 8;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cdiv class=\"picture\"\u003E";
 ;pug_debug_line = 9;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
@@ -376,7 +384,51 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.status) ? "" : 
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp);
+pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 15;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv class=\"gallery\"\u003E";
+;pug_debug_line = 16;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+// iterate campaign.screenshots
+;(function(){
+  var $$obj = campaign.screenshots;
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index3 = 0, $$l = $$obj.length; pug_index3 < $$l; pug_index3++) {
+        var screenshot = $$obj[pug_index3];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index3 in $$obj) {
+      $$l++;
+      var screenshot = $$obj[pug_index3];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+    }
+  }
+}).call(this);
+
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = space) ? "" : pug_interp));
 ;pug_debug_line = 40;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cdiv class=\"controls\"\u003E";
 ;pug_debug_line = 41;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
@@ -386,7 +438,7 @@ pug_html = pug_html + "Edit\u003C\u002Fbutton\u003E";
 ;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cbutton\u003E";
 ;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
-pug_html = pug_html + "Delete\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "Delete\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
       }
   } else {
     var $$l = 0;
@@ -410,13 +462,21 @@ pug_html = pug_html + "\u003Cspan class=\"setting\"\u003E";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Time: ";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cspan class=\"region\"\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Region: ";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 8;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cdiv class=\"picture\"\u003E";
 ;pug_debug_line = 9;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
@@ -434,7 +494,51 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.status) ? "" : 
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp);
+pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 15;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv class=\"gallery\"\u003E";
+;pug_debug_line = 16;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+// iterate campaign.screenshots
+;(function(){
+  var $$obj = campaign.screenshots;
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index4 = 0, $$l = $$obj.length; pug_index4 < $$l; pug_index4++) {
+        var screenshot = $$obj[pug_index4];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index4 in $$obj) {
+      $$l++;
+      var screenshot = $$obj[pug_index4];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+    }
+  }
+}).call(this);
+
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = space) ? "" : pug_interp));
 ;pug_debug_line = 40;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cdiv class=\"controls\"\u003E";
 ;pug_debug_line = 41;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
@@ -444,7 +548,7 @@ pug_html = pug_html + "Edit\u003C\u002Fbutton\u003E";
 ;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
 pug_html = pug_html + "\u003Cbutton\u003E";
 ;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fadmin.pug";
-pug_html = pug_html + "Delete\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "Delete\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
     }
   }
 }).call(this);
@@ -493,7 +597,7 @@ pug_html = pug_html + "\u003Cdiv class=\"frame bottom\"\u003E";
 pug_html = pug_html + "\u003Cdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 ;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fmodernizr-custom.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"articles" in locals_for_with?locals_for_with.articles:typeof articles!=="undefined"?articles:undefined,"campaigns" in locals_for_with?locals_for_with.campaigns:typeof campaigns!=="undefined"?campaigns:undefined,"screenshots" in locals_for_with?locals_for_with.screenshots:typeof screenshots!=="undefined"?screenshots:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
+pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fmodernizr-custom.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"articles" in locals_for_with?locals_for_with.articles:typeof articles!=="undefined"?articles:undefined,"campaigns" in locals_for_with?locals_for_with.campaigns:typeof campaigns!=="undefined"?campaigns:undefined,"screenshots" in locals_for_with?locals_for_with.screenshots:typeof screenshots!=="undefined"?screenshots:undefined,"space" in locals_for_with?locals_for_with.space:typeof space!=="undefined"?space:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
 "campaigns":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, campaign, screenshots, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003C!DOCTYPE html\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
@@ -583,141 +687,263 @@ pug_html = pug_html + "\u003Cdiv id=\"editor\"\u003E";
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 15;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cdiv class=\"fileUpload\"\u003E";
+pug_html = pug_html + "\u003Cinput" + (" type=\"text\" name=\"setting\" placeholder=\"Timeframe of the campaign\""+pug_attr("value", campaign.setting, true, true)) + "\u003E";
 ;pug_debug_line = 16;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Clabel for=\"image\"\u003E";
-;pug_debug_line = 16;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "Upload a different image (Max 2MB):\u003C\u002Flabel\u003E";
+pug_html = pug_html + "\u003Cinput" + (" type=\"text\" name=\"region\" placeholder=\"Region of the campaign\""+pug_attr("value", campaign.region, true, true)) + "\u003E";
 ;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cinput type=\"file\" name=\"image\"\u003E";
+pug_html = pug_html + "\u003Clabel for=\"image\"\u003E";
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "Choose a image cover for the campaign:\u003C\u002Flabel\u003E";
 ;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cimg class=\"preview\" src=\"\"\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"image-select\"\u003E";
 ;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cinput type=\"submit\" value=\"Post News\"\u003E\u003C\u002Fform\u003E";
+// iterate screenshots
+;(function(){
+  var $$obj = screenshots;
+  if ('number' == typeof $$obj.length) {
+      for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
+        var screenshot = $$obj[index];
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 23;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 24;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E";
+;pug_debug_line = 25;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+if (campaign.image._id == screenshot._id) {
+;pug_debug_line = 26;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cinput" + (" type=\"radio\" name=\"image\""+pug_attr("checked", true, true, true)+pug_attr("value", screenshot._id, true, true)) + "\u003E";
 }
 else {
+;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cinput" + (" type=\"radio\" name=\"image\""+pug_attr("value", screenshot._id, true, true)) + "\u003E";
+}
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var index in $$obj) {
+      $$l++;
+      var screenshot = $$obj[index];
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
 ;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cform data-method=\"POST\" autocomplete=\"off\"\u003E";
+pug_html = pug_html + "\u003Cpicture\u003E";
 ;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cinput type=\"text\" name=\"title\" placeholder=\"Insert Title Here\"\u003E";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
 ;pug_debug_line = 23;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cdiv id=\"editor\"\u003E";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
 ;pug_debug_line = 24;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cp\u003E";
-;pug_debug_line = 24;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "Here is where you can write the content of the campaign.\u003C\u002Fp\u003E";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E";
 ;pug_debug_line = 25;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cp\u003E";
-;pug_debug_line = 25;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "This short description can be \u003Cstrong\u003Eanything\u003C\u002Fstrong\u003E that you want!\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E";
+if (campaign.image._id == screenshot._id) {
 ;pug_debug_line = 26;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cinput type=\"text\" name=\"setting\" placeholder=\"Timeframe of the campaign\"\u003E";
-;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cinput type=\"text\" name=\"region\" placeholder=\"Region of the campaign\"\u003E";
+pug_html = pug_html + "\u003Cinput" + (" type=\"radio\" name=\"image\""+pug_attr("checked", true, true, true)+pug_attr("value", screenshot._id, true, true)) + "\u003E";
+}
+else {
 ;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Clabel for=\"image\"\u003E";
-;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "Choose a image cover for the campaign:\u003C\u002Flabel\u003E";
+pug_html = pug_html + "\u003Cinput" + (" type=\"radio\" name=\"image\""+pug_attr("value", screenshot._id, true, true)) + "\u003E";
+}
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+    }
+  }
+}).call(this);
+
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cdiv class=\"image-select\"\u003E";
-;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-// iterate screenshots
-;(function(){
-  var $$obj = screenshots;
-  if ('number' == typeof $$obj.length) {
-      for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
-        var screenshot = $$obj[index];
-;pug_debug_line = 31;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cdiv class=\"screenshot\"\u003E";
-;pug_debug_line = 32;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cpicture\u003E";
-;pug_debug_line = 33;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
-;pug_debug_line = 34;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
-;pug_debug_line = 35;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E";
-;pug_debug_line = 36;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cinput" + (" type=\"radio\" name=\"image\""+pug_attr("checked", true, true, true)+pug_attr("value", screenshot._id, true, true)) + "\u003E\u003C\u002Fdiv\u003E";
-      }
-  } else {
-    var $$l = 0;
-    for (var index in $$obj) {
-      $$l++;
-      var screenshot = $$obj[index];
-;pug_debug_line = 31;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cdiv class=\"screenshot\"\u003E";
-;pug_debug_line = 32;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cpicture\u003E";
-;pug_debug_line = 33;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
-;pug_debug_line = 34;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
-;pug_debug_line = 35;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E";
-;pug_debug_line = 36;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cinput" + (" type=\"radio\" name=\"image\""+pug_attr("checked", true, true, true)+pug_attr("value", screenshot._id, true, true)) + "\u003E\u003C\u002Fdiv\u003E";
-    }
-  }
-}).call(this);
-
-pug_html = pug_html + "\u003C\u002Fdiv\u003E";
-;pug_debug_line = 37;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cdiv\u003E";
-;pug_debug_line = 38;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Clabel for=\"status\"\u003E";
-;pug_debug_line = 38;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "Status:\u003C\u002Flabel\u003E";
-;pug_debug_line = 39;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cselect name=\"status\" value=\"tbd\"\u003E";
-;pug_debug_line = 40;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Coption value=\"tbd\"\u003E";
-;pug_debug_line = 40;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "TBD\u003C\u002Foption\u003E";
-;pug_debug_line = 41;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 31;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cselect" + (" name=\"status\""+pug_attr("value", campaign.status, true, true)) + "\u003E";
+;pug_debug_line = 32;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Coption value=\"active\"\u003E";
-;pug_debug_line = 41;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 32;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "Current\u003C\u002Foption\u003E";
-;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 33;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Coption value=\"finished\"\u003E";
-;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 33;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "Finished\u003C\u002Foption\u003E";
-;pug_debug_line = 43;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 34;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Coption value=\"planned\"\u003E";
-;pug_debug_line = 43;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 34;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "Planned\u003C\u002Foption\u003E";
-;pug_debug_line = 44;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Coption value=\"paused\"\u003E";
-;pug_debug_line = 44;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "Paused\u003C\u002Foption\u003E";
-;pug_debug_line = 45;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 35;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Coption value=\"ongoing\"\u003E";
-;pug_debug_line = 45;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 35;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "Ongoing\u003C\u002Foption\u003E\u003C\u002Fselect\u003E\u003C\u002Fdiv\u003E";
-;pug_debug_line = 46;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 36;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Clabel for=\"screenshots\"\u003E";
-;pug_debug_line = 46;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 36;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "Select which screenshot to add to the campaign:\u003C\u002Flabel\u003E";
-;pug_debug_line = 47;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 37;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cdiv class=\"screenshots-select\"\u003E";
-;pug_debug_line = 48;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 38;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 // iterate screenshots
 ;(function(){
   var $$obj = screenshots;
   if ('number' == typeof $$obj.length) {
       for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
         var screenshot = $$obj[index];
-;pug_debug_line = 49;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cdiv class=\"screenshot\"\u003E";
-;pug_debug_line = 50;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 39;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 40;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cpicture\u003E";
-;pug_debug_line = 51;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 41;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
-;pug_debug_line = 52;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 43;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E";
+;pug_debug_line = 44;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cinput" + (" type=\"checkbox\""+pug_attr("value", screenshot._id, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var index in $$obj) {
+      $$l++;
+      var screenshot = $$obj[index];
+;pug_debug_line = 39;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 40;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 41;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 43;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E";
+;pug_debug_line = 44;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cinput" + (" type=\"checkbox\""+pug_attr("value", screenshot._id, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+    }
+  }
+}).call(this);
+
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+;pug_debug_line = 45;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cinput type=\"submit\" value=\"Post Campaign\"\u003E\u003C\u002Fform\u003E";
+}
+else {
+;pug_debug_line = 47;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cform data-method=\"POST\" autocomplete=\"off\"\u003E";
+;pug_debug_line = 48;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cinput type=\"text\" name=\"title\" placeholder=\"Insert Title Here\"\u003E";
+;pug_debug_line = 49;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv id=\"editor\"\u003E";
+;pug_debug_line = 50;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cp\u003E";
+;pug_debug_line = 50;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "Here is where you can write the content of the campaign.\u003C\u002Fp\u003E";
+;pug_debug_line = 51;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cp\u003E";
+;pug_debug_line = 51;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "This short description can be \u003Cstrong\u003Eanything\u003C\u002Fstrong\u003E that you want!\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 52;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cinput type=\"text\" name=\"setting\" placeholder=\"Timeframe of the campaign\"\u003E";
 ;pug_debug_line = 53;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
-pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E";
+pug_html = pug_html + "\u003Cinput type=\"text\" name=\"region\" placeholder=\"Region of the campaign\"\u003E";
 ;pug_debug_line = 54;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Clabel for=\"image\"\u003E";
+;pug_debug_line = 54;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "Choose a image cover for the campaign:\u003C\u002Flabel\u003E";
+;pug_debug_line = 55;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv class=\"image-select\"\u003E";
+;pug_debug_line = 56;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+// iterate screenshots
+;(function(){
+  var $$obj = screenshots;
+  if ('number' == typeof $$obj.length) {
+      for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
+        var screenshot = $$obj[index];
+;pug_debug_line = 57;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv class=\"screenshot\"\u003E";
+;pug_debug_line = 58;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 59;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 60;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 61;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E";
+;pug_debug_line = 62;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cinput" + (" type=\"radio\" name=\"image\""+pug_attr("checked", true, true, true)+pug_attr("value", screenshot._id, true, true)) + "\u003E\u003C\u002Fdiv\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var index in $$obj) {
+      $$l++;
+      var screenshot = $$obj[index];
+;pug_debug_line = 57;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv class=\"screenshot\"\u003E";
+;pug_debug_line = 58;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 59;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 60;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 61;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E";
+;pug_debug_line = 62;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cinput" + (" type=\"radio\" name=\"image\""+pug_attr("checked", true, true, true)+pug_attr("value", screenshot._id, true, true)) + "\u003E\u003C\u002Fdiv\u003E";
+    }
+  }
+}).call(this);
+
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+;pug_debug_line = 63;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv\u003E";
+;pug_debug_line = 64;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Clabel for=\"status\"\u003E";
+;pug_debug_line = 64;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "Status:\u003C\u002Flabel\u003E";
+;pug_debug_line = 65;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cselect name=\"status\" value=\"planned\"\u003E";
+;pug_debug_line = 66;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Coption value=\"active\"\u003E";
+;pug_debug_line = 66;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "Current\u003C\u002Foption\u003E";
+;pug_debug_line = 67;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Coption value=\"finished\"\u003E";
+;pug_debug_line = 67;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "Finished\u003C\u002Foption\u003E";
+;pug_debug_line = 68;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Coption value=\"planned\"\u003E";
+;pug_debug_line = 68;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "Planned\u003C\u002Foption\u003E";
+;pug_debug_line = 69;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Coption value=\"ongoing\"\u003E";
+;pug_debug_line = 69;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "Ongoing\u003C\u002Foption\u003E\u003C\u002Fselect\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 70;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Clabel for=\"screenshots\"\u003E";
+;pug_debug_line = 70;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "Select which screenshot to add to the campaign:\u003C\u002Flabel\u003E";
+;pug_debug_line = 71;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv class=\"screenshots-select\"\u003E";
+;pug_debug_line = 72;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+// iterate screenshots
+;(function(){
+  var $$obj = screenshots;
+  if ('number' == typeof $$obj.length) {
+      for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
+        var screenshot = $$obj[index];
+;pug_debug_line = 73;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cdiv class=\"screenshot\"\u003E";
+;pug_debug_line = 74;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 75;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 76;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 77;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E";
+;pug_debug_line = 78;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cinput" + (" type=\"checkbox\""+pug_attr("value", screenshot._id, true, true)) + "\u003E\u003C\u002Fdiv\u003E";
       }
   } else {
@@ -725,24 +951,24 @@ pug_html = pug_html + "\u003Cinput" + (" type=\"checkbox\""+pug_attr("value", sc
     for (var index in $$obj) {
       $$l++;
       var screenshot = $$obj[index];
-;pug_debug_line = 49;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 73;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cdiv class=\"screenshot\"\u003E";
-;pug_debug_line = 50;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 74;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cpicture\u003E";
-;pug_debug_line = 51;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 75;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
-;pug_debug_line = 52;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 76;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
-;pug_debug_line = 53;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 77;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E";
-;pug_debug_line = 54;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 78;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cinput" + (" type=\"checkbox\""+pug_attr("value", screenshot._id, true, true)) + "\u003E\u003C\u002Fdiv\u003E";
     }
   }
 }).call(this);
 
 pug_html = pug_html + "\u003C\u002Fdiv\u003E";
-;pug_debug_line = 55;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 79;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cinput type=\"submit\" value=\"Post Campaign\"\u003E\u003C\u002Fform\u003E";
 }
 pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003C\u002Fmain\u003E";
@@ -765,11 +991,69 @@ pug_html = pug_html + "\u003Cdiv class=\"frame bottom\"\u003E";
 ;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
-;pug_debug_line = 57;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 81;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cscript src=\"https:\u002F\u002Fcdn.quilljs.com\u002F1.3.6\u002Fquill.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 58;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 82;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Futils.js\"\u003E\u003C\u002Fscript\u003E";
-;pug_debug_line = 59;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+;pug_debug_line = 83;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+if (campaign) {
+;pug_debug_line = 84;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cscript\u003E";
+;pug_debug_line = 85;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "const screenshots = []";
+;pug_debug_line = 86;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\n";
+;pug_debug_line = 86;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "const image = '";
+;pug_debug_line = 86;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.image._id) ? "" : pug_interp));
+;pug_debug_line = 86;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "'\u003C\u002Fscript\u003E";
+;pug_debug_line = 87;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+// iterate campaign.screenshots
+;(function(){
+  var $$obj = campaign.screenshots;
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index4 = 0, $$l = $$obj.length; pug_index4 < $$l; pug_index4++) {
+        var screenshot = $$obj[pug_index4];
+;pug_debug_line = 88;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cscript\u003E";
+;pug_debug_line = 89;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "screenshots.push('";
+;pug_debug_line = 89;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot._id) ? "" : pug_interp));
+;pug_debug_line = 89;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "')\u003C\u002Fscript\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index4 in $$obj) {
+      $$l++;
+      var screenshot = $$obj[pug_index4];
+;pug_debug_line = 88;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cscript\u003E";
+;pug_debug_line = 89;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "screenshots.push('";
+;pug_debug_line = 89;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = screenshot._id) ? "" : pug_interp));
+;pug_debug_line = 89;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "')\u003C\u002Fscript\u003E";
+    }
+  }
+}).call(this);
+
+}
+else {
+;pug_debug_line = 91;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\u003Cscript\u003E";
+;pug_debug_line = 92;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "const screenshots = null";
+;pug_debug_line = 93;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "\n";
+;pug_debug_line = 93;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
+pug_html = pug_html + "const image = null\u003C\u002Fscript\u003E";
+}
+;pug_debug_line = 94;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fcampaigns.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fcampaigns.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fmodernizr-custom.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"campaign" in locals_for_with?locals_for_with.campaign:typeof campaign!=="undefined"?campaign:undefined,"screenshots" in locals_for_with?locals_for_with.screenshots:typeof screenshots!=="undefined"?screenshots:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
@@ -891,7 +1175,7 @@ pug_html = pug_html + "\u003Cdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E
 ;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 ;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fmodernizr-custom.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"error" in locals_for_with?locals_for_with.error:typeof error!=="undefined"?error:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
-"index":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, articles, campaigns, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
+"index":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, articles, campaigns, space, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003C!DOCTYPE html\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Chtml lang=\"en\"\u003E";
@@ -1402,13 +1686,21 @@ pug_html = pug_html + "\u003Cspan class=\"setting\"\u003E";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Time: ";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cspan class=\"region\"\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Region: ";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 8;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cdiv class=\"picture\"\u003E";
 ;pug_debug_line = 9;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
@@ -1426,7 +1718,55 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.status) ? "" : 
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 15;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv class=\"gallery\"\u003E";
+;pug_debug_line = 16;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+// iterate campaign.screenshots
+;(function(){
+  var $$obj = campaign.screenshots;
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index2 = 0, $$l = $$obj.length; pug_index2 < $$l; pug_index2++) {
+        var screenshot = $$obj[pug_index2];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index2 in $$obj) {
+      $$l++;
+      var screenshot = $$obj[pug_index2];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+    }
+  }
+}).call(this);
+
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = space) ? "" : pug_interp));
+;pug_debug_line = 122;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
+pug_html = pug_html + "\u003Ca" + (pug_attr("href", '/campaigns/'+campaign._id, true, true)) + "\u003E";
+;pug_debug_line = 122;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
+pug_html = pug_html + "Learn More\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
       }
   } else {
     var $$l = 0;
@@ -1450,13 +1790,21 @@ pug_html = pug_html + "\u003Cspan class=\"setting\"\u003E";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Time: ";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cspan class=\"region\"\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Region: ";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 8;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cdiv class=\"picture\"\u003E";
 ;pug_debug_line = 9;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
@@ -1474,15 +1822,63 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.status) ? "" : 
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 15;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv class=\"gallery\"\u003E";
+;pug_debug_line = 16;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+// iterate campaign.screenshots
+;(function(){
+  var $$obj = campaign.screenshots;
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index3 = 0, $$l = $$obj.length; pug_index3 < $$l; pug_index3++) {
+        var screenshot = $$obj[pug_index3];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index3 in $$obj) {
+      $$l++;
+      var screenshot = $$obj[pug_index3];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, true)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, true)+" type=\"image\u002Fwebp\"") + "\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, true)+" type=\"image\u002Fjpeg\"") + "\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, true)) + "\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+    }
+  }
+}).call(this);
+
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = space) ? "" : pug_interp));
+;pug_debug_line = 122;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
+pug_html = pug_html + "\u003Ca" + (pug_attr("href", '/campaigns/'+campaign._id, true, true)) + "\u003E";
+;pug_debug_line = 122;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
+pug_html = pug_html + "Learn More\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
     }
   }
 }).call(this);
 
 pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003C\u002Fmain\u003E";
-;pug_debug_line = 129;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
-pug_html = pug_html + "\u003Cdiv id=\"modal\"\u003E";
 ;pug_debug_line = 130;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv id=\"modal\"\u003E";
+;pug_debug_line = 131;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv class=\"content\"\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 25;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cdiv class=\"frame right\"\u003E\u003C\u002Fdiv\u003E";
@@ -1503,18 +1899,18 @@ pug_html = pug_html + "\u003Cdiv class=\"frame bottom\"\u003E";
 ;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003Cdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
-;pug_debug_line = 133;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
-pug_html = pug_html + "\u003Cscript src=\"https:\u002F\u002Funpkg.com\u002Faos@2.3.1\u002Fdist\u002Faos.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 134;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fyall-2.2.1.min.js\"\u003E\u003C\u002Fscript\u003E";
+pug_html = pug_html + "\u003Cscript src=\"https:\u002F\u002Funpkg.com\u002Faos@2.3.1\u002Fdist\u002Faos.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 135;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Futils.js\"\u003E\u003C\u002Fscript\u003E";
+pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fyall-2.2.1.min.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 136;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Ftemplates.js\"\u003E\u003C\u002Fscript\u003E";
+pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Futils.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 137;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
+pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Ftemplates.js\"\u003E\u003C\u002Fscript\u003E";
+;pug_debug_line = 138;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fapp.js\"\u003E\u003C\u002Fscript\u003E";
 ;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
-pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fmodernizr-custom.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"articles" in locals_for_with?locals_for_with.articles:typeof articles!=="undefined"?articles:undefined,"campaigns" in locals_for_with?locals_for_with.campaigns:typeof campaigns!=="undefined"?campaigns:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
+pug_html = pug_html + "\u003Cscript src=\"\u002Fjs\u002Fvendors\u002Fmodernizr-custom.js\"\u003E\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"ENV_DEVELOPMENT" in locals_for_with?locals_for_with.ENV_DEVELOPMENT:typeof ENV_DEVELOPMENT!=="undefined"?ENV_DEVELOPMENT:undefined,"articles" in locals_for_with?locals_for_with.articles:typeof articles!=="undefined"?articles:undefined,"campaigns" in locals_for_with?locals_for_with.campaigns:typeof campaigns!=="undefined"?campaigns:undefined,"space" in locals_for_with?locals_for_with.space:typeof space!=="undefined"?space:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"year" in locals_for_with?locals_for_with.year:typeof year!=="undefined"?year:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
 "layout":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (ENV_DEVELOPMENT, title, year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
 pug_html = pug_html + "\u003C!DOCTYPE html\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Flayout.pug";
@@ -2057,7 +2453,7 @@ pug_html = pug_html + " \u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E";
 pug_html = pug_html + "\u003Cdiv class=\"main\"\u003E";
 ;pug_debug_line = 9;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Farticle.pug";
 pug_html = pug_html + (null == (pug_interp = news.content) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Farticle\u003E";}.call(this,"news" in locals_for_with?locals_for_with.news:typeof news!=="undefined"?news:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
-"campaign":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (campaign) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+"campaign":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (campaign, space) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cdiv" + (pug_attr("class", pug_classes(["campaign",campaign.status], [false,true]), false, false)+pug_attr("data-id", campaign._id, true, false)+pug_attr("data-timestamp", campaign.timestamp, true, false)+pug_attr("data-status", campaign.status, true, false)) + "\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cdiv class=\"description\"\u003E";
@@ -2074,13 +2470,21 @@ pug_html = pug_html + "\u003Cspan class=\"setting\"\u003E";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Time: ";
 ;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.setting) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cspan class=\"region\"\u003E";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "Region: ";
 ;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003Cb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.region) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+;pug_debug_line = 7;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 8;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cdiv class=\"picture\"\u003E";
 ;pug_debug_line = 9;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
@@ -2098,7 +2502,51 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = campaign.status) ? "" : 
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
-pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";}.call(this,"campaign" in locals_for_with?locals_for_with.campaign:typeof campaign!=="undefined"?campaign:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
+pug_html = pug_html + (null == (pug_interp = campaign.content) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 15;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv class=\"gallery\"\u003E";
+;pug_debug_line = 16;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+// iterate campaign.screenshots
+;(function(){
+  var $$obj = campaign.screenshots;
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index0 = 0, $$l = $$obj.length; pug_index0 < $$l; pug_index0++) {
+        var screenshot = $$obj[pug_index0];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, false)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, false)+" type=\"image\u002Fwebp\"") + "\u002F\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, false)+" type=\"image\u002Fjpeg\"") + "\u002F\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, false)) + "\u002F\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index0 in $$obj) {
+      $$l++;
+      var screenshot = $$obj[pug_index0];
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv" + (" class=\"screenshot\""+pug_attr("data-id", screenshot._id, true, false)) + "\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cpicture\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.pathMin, true, false)+" type=\"image\u002Fwebp\"") + "\u002F\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Csource" + (pug_attr("srcset", screenshot.path, true, false)+" type=\"image\u002Fjpeg\"") + "\u002F\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cimg" + (pug_attr("src", screenshot.path, true, false)) + "\u002F\u003E\u003C\u002Fpicture\u003E\u003C\u002Fdiv\u003E";
+    }
+  }
+}).call(this);
+
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + "\u003Cdiv\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Fcampaign.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = space) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";}.call(this,"campaign" in locals_for_with?locals_for_with.campaign:typeof campaign!=="undefined"?campaign:undefined,"space" in locals_for_with?locals_for_with.space:typeof space!=="undefined"?space:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;},
 "footer":function (locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (year) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Ffooter.pug";
 pug_html = pug_html + "\u003Cfooter\u003E";
 ;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Falessandroromanelli\u002FDocuments\u002FGitHub\u002F16AAB\u002Fapp\u002Fviews\u002Fincludes\u002Ffooter.pug";

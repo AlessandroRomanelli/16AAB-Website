@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
   articles.sort((a,b) => {
     return b.timestamp - a.timestamp
   })
-  console.log(campaigns)
   res.render('index', {
     year: new Date().getFullYear(),
     title: config.app.title,

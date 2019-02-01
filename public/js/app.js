@@ -168,7 +168,6 @@
   const modal = document.getElementById('modal')
   document.body.onclick = (event) => {
     document.body.style.overflow = 'auto'
-    console.log(event.target)
     const content = modal.querySelector('.content')
     if (!(content.contains(event.target))) {
       modal.classList.remove('show')
@@ -183,7 +182,7 @@
     handleContent(article)
   })
 
-  const screenshots = document.querySelectorAll('.screenshots .screenshot')
+  const screenshots = document.querySelectorAll('.campaigns .screenshot')
   screenshots.forEach(screenshot => {
     screenshot.addEventListener('click', (event) => {
       const id = screenshot.dataset.id

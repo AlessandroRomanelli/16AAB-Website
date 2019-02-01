@@ -615,12 +615,12 @@ section {
 section.screenshots, section.campaigns {
   text-align: center; }
   section.screenshots .content, section.campaigns .content {
-    grid-column: 2 / 3; }
+    grid-column: 1 / -1; }
     section.screenshots .content > .gallery, section.campaigns .content > .gallery {
       display: flex;
       flex-wrap: wrap;
       align-content: stretch;
-      justify-content: space-evenly;
+      justify-content: center;
       align-items: stretch; }
 
 section.screenshots .screenshot {
@@ -673,28 +673,80 @@ section.screenshots .screenshot {
       section.screenshots .screenshot:hover .description img {
         border-top: 1px solid rgba(207, 0, 5, 0.5); }
 
-section.campaigns .campaign {
+.campaigns .campaign {
   padding: 0 1em; }
-  @media screen and (min-width: 768px) {
-    section.campaigns .campaign {
-      min-width: 32%; } }
-  section.campaigns .campaign .header {
-    padding: 1em 0; }
-    section.campaigns .campaign .header h2 {
-      font-size: 1.75em;
+  @media screen and (min-width: 1088px) {
+    .campaigns .campaign {
+      max-width: 500px; } }
+  .campaigns .campaign .header {
+    padding: 1em 0 0.5em; }
+    .campaigns .campaign .header h2 {
       margin: 0;
+      text-align: center;
       text-transform: uppercase;
       font-family: "Raleway", sans-serif;
       font-weight: 500; }
-    section.campaigns .campaign .header > div {
+    .campaigns .campaign .header > div {
       display: flex;
       justify-content: space-between; }
-  section.campaigns .campaign p {
-    text-align: left; }
-  section.campaigns .campaign .screenshot img {
-    max-height: 66px; }
-  section.campaigns .campaign .picture {
+      .campaigns .campaign .header > div b {
+        color: #cf0005; }
+  .campaigns .campaign .gallery {
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap; }
+    .campaigns .campaign .gallery .screenshot img {
+      max-height: 66px;
+      opacity: 0.75;
+      transition: 0.2s ease-in-out; }
+      .campaigns .campaign .gallery .screenshot img:hover {
+        opacity: 1;
+        cursor: pointer; }
+  .campaigns .campaign .picture {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
     max-height: 200px; }
+    .campaigns .campaign .picture .status {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      padding: 0.5em 1em;
+      border-radius: 0 0 5px 5px;
+      font-family: "Raleway", sans-serif;
+      box-shadow: 0 0 5px 1px #0f171c;
+      background: #131c23;
+      text-transform: uppercase; }
+  .campaigns .campaign img {
+    max-width: 100%; }
+  .campaigns .campaign p {
+    text-align: left; }
+  .campaigns .campaign.planned .picture {
+    border: 2px solid darkgray; }
+    .campaigns .campaign.planned .picture .status {
+      background: darkgray;
+      color: #0f171c; }
+  .campaigns .campaign.active .picture {
+    border: 2px solid #39c327; }
+    .campaigns .campaign.active .picture .status {
+      background: #39c327;
+      color: #0f171c; }
+  .campaigns .campaign.ongoing .picture {
+    border: 2px solid #c3b127; }
+    .campaigns .campaign.ongoing .picture .status {
+      background: #c3b127;
+      color: #0f171c; }
+  .campaigns .campaign.finished .picture {
+    border: 2px solid #444; }
+    .campaigns .campaign.finished .picture .status {
+      background: #444;
+      color: #FEFDFF; }
 
 #modal {
   overflow-y: scroll;
@@ -1043,75 +1095,6 @@ main.admin-area .add-element {
     transition: 0.2s ease-in-out; }
     main.admin-area .add-element a:hover {
       filter: drop-shadow(0 0 5px rgba(254, 253, 255, 0.34)); }
-
-.campaigns .campaign {
-  width: 100%;
-  padding: 0 1em; }
-  @media screen and (min-width: 768px) {
-    .campaigns .campaign {
-      flex: 0 1 50%; } }
-  .campaigns .campaign .header {
-    padding: 1em 0 0.5em; }
-    .campaigns .campaign .header h2 {
-      margin: 0;
-      text-align: center;
-      text-transform: uppercase;
-      font-family: "Raleway", sans-serif;
-      font-weight: 500; }
-    .campaigns .campaign .header > div {
-      display: flex;
-      justify-content: space-between; }
-  .campaigns .campaign .gallery {
-    display: flex;
-    align-content: stretch;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap; }
-    .campaigns .campaign .gallery .screenshot img {
-      max-height: 66px; }
-  .campaigns .campaign .picture {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 4px;
-    max-height: 200px; }
-    .campaigns .campaign .picture .status {
-      position: absolute;
-      top: 0;
-      left: 5%;
-      padding: 0.5em 1em;
-      border-radius: 0 0 5px 5px;
-      font-family: "Raleway", sans-serif;
-      box-shadow: 0 0 5px 1px #0f171c;
-      background: #131c23;
-      text-transform: uppercase; }
-  .campaigns .campaign img {
-    max-width: 100%; }
-  .campaigns .campaign p {
-    text-align: left; }
-  .campaigns .campaign.planned .picture {
-    border: 2px solid darkgray; }
-    .campaigns .campaign.planned .picture .status {
-      background: darkgray;
-      color: #0f171c; }
-  .campaigns .campaign.active .picture {
-    border: 2px solid #39c327; }
-    .campaigns .campaign.active .picture .status {
-      background: #39c327;
-      color: #0f171c; }
-  .campaigns .campaign.ongoing .picture {
-    border: 2px solid #c3b127; }
-    .campaigns .campaign.ongoing .picture .status {
-      background: #c3b127;
-      color: #0f171c; }
-  .campaigns .campaign.finished .picture {
-    border: 2px solid #444; }
-    .campaigns .campaign.finished .picture .status {
-      background: #444;
-      color: #FEFDFF; }
 
 main.campaign-edit .image-select, main.campaign-edit .screenshots-select {
   display: flex;
