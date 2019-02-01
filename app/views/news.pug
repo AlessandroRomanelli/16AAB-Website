@@ -1,7 +1,9 @@
 extends layout
 
-block content
+block css
   link(href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet")
+
+block content
   main.news-edit
     section
       .content
@@ -26,6 +28,8 @@ block content
               input(type='file' name='image')
               img.preview(src='')
             input(type='submit' value='Post News')
+
+block js
   script(src="https://cdn.quilljs.com/1.3.6/quill.js")
   script(src='/js/utils.js')
   script(src='/js/news.js')

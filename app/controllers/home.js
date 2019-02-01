@@ -3,7 +3,7 @@ const config = require('../../config/config');
 
 const router = express.Router();
 
-const { news, images } = require('./utils/data');
+const { news, images, campaigns } = require('./utils/data');
 
 
 module.exports = (app) => {
@@ -16,10 +16,12 @@ router.get('/', (req, res) => {
   articles.sort((a,b) => {
     return b.timestamp - a.timestamp
   })
+  console.log(campaigns)
   res.render('index', {
     year: new Date().getFullYear(),
     title: config.app.title,
     articles,
-    screenshots
+    screenshots,
+    campaigns: Object.values(campaigns)
   });
 });

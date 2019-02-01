@@ -1,0 +1,90 @@
+extends layout
+
+block css
+  link(href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet")
+    
+block content
+  main.campaign-edit
+    section
+      .content
+        h1 Add Campaign
+        if campaign
+          form(data-method='PUT', data-id=campaign._id autocomplete='off')
+            input(type='text' name='title' value=campaign.title)
+            #editor !{campaign.content}
+            input(type='text' name='setting' placeholder='Timeframe of the campaign' value=campaign.setting)
+            input(type='text' name='region' placeholder='Region of the campaign' value=campaign.region)
+            label(for='image') Choose a image cover for the campaign:
+            .image-select
+              each screenshot, index in screenshots
+                .screenshot(data-id=screenshot._id)
+                  picture
+                    source(srcset=screenshot.pathMin type='image/webp')
+                    source(srcset=screenshot.path type='image/jpeg')
+                    img(src=screenshot.path)
+                  if campaign.image._id == screenshot._id
+                    input(type='radio' name='image' checked value=screenshot._id)
+                  else
+                    input(type='radio' name='image' value=screenshot._id)
+            div
+              label(for='status') Status:
+              select(name='status' value=campaign.status)
+                option(value='active') Current
+                option(value='finished') Finished
+                option(value='planned') Planned
+                option(value='ongoing') Ongoing
+            label(for='screenshots') Select which screenshot to add to the campaign:
+            .screenshots-select
+              each screenshot, index in screenshots
+                .screenshot(data-id=screenshot._id)
+                  picture
+                    source(srcset=screenshot.pathMin type='image/webp')
+                    source(srcset=screenshot.path type='image/jpeg')
+                    img(src=screenshot.path)
+                    input(type='checkbox' value=screenshot._id)
+            input(type='submit' value='Post Campaign')
+        else
+          form(data-method='POST' autocomplete='off')
+            input(type='text' name='title' placeholder='Insert Title Here')
+            #editor
+              p Here is where you can write the content of the campaign.
+              p This short description can be <strong>anything</strong> that you want!
+            input(type='text' name='setting' placeholder='Timeframe of the campaign')
+            input(type='text' name='region' placeholder='Region of the campaign')
+            label(for='image') Choose a image cover for the campaign:
+            .image-select
+              each screenshot, index in screenshots
+                .screenshot
+                  picture
+                    source(srcset=screenshot.pathMin type='image/webp')
+                    source(srcset=screenshot.path type='image/jpeg')
+                    img(src=screenshot.path)
+                  input(type='radio' name='image' checked value=screenshot._id)
+            div
+              label(for='status') Status:
+              select(name='status' value='planned')
+                option(value='active') Current
+                option(value='finished') Finished
+                option(value='planned') Planned
+                option(value='ongoing') Ongoing
+            label(for='screenshots') Select which screenshot to add to the campaign:
+            .screenshots-select
+              each screenshot, index in screenshots
+                .screenshot
+                  picture
+                    source(srcset=screenshot.pathMin type='image/webp')
+                    source(srcset=screenshot.path type='image/jpeg')
+                    img(src=screenshot.path)
+                  input(type='checkbox' value=screenshot._id)
+            input(type='submit' value='Post Campaign')
+block js
+  script(src="https://cdn.quilljs.com/1.3.6/quill.js")
+  script(src='/js/utils.js')
+  if campaign
+    script.
+      const screenshots = []
+      const image = '#{campaign.image._id}'
+    each screenshot in campaign.screenshots
+      script.
+          screenshots.push('#{screenshot._id}')
+  script(src='/js/campaigns.js')

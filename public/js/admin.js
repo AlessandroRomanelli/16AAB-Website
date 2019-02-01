@@ -70,6 +70,25 @@
     })
   }
 
+  handleCampaign = (campaign) => {
+    const id = campaign.dataset.id
+    const editBtn = campaign.querySelector('button:first-child')
+    editBtn.addEventListener('click', (event) => {
+      event.preventDefault()
+      window.location.pathname = '/campaign/'+id+'/edit'
+    })
+    const deleteBtn = campaign.querySelector('button:last-child')
+    deleteBtn.addEventListener('click', (event) => {
+      event.preventDefault()
+      doJSONRequest('DELETE', '/campaign/'+id, {}, {}).then(response => {
+        console.log(response)
+        if (response.status === 200) {
+          window.location.reload()
+        }
+      })
+    })
+  }
+
 
   const displayError = (message) => {
     alert(message)
@@ -84,6 +103,10 @@
     const screenshots = document.querySelectorAll('.screenshots .screenshot')
     screenshots.forEach(screenshot => {
       handleImage(screenshot)
+    })
+    const campaigns = document.querySelectorAll('.campaigns .campaign')
+    campaigns.forEach(campaign => {
+      handleCampaign(campaign)
     })
 
   }

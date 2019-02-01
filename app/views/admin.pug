@@ -14,7 +14,7 @@ block content
                   button Delete
         else
           p At the moment there aren't any news to display.
-        .add-news
+        .add-element
           a(href='/news/add') Add News
     section
       .content
@@ -28,8 +28,22 @@ block content
                   button Delete
         else
           p At the moment there aren't any screenshots posted.
-        .add-screenshot
+        .add-element
           a(href='/screenshot/add') Add Screenshot
+    section
+      .content
+        h1 Campaigns
+        if campaigns.length > 0
+          .campaigns
+            each campaign, index in campaigns
+              include includes/campaign.pug
+                .controls
+                  button Edit
+                  button Delete
+        else
+          p At the moment there aren't any campaigns posted.
+        .add-element
+          a(href='/campaign/add') Add Campaign
   script(src="/js/vendors/yall-2.2.1.min.js")
   script.
     document.addEventListener("DOMContentLoaded", yall);

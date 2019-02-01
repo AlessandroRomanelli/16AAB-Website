@@ -73,6 +73,15 @@ body {
       grid-template-areas: ". content content content ." ". footer footer footer .";
       grid-template-columns: 2rem 1fr 1024px 1fr 2rem; } }
 
+button {
+  background: #FEFDFF;
+  border-radius: 2px;
+  border: none;
+  margin: 0.5em; }
+
+picture img {
+  vertical-align: middle; }
+
 nav.navbar {
   top: 0;
   height: 50px;
@@ -603,65 +612,89 @@ section {
 .webp .joining.lazy-bg-loaded::before {
   background-image: url("/img/joinpara.webp"); }
 
-section.screenshots {
+section.screenshots, section.campaigns {
   text-align: center; }
-  section.screenshots .content {
-    grid-column: -1 / 1; }
-  section.screenshots .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: center;
-    align-items: stretch; }
-  section.screenshots .screenshot {
-    position: relative;
-    display: flex;
-    opacity: 0.75;
-    transition: 0.2s ease-in-out;
-    overflow: hidden;
-    border: 1px solid transparent; }
-    section.screenshots .screenshot .description {
-      width: calc(100% - 0.5em);
-      right: 0;
-      position: absolute;
-      bottom: 0;
-      transform: translateY(100%);
-      opacity: 1;
-      background: transparent;
-      transition: 0.2s ease-in-out; }
-      section.screenshots .screenshot .description .header {
-        text-transform: uppercase;
-        font-family: "Raleway", sans-serif; }
-      section.screenshots .screenshot .description p {
-        display: none; }
-    section.screenshots .screenshot img {
-      max-width: 100%;
-      max-height: 210px;
-      border: 1px solid transparent;
-      transition: 0.2s ease-in-out; }
-    section.screenshots .screenshot::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 0;
-      background: #cf0005;
-      z-index: 100;
-      transition: 0.2s ease-in-out; }
-    section.screenshots .screenshot:hover {
-      opacity: 1;
-      cursor: pointer; }
-      section.screenshots .screenshot:hover::before {
-        width: 0.5em; }
-      section.screenshots .screenshot:hover img {
-        position: relative;
-        border: 1px solid rgba(254, 253, 255, 0.5); }
-      section.screenshots .screenshot:hover .description {
-        transform: translateY(0);
-        background: rgba(10, 16, 13, 0.5); }
-        section.screenshots .screenshot:hover .description img {
-          border-top: 1px solid rgba(207, 0, 5, 0.5); }
+  section.screenshots .content, section.campaigns .content {
+    grid-column: 2 / 3; }
+    section.screenshots .content > .gallery, section.campaigns .content > .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: stretch;
+      justify-content: space-evenly;
+      align-items: stretch; }
+
+section.screenshots .screenshot {
+  position: relative;
+  display: flex;
+  opacity: 0.75;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+  border: 1px solid transparent; }
+  section.screenshots .screenshot .description {
+    width: calc(100% - 0.5em);
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    opacity: 1;
+    background: transparent;
+    transition: 0.2s ease-in-out; }
+    section.screenshots .screenshot .description .header {
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif; }
+    section.screenshots .screenshot .description p {
+      display: none; }
+  section.screenshots .screenshot img {
+    max-width: 100%;
+    max-height: 210px;
+    border: 1px solid transparent;
+    transition: 0.2s ease-in-out; }
+  section.screenshots .screenshot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #cf0005;
+    z-index: 100;
+    transition: 0.2s ease-in-out; }
+  section.screenshots .screenshot:hover {
+    opacity: 1;
+    cursor: pointer; }
+    section.screenshots .screenshot:hover::before {
+      width: 0.5em; }
+    section.screenshots .screenshot:hover img {
+      position: relative;
+      border: 1px solid rgba(254, 253, 255, 0.5); }
+    section.screenshots .screenshot:hover .description {
+      transform: translateY(0);
+      background: rgba(10, 16, 13, 0.5); }
+      section.screenshots .screenshot:hover .description img {
+        border-top: 1px solid rgba(207, 0, 5, 0.5); }
+
+section.campaigns .campaign {
+  padding: 0 1em; }
+  @media screen and (min-width: 768px) {
+    section.campaigns .campaign {
+      min-width: 32%; } }
+  section.campaigns .campaign .header {
+    padding: 1em 0; }
+    section.campaigns .campaign .header h2 {
+      font-size: 1.75em;
+      margin: 0;
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
+      font-weight: 500; }
+    section.campaigns .campaign .header > div {
+      display: flex;
+      justify-content: space-between; }
+  section.campaigns .campaign p {
+    text-align: left; }
+  section.campaigns .campaign .screenshot img {
+    max-height: 66px; }
+  section.campaigns .campaign .picture {
+    max-height: 200px; }
 
 #modal {
   overflow-y: scroll;
@@ -943,23 +976,23 @@ main.screenshot-edit form {
     display: flex;
     justify-content: center; }
 
-main.news-edit form {
+main.news-edit form, main.campaign-edit form {
   width: 100%; }
-  main.news-edit form input {
+  main.news-edit form input, main.campaign-edit form input {
     outline: 0;
     width: 100%; }
-  main.news-edit form input[type='submit'] {
+  main.news-edit form input[type='submit'], main.campaign-edit form input[type='submit'] {
     width: auto;
     margin: 0.5em 0 0 0; }
-  main.news-edit form input[type='text'] {
+  main.news-edit form input[type='text'], main.campaign-edit form input[type='text'] {
     text-transform: uppercase;
     margin-bottom: 0.5em; }
-  main.news-edit form .fileUpload {
+  main.news-edit form .fileUpload, main.campaign-edit form .fileUpload {
     margin-top: 0.5em;
     position: relative; }
-    main.news-edit form .fileUpload input[type='file'] {
+    main.news-edit form .fileUpload input[type='file'], main.campaign-edit form .fileUpload input[type='file'] {
       display: inline; }
-    main.news-edit form .fileUpload img.preview {
+    main.news-edit form .fileUpload img.preview, main.campaign-edit form .fileUpload img.preview {
       position: absolute;
       max-width: 300px;
       left: 0;
@@ -973,36 +1006,125 @@ main.admin-area .news {
   main.admin-area .news article.carousel-item {
     flex: 1 0 50%; }
 
-main.admin-area .screenshots {
+main.admin-area .screenshots, main.admin-area .campaigns {
   display: flex;
   align-content: stretch;
   align-items: stretch;
   justify-content: center;
   flex-wrap: wrap; }
-  main.admin-area .screenshots .screenshot {
-    position: relative;
-    text-align: center; }
-  main.admin-area .screenshots .description {
-    position: absolute;
-    bottom: 0;
-    width: 100%; }
-    main.admin-area .screenshots .description p {
-      display: none; }
-    main.admin-area .screenshots .description h2 {
-      text-transform: uppercase; }
-  main.admin-area .screenshots img {
-    max-height: 200px; }
 
-main.admin-area .add-news, main.admin-area .add-screenshot {
+main.admin-area .screenshots .screenshot {
+  position: relative;
+  text-align: center; }
+
+main.admin-area .screenshots .description {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  main.admin-area .screenshots .description p {
+    display: none; }
+  main.admin-area .screenshots .description h2 {
+    margin: 0;
+    text-transform: uppercase; }
+
+main.admin-area .screenshots img {
+  max-height: 200px; }
+
+main.admin-area .add-element {
   margin-top: 1em;
   display: flex;
   justify-content: center; }
-  main.admin-area .add-news a, main.admin-area .add-screenshot a {
+  main.admin-area .add-element a {
     padding: 0.5em;
     background: #FEFDFF;
     color: #0A100D;
     border-radius: 0.25em;
     text-transform: uppercase;
     transition: 0.2s ease-in-out; }
-    main.admin-area .add-news a:hover, main.admin-area .add-screenshot a:hover {
+    main.admin-area .add-element a:hover {
       filter: drop-shadow(0 0 5px rgba(254, 253, 255, 0.34)); }
+
+.campaigns .campaign {
+  width: 100%;
+  padding: 0 1em; }
+  @media screen and (min-width: 768px) {
+    .campaigns .campaign {
+      flex: 0 1 50%; } }
+  .campaigns .campaign .header {
+    padding: 1em 0 0.5em; }
+    .campaigns .campaign .header h2 {
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
+      font-weight: 500; }
+    .campaigns .campaign .header > div {
+      display: flex;
+      justify-content: space-between; }
+  .campaigns .campaign .gallery {
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap; }
+    .campaigns .campaign .gallery .screenshot img {
+      max-height: 66px; }
+  .campaigns .campaign .picture {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    max-height: 200px; }
+    .campaigns .campaign .picture .status {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      padding: 0.5em 1em;
+      border-radius: 0 0 5px 5px;
+      font-family: "Raleway", sans-serif;
+      box-shadow: 0 0 5px 1px #0f171c;
+      background: #131c23;
+      text-transform: uppercase; }
+  .campaigns .campaign img {
+    max-width: 100%; }
+  .campaigns .campaign p {
+    text-align: left; }
+  .campaigns .campaign.planned .picture {
+    border: 2px solid darkgray; }
+    .campaigns .campaign.planned .picture .status {
+      background: darkgray;
+      color: #0f171c; }
+  .campaigns .campaign.active .picture {
+    border: 2px solid #39c327; }
+    .campaigns .campaign.active .picture .status {
+      background: #39c327;
+      color: #0f171c; }
+  .campaigns .campaign.ongoing .picture {
+    border: 2px solid #c3b127; }
+    .campaigns .campaign.ongoing .picture .status {
+      background: #c3b127;
+      color: #0f171c; }
+  .campaigns .campaign.finished .picture {
+    border: 2px solid #444; }
+    .campaigns .campaign.finished .picture .status {
+      background: #444;
+      color: #FEFDFF; }
+
+main.campaign-edit .image-select, main.campaign-edit .screenshots-select {
+  display: flex;
+  align-content: stretch;
+  justify-content: center;
+  align-items: stretch; }
+  main.campaign-edit .image-select .screenshot, main.campaign-edit .screenshots-select .screenshot {
+    position: relative;
+    display: inline-block;
+    max-height: 75px; }
+    main.campaign-edit .image-select .screenshot input, main.campaign-edit .screenshots-select .screenshot input {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+    main.campaign-edit .image-select .screenshot img, main.campaign-edit .screenshots-select .screenshot img {
+      max-height: 100%; }

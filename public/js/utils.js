@@ -1,3 +1,7 @@
+const displayError = (message) => {
+  alert(message)
+}
+
 function doFetchRequest(method, url, headers, body) {
   const methods = ['GET', 'POST', 'PUT', 'DELETE'];
 

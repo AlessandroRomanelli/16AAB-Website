@@ -440,16 +440,18 @@ section
 .webp .joining.lazy-bg-loaded::before
   background-image: url('/img/joinpara.webp')
 
-section.screenshots
+section.screenshots, section.campaigns
   text-align: center
   .content
-    grid-column: -1 / 1
-  .gallery
-    display: flex
-    flex-wrap: wrap
-    align-content: stretch
-    justify-content: center
-    align-items: stretch
+    grid-column: 2 / 3
+    & > .gallery
+      display: flex
+      flex-wrap: wrap
+      align-content: stretch
+      justify-content: space-evenly
+      align-items: stretch
+
+section.screenshots
   .screenshot
     position: relative
     display: flex
@@ -502,6 +504,32 @@ section.screenshots
         background: transparentize($black, 0.5)
         img
           border-top: 1px solid transparentize($primary, 0.5)
+
+section.campaigns
+  .campaign
+    padding: 0 1em
+    @media screen and (min-width: 768px)
+      min-width: 32%
+    .header
+      padding: 1em 0
+      h2
+        font-size: 1.75em
+        margin: 0
+        text-transform: uppercase
+        font-family: $title-font
+        font-weight: $title-font-regular
+      & > div
+        display: flex
+        justify-content: space-between
+    p
+      text-align: left
+
+    .screenshot img
+      max-height: 66px
+
+    .picture
+      max-height: 200px
+
 
 #modal
   overflow-y: scroll

@@ -1,0 +1,22 @@
+.campaign(class=campaign.status data-id=campaign._id, data-timestamp=campaign.timestamp, data-status=campaign.status)
+  .description
+    .header
+      h2=campaign.title
+      div
+        span.setting Time: #[b= campaign.setting]
+        span.region Region: #[b= campaign.region]
+    .picture
+      picture
+        source(srcset=campaign.image.pathMin, type='image/webp')
+        source(srcset=campaign.image.path, type='image/jpeg')
+        img(src=campaign.image.path)
+      span.status=campaign.status
+    p !{campaign.content}
+  .gallery
+    each screenshot in campaign.screenshots
+      .screenshot(data-id=screenshot._id)
+        picture
+          source(srcset=screenshot.pathMin type='image/webp')
+          source(srcset=screenshot.path type='image/jpeg')
+          img(src=screenshot.path)
+  div #{space}

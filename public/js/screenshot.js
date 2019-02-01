@@ -7,10 +7,6 @@
     id = "/"+form.dataset.id
   }
 
-  const displayError = (message) => {
-    alert(message)
-  }
-
   form.addEventListener('submit', (event) => {
     event.preventDefault()
     const title = event.target.querySelector('input[name="title"]').value

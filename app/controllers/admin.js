@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const passport = require('passport');
 const config = require('../../config/config');
 
-const { news, images } = require('./utils/data')
+const { news, images, campaigns } = require('./utils/data')
 
 const User = mongoose.model('User');
 
@@ -23,6 +23,7 @@ router.get('/', (req, res) => {
     year: new Date().getFullYear(),
     articles,
     screenshots,
+    campaigns: Object.values(campaigns),
     title: config.app.title
   });
 });

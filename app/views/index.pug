@@ -112,13 +112,21 @@ block content
         .call-to-action
           a(href='https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk' target="_blank") Enlist now
            
-    section.screenshots
+    section.campaigns
       .content
-        h1 Screenshots
-        p Some memorable moments from our operations
+        h1 Campaigns
+        p A collection of present and past campaigns in which our unit was engaged in.
         .gallery
-          each screenshot, index in screenshots
-            include includes/lazyscreen.pug
+          each campaign, index in campaigns
+            include includes/campaign.pug
+              a(href='/campaigns/'+campaign._id) Learn More
+    //- section.screenshots
+    //-   .content
+    //-     h1 Screenshots
+    //-     p Some memorable moments from our operations
+    //-     .gallery
+    //-       each screenshot, index in screenshots
+    //-         include includes/lazyscreen.pug
   #modal
     .content
       
