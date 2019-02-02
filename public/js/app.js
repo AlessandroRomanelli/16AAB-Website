@@ -143,7 +143,6 @@
     const content = article.querySelector('.main')
     const text = content.innerText
     let limit = 250
-    const regex = />(?:(?<t>[^<]*))/gm
     if (text.length > limit) {
       let area = content.innerHTML.substr(0, limit)
       content.innerHTML = area+"..."
