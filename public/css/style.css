@@ -842,6 +842,7 @@ section.screenshots .screenshot {
   justify-content: center;
   height: 100%; }
   #modal .content .container .screenshot {
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(254, 253, 255, 0.5); }
