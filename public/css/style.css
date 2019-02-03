@@ -1178,3 +1178,6 @@ main.campaign-edit .image-select, main.campaign-edit .screenshots-select {
       bottom: 0; }
     main.campaign-edit .image-select .screenshot img, main.campaign-edit .screenshots-select .screenshot img {
       max-height: 100%; }
+
+main.admin-area .learn-more {
+  display: none; }
