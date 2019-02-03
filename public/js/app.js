@@ -150,7 +150,7 @@
       div.classList.add('read-more')
       content.appendChild(div)
       div.innerHTML = `<a href='/'>Read More ${templates['long-arrow-right']()}</a>`
-      const anchor = document.querySelector('.read-more a')
+      const anchor = div.querySelector('.read-more a')
       anchor.addEventListener('click', (event) => {
         event.preventDefault()
         doJSONRequest('GET', '/news/'+id, {}, null).then(response => {
