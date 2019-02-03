@@ -210,7 +210,7 @@ section
       pointer-events: none
 
 
-.carousel
+section.news .carousel
   position: relative
   padding: 0
   margin: 0
@@ -220,7 +220,7 @@ section
   transition: 1s cubic-bezier(.41,.01,0,1)
   left: 0%
 
-.carousel-item
+section.news .carousel-item
   overflow: hidden
   position: relative
   display: flex
@@ -258,7 +258,7 @@ section
     max-width: 100%
     z-index: -1
     opacity: 0.3
-.carousel-item .main
+section.news .carousel-item .main
   margin-top: 1em
   p
     margin: 0
@@ -283,7 +283,7 @@ section
       opacity: 0
 
 
-.controls
+section.news .controls
   display: flex
   justify-content: center
   margin: 0.5em 0
@@ -535,6 +535,44 @@ section.screenshots
       &:hover
         opacity: 1
         cursor: pointer
+  svg
+    width: 20px
+    transition: 0.2s ease-in-out
+    &:first-child
+      margin-right: 0.5em
+    &:last-child
+      margin-left: 0.5em
+
+
+  .description
+    .gallery
+      display: none
+    // &.show
+    //   .gallery
+    //     opacity: 1
+    //     height: 100%
+
+  a.learn-more
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    transition: 0.2s ease-in-out
+    padding: 0.25em 0
+    text-transform: uppercase
+    font-weight: bold
+    background: transparentize($background-color-dark, 0.5)
+    color: $white
+    border-top: 1px solid transparent
+    z-index: 10
+    &::after
+      display: none
+    &:hover
+      transform: none
+      color: $primary
+      background: transparentize($background-color-dark, 0.25)
+      border-top: 1px solid transparentize($primary, 0.5)
+
 
   .picture
     position: relative
@@ -614,7 +652,7 @@ section.screenshots
     flex-direction: column
   &.wide .content
     grid-column: 2 / 5
-  svg
+  .content > svg
     width: 50px
     height: 50px
     background: $background-color-dark
@@ -643,6 +681,7 @@ section.screenshots
       font-size: 3em
 
 #modal .content .container
+  position: relative
   display: flex
   flex-direction: column
   align-items: center
@@ -657,6 +696,7 @@ section.screenshots
     position: relative
     max-width: 100%
     max-height: calc(100vh - 50px - 2rem)
+    margin: 0 auto
   .description
     width: 100%
     position: absolute
@@ -675,3 +715,34 @@ section.screenshots
     p
       text-align: center
       margin: 0 1em
+
+#modal .content .carousel
+  position: relative
+  left: 0
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  // transition: 0.5s cubic-bezier(.41,.01,0,1)
+  .carousel-item
+    flex: 1 0 100%
+    height: 100%
+    display: flex
+    align-items: center
+
+#modal .controls
+  & > *
+    position: absolute
+    width: 50px
+    top: 50%
+    transform: translateY(-50%)
+    opacity: 0.5
+    transition: 0.2s ease-in-out
+    &:hover
+      opacity: 1
+      cursor: pointer
+    &.prev
+      left: 2rem
+    &.next
+      right: 2rem

@@ -1,3 +1,38 @@
+class Slideshow {
+  constructor(elements) {
+    this.elements = elements
+    this.index = 0
+  }
+
+  get current() {
+    return this.elements[this.index]
+  }
+
+  getNext() {
+    return this.elements[(this.index + 1) % this.elements.length]
+  }
+
+  getPrev() {
+    if (this.index === 0) {
+      return this.elements[this.elements.length - 1]
+    } else {
+      return this.elements[this.index-1]
+    }
+  }
+
+  next() {
+    this.index = (this.index + 1) % this.elements.length
+  }
+
+  prev() {
+    if (this.index === 0) {
+      this.index = this.elements.length - 1
+    } else {
+      this.index -= 1
+    }
+  }
+}
+
 const displayError = (message) => {
   alert(message)
 }

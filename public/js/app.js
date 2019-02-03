@@ -164,6 +164,33 @@
     }
   }
 
+  updateCarousel = () => {
+    const carousel = modal.querySelector('.carousel')
+    const prevItem = carousel.querySelector('.prev-element')
+    const currentItem = carousel.querySelector('.current-element')
+    const nextItem = carousel.querySelector('.next-element')
+    prevItem.innerHTML = templates.screenshot({ screenshot: slideshow.getPrev()})
+    currentItem.innerHTML = templates.screenshot({ screenshot: slideshow.current})
+    nextItem.innerHTML = templates.screenshot({ screenshot: slideshow.getNext()})
+  }
+
+  handleModalCarousel = () => {
+    updateCarousel()
+    modal.querySelector('.controls .prev').addEventListener('click', (event) => {
+      event.preventDefault()
+      slideshow.prev()
+      updateCarousel()
+      console.log(slideshow)
+    })
+
+    modal.querySelector('.controls .next').addEventListener('click', (event) => {
+      event.preventDefault()
+      slideshow.next()
+      updateCarousel()
+      console.log(slideshow)
+    })
+  }
+
   const modal = document.getElementById('modal')
   document.body.onclick = (event) => {
     document.body.style.overflow = 'auto'
@@ -193,4 +220,31 @@
     })
   })
 
+  let slideshow = null
+
+  const campaigns = document.querySelectorAll('.campaigns .campaign')
+  campaigns.forEach(campaign => {
+    const anchor = campaign.querySelector('a.learn-more')
+    anchor.addEventListener('click', (event) => {
+      event.preventDefault()
+      const screenshots = []
+      campaign.querySelectorAll('.gallery .screenshot').forEach(screenshot => {
+        screenshots.push(screenshot.dataset.id)
+      })
+      let results = []
+      screenshots.forEach(id => {
+        doJSONRequest('GET', '/screenshot/'+id, {}, null).then(response => {
+          const { screenshot } = response
+          results.push(screenshot)
+        }).then(() => {
+          if (results.length !== screenshots.length) { return }
+          slideshow = new Slideshow(results)
+          console.log(slideshow)
+          const html = `<div class='container'>${templates.carousel()}</div>`
+          populateModal(html, true)
+          handleModalCarousel();
+        })
+      })
+    })
+  })
 }());

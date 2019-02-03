@@ -363,7 +363,7 @@ section {
       background: linear-gradient(90deg, #0f171c 0%, transparent 2%, transparent 98%, #0f171c 100%);
       pointer-events: none; }
 
-.carousel {
+section.news .carousel {
   position: relative;
   padding: 0;
   margin: 0;
@@ -373,7 +373,7 @@ section {
   transition: 1s cubic-bezier(0.41, 0.01, 0, 1);
   left: 0%; }
 
-.carousel-item {
+section.news .carousel-item {
   overflow: hidden;
   position: relative;
   display: flex;
@@ -383,29 +383,29 @@ section {
   border-top: 1px solid rgba(254, 253, 255, 0.5);
   border-bottom: 1px solid rgba(254, 253, 255, 0.5); }
   @media screen and (min-width: 1088px) {
-    .carousel-item {
+    section.news .carousel-item {
       flex: 1 0 50%; } }
-  .carousel-item:nth-child(2n-1) {
+  section.news .carousel-item:nth-child(2n-1) {
     background: rgba(254, 253, 255, 0.025); }
-  .carousel-item:nth-child(2n) {
+  section.news .carousel-item:nth-child(2n) {
     background: rgba(254, 253, 255, 0.05); }
-  .carousel-item:not(:last-child) {
+  section.news .carousel-item:not(:last-child) {
     border-right: 1px solid rgba(254, 253, 255, 0.1); }
-  .carousel-item h2 {
+  section.news .carousel-item h2 {
     margin: 0;
     flex: 1 0 100%; }
-  .carousel-item .header {
+  section.news .carousel-item .header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase; }
-    .carousel-item .header .author, .carousel-item .header .date {
+    section.news .carousel-item .header .author, section.news .carousel-item .header .date {
       font-size: 0.8em; }
-  .carousel-item .content {
+  section.news .carousel-item .content {
     width: 100%;
     margin: 1em 0; }
-  .carousel-item > img.background {
+  section.news .carousel-item > img.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -413,23 +413,23 @@ section {
     z-index: -1;
     opacity: 0.3; }
 
-.carousel-item .main {
+section.news .carousel-item .main {
   margin-top: 1em; }
-  .carousel-item .main p {
+  section.news .carousel-item .main p {
     margin: 0; }
-  .carousel-item .main .read-more {
+  section.news .carousel-item .main .read-more {
     margin-top: 0.5em;
     display: flex;
     justify-content: flex-end; }
-    .carousel-item .main .read-more a {
+    section.news .carousel-item .main .read-more a {
       display: flex;
       align-items: center;
       position: relative;
       transition: 0.2s ease-in-out; }
-      .carousel-item .main .read-more a:hover svg {
+      section.news .carousel-item .main .read-more a:hover svg {
         opacity: 1;
         right: 0; }
-    .carousel-item .main .read-more svg {
+    section.news .carousel-item .main .read-more svg {
       margin-left: 0.25em;
       height: 1em;
       position: relative;
@@ -437,22 +437,22 @@ section {
       right: 20px;
       opacity: 0; }
 
-.controls {
+section.news .controls {
   display: flex;
   justify-content: center;
   margin: 0.5em 0; }
-  .controls i {
+  section.news .controls i {
     color: #FEFDFF;
     font-size: 2.5em;
     transition: 0.2s ease-in-out; }
-    .controls i:not(:last-child) {
+    section.news .controls i:not(:last-child) {
       margin-right: 0.5em; }
-    .controls i:not(.active):hover {
+    section.news .controls i:not(.active):hover {
       cursor: pointer;
       opacity: 0.75; }
-    .controls i:hover {
+    section.news .controls i:hover {
       color: #cf0005; }
-    .controls i svg {
+    section.news .controls i svg {
       width: 1em;
       height: 1em; }
 
@@ -704,6 +704,35 @@ section.screenshots .screenshot {
       .campaigns .campaign .gallery .screenshot img:hover {
         opacity: 1;
         cursor: pointer; }
+  .campaigns .campaign svg {
+    width: 20px;
+    transition: 0.2s ease-in-out; }
+    .campaigns .campaign svg:first-child {
+      margin-right: 0.5em; }
+    .campaigns .campaign svg:last-child {
+      margin-left: 0.5em; }
+  .campaigns .campaign .description .gallery {
+    display: none; }
+  .campaigns .campaign a.learn-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.2s ease-in-out;
+    padding: 0.25em 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: rgba(15, 23, 28, 0.5);
+    color: #FEFDFF;
+    border-top: 1px solid transparent;
+    z-index: 10; }
+    .campaigns .campaign a.learn-more::after {
+      display: none; }
+    .campaigns .campaign a.learn-more:hover {
+      transform: none;
+      color: #cf0005;
+      background: rgba(15, 23, 28, 0.75);
+      border-top: 1px solid rgba(207, 0, 5, 0.5); }
   .campaigns .campaign .picture {
     position: relative;
     display: flex;
@@ -777,7 +806,7 @@ section.screenshots .screenshot {
     flex-direction: column; }
   #modal.wide .content {
     grid-column: 2 / 5; }
-  #modal svg {
+  #modal .content > svg {
     width: 50px;
     height: 50px;
     background: #0f171c;
@@ -790,7 +819,7 @@ section.screenshots .screenshot {
     transition: 0.2s ease-in-out;
     z-index: 100;
     color: rgba(254, 253, 255, 0.75); }
-    #modal svg:hover {
+    #modal .content > svg:hover {
       cursor: pointer;
       color: #FEFDFF;
       transform: scale(1.1); }
@@ -806,6 +835,7 @@ section.screenshots .screenshot {
       font-size: 3em; }
 
 #modal .content .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -819,7 +849,8 @@ section.screenshots .screenshot {
     display: flex;
     position: relative;
     max-width: 100%;
-    max-height: calc(100vh - 50px - 2rem); }
+    max-height: calc(100vh - 50px - 2rem);
+    margin: 0 auto; }
   #modal .content .container .description {
     width: 100%;
     position: absolute;
@@ -838,6 +869,35 @@ section.screenshots .screenshot {
     #modal .content .container .description p {
       text-align: center;
       margin: 0 1em; }
+
+#modal .content .carousel {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #modal .content .carousel .carousel-item {
+    flex: 1 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+
+#modal .controls > * {
+  position: absolute;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  transition: 0.2s ease-in-out; }
+  #modal .controls > *:hover {
+    opacity: 1;
+    cursor: pointer; }
+  #modal .controls > *.prev {
+    left: 2rem; }
+  #modal .controls > *.next {
+    right: 2rem; }
 
 footer {
   grid-area: footer;
