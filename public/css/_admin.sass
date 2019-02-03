@@ -59,8 +59,12 @@ main.news-edit, main.campaign-edit
 main.admin-area .news
   display: flex
   flex-wrap: wrap
-  article.carousel-item
-    flex: 1 0 50%
+  img
+    float: left
+    margin: 0 1em 1em 0
+    width: 100%
+    @media screen and (min-width: 1024px)
+      max-width: 30%
 
 main.admin-area .screenshots, main.admin-area .campaigns
   display: flex

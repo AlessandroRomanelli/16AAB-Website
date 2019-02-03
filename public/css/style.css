@@ -373,7 +373,7 @@ section.news .carousel {
   transition: 1s cubic-bezier(0.41, 0.01, 0, 1);
   left: 0%; }
 
-section.news .carousel-item {
+.news .carousel-item {
   overflow: hidden;
   position: relative;
   display: flex;
@@ -383,29 +383,29 @@ section.news .carousel-item {
   border-top: 1px solid rgba(254, 253, 255, 0.5);
   border-bottom: 1px solid rgba(254, 253, 255, 0.5); }
   @media screen and (min-width: 1088px) {
-    section.news .carousel-item {
+    .news .carousel-item {
       flex: 1 0 50%; } }
-  section.news .carousel-item:nth-child(2n-1) {
+  .news .carousel-item:nth-child(2n-1) {
     background: rgba(254, 253, 255, 0.025); }
-  section.news .carousel-item:nth-child(2n) {
+  .news .carousel-item:nth-child(2n) {
     background: rgba(254, 253, 255, 0.05); }
-  section.news .carousel-item:not(:last-child) {
+  .news .carousel-item:not(:last-child) {
     border-right: 1px solid rgba(254, 253, 255, 0.1); }
-  section.news .carousel-item h2 {
+  .news .carousel-item h2 {
     margin: 0;
     flex: 1 0 100%; }
-  section.news .carousel-item .header {
+  .news .carousel-item .header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase; }
-    section.news .carousel-item .header .author, section.news .carousel-item .header .date {
+    .news .carousel-item .header .author, .news .carousel-item .header .date {
       font-size: 0.8em; }
-  section.news .carousel-item .content {
+  .news .carousel-item .content {
     width: 100%;
     margin: 1em 0; }
-  section.news .carousel-item > img.background {
+  .news .carousel-item > img.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -413,23 +413,23 @@ section.news .carousel-item {
     z-index: -1;
     opacity: 0.3; }
 
-section.news .carousel-item .main {
+.news .carousel-item .main {
   margin-top: 1em; }
-  section.news .carousel-item .main p {
+  .news .carousel-item .main p {
     margin: 0; }
-  section.news .carousel-item .main .read-more {
+  .news .carousel-item .main .read-more {
     margin-top: 0.5em;
     display: flex;
     justify-content: flex-end; }
-    section.news .carousel-item .main .read-more a {
+    .news .carousel-item .main .read-more a {
       display: flex;
       align-items: center;
       position: relative;
       transition: 0.2s ease-in-out; }
-      section.news .carousel-item .main .read-more a:hover svg {
+      .news .carousel-item .main .read-more a:hover svg {
         opacity: 1;
         right: 0; }
-    section.news .carousel-item .main .read-more svg {
+    .news .carousel-item .main .read-more svg {
       margin-left: 0.25em;
       height: 1em;
       position: relative;
@@ -437,22 +437,22 @@ section.news .carousel-item .main {
       right: 20px;
       opacity: 0; }
 
-section.news .controls {
+.news .controls {
   display: flex;
   justify-content: center;
   margin: 0.5em 0; }
-  section.news .controls i {
+  .news .controls i {
     color: #FEFDFF;
     font-size: 2.5em;
     transition: 0.2s ease-in-out; }
-    section.news .controls i:not(:last-child) {
+    .news .controls i:not(:last-child) {
       margin-right: 0.5em; }
-    section.news .controls i:not(.active):hover {
+    .news .controls i:not(.active):hover {
       cursor: pointer;
       opacity: 0.75; }
-    section.news .controls i:hover {
+    .news .controls i:hover {
       color: #cf0005; }
-    section.news .controls i svg {
+    .news .controls i svg {
       width: 1em;
       height: 1em; }
 
@@ -1116,8 +1116,13 @@ main.news-edit form, main.campaign-edit form {
 main.admin-area .news {
   display: flex;
   flex-wrap: wrap; }
-  main.admin-area .news article.carousel-item {
-    flex: 1 0 50%; }
+  main.admin-area .news img {
+    float: left;
+    margin: 0 1em 1em 0;
+    width: 100%; }
+    @media screen and (min-width: 1024px) {
+      main.admin-area .news img {
+        max-width: 30%; } }
 
 main.admin-area .screenshots, main.admin-area .campaigns {
   display: flex;
