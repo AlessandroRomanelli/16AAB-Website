@@ -189,6 +189,22 @@
       updateCarousel()
       console.log(slideshow)
     })
+
+    document.onkeydown = (event) => {
+      const { keyCode } = event
+      event.preventDefault()
+      if (keyCode === 37) {
+        slideshow.prev()
+        updateCarousel()
+      } else if (keyCode === 39) {
+        slideshow.next()
+        updateCarousel()
+      } else if (keyCode === 27) {
+        document.body.style.overflow = 'auto'
+        modal.classList.remove('show')
+        modal.classList.remove('wide')
+      }
+    }
   }
 
   const modal = document.getElementById('modal')
