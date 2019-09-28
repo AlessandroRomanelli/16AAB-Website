@@ -169,7 +169,7 @@ main {
       grid-template-rows: calc(100vh - 50px - 375px) 375px 1fr; } }
   @media screen and (min-width: 1088px) {
     .home-page {
-      grid-template-rows: calc(100vh - 2rem - 50px - 375px) 375px 1fr; } }
+      grid-template-rows: calc(100vh - 2rem - 50px - 450px) 450px 1fr; } }
 
 .news {
   grid-area: news; }
