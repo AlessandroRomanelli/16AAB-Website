@@ -3,7 +3,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
-  src: local("Raleway Medium"), local("Raleway-Medium"), url(../fonts/Raleway/medium-ext.woff2) format("woff2");
+  src: local("Raleway Medium"), local("Raleway-Medium"), url(../public/fonts/Raleway/medium-ext.woff2) format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 
 /* latin */
@@ -11,7 +11,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
-  src: local("Raleway Medium"), local("Raleway-Medium"), url(../fonts/Raleway/medium.woff2) format("woff2");
+  src: local("Raleway Medium"), local("Raleway-Medium"), url(../public/fonts/Raleway/medium.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 /* latin-ext */
@@ -19,7 +19,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 900;
-  src: local("Raleway Black"), local("Raleway-Black"), url(../fonts/Raleway/black-ext.woff2) format("woff2");
+  src: local("Raleway Black"), local("Raleway-Black"), url(../public/fonts/Raleway/black-ext.woff2) format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 
 /* latin */
@@ -27,7 +27,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 900;
-  src: local("Raleway Black"), local("Raleway-Black"), url(../fonts/Raleway/black.woff2) format("woff2");
+  src: local("Raleway Black"), local("Raleway-Black"), url(../public/fonts/Raleway/black.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 /* latin-ext */
@@ -35,7 +35,7 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 200;
-  src: local("Work Sans ExtraLight"), local("WorkSans-ExtraLight"), url(../fonts/Work_Sans/light-ext.woff2) format("woff2");
+  src: local("Work Sans ExtraLight"), local("WorkSans-ExtraLight"), url(../public/fonts/Work_Sans/light-ext.woff2) format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 
 /* latin */
@@ -43,7 +43,7 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 200;
-  src: local("Work Sans ExtraLight"), local("WorkSans-ExtraLight"), url(../fonts/Work_Sans/light.woff2) format("woff2");
+  src: local("Work Sans ExtraLight"), local("WorkSans-ExtraLight"), url(../public/fonts/Work_Sans/light.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 * {
@@ -122,7 +122,8 @@ nav.navbar {
       color: #FEFDFF; }
     nav.navbar a.name span {
       font-weight: 900;
-      color: #cf0005; }
+      color: #3587A4;
+      margin-right: 2px; }
   nav.navbar img {
     width: 50px;
     height: 50px; }
@@ -135,7 +136,7 @@ main {
     display: inline-block;
     position: relative;
     text-decoration: none;
-    color: #cf0005;
+    color: #3587A4;
     font-weight: bold;
     transition: 0.2s ease-in-out; }
     main a:link::after,
@@ -150,9 +151,9 @@ main {
       background: transparent; }
   main a:hover {
     transform: translateY(-2px);
-    color: #da3f43; }
+    color: #67a5bb; }
     main a:hover::after {
-      background: #da3f43;
+      background: #67a5bb;
       width: 100%; }
   main button a::after {
     display: none; }
@@ -240,8 +241,13 @@ main > .header .title {
     text-transform: uppercase;
     font-size: 2.75em;
     margin: 0; }
+    main > .header .title h1:first-child {
+      margin-bottom: 0.5rem; }
+    main > .header .title h1:last-child {
+      margin-top: 0.5rem; }
     main > .header .title h1 span {
-      color: #cf0005;
+      margin: 0 5px;
+      color: #3587A4;
       font-weight: 800; }
     main > .header .title h1:first-of-type {
       margin-right: 1em; }
@@ -254,6 +260,7 @@ main > .header .subtitle {
   text-transform: uppercase;
   position: absolute;
   top: 50%;
+  letter-spacing: 1px;
   transform: translateY(-50%); }
 
 main > .header .call-to-action {
@@ -287,15 +294,15 @@ main > .header .call-to-action {
   .call-to-action a:link, .call-to-action a:visited {
     color: #FEFDFF; }
     .call-to-action a:link:last-of-type, .call-to-action a:visited:last-of-type {
-      background: rgba(111, 12, 16, 0.2);
-      border-color: rgba(207, 0, 5, 0.2);
+      background: rgba(34, 79, 96, 0.2);
+      border-color: rgba(53, 135, 164, 0.2);
       margin-left: 1em; }
       .call-to-action a:link:last-of-type:hover, .call-to-action a:visited:last-of-type:hover {
-        border-left-color: rgba(207, 0, 5, 0.25);
-        border-right-color: rgba(207, 0, 5, 0.25);
-        background: rgba(207, 0, 5, 0.25); }
+        border-left-color: rgba(53, 135, 164, 0.25);
+        border-right-color: rgba(53, 135, 164, 0.25);
+        background: rgba(53, 135, 164, 0.25); }
         .call-to-action a:link:last-of-type:hover::before, .call-to-action a:link:last-of-type:hover::after, .call-to-action a:visited:last-of-type:hover::before, .call-to-action a:visited:last-of-type:hover::after {
-          background: #cf0005; }
+          background: #3587A4; }
     .call-to-action a:link::before, .call-to-action a:link::after, .call-to-action a:visited::before, .call-to-action a:visited::after {
       content: '';
       position: absolute;
@@ -340,13 +347,16 @@ section {
     font-family: "Raleway", sans-serif;
     font-weight: 500; }
     section h1 > span {
-      color: #cf0005;
-      font-weight: 800; }
+      color: #3587A4;
+      font-weight: 800;
+      margin: 0 10px; }
     section h1 div {
       position: relative;
       font-size: 0.8rem; }
+      section h1 div span {
+        margin: 0 0.5rem; }
       section h1 div span:nth-child(2n-1) {
-        color: #cf0005; }
+        color: #3587A4; }
 
 .news {
   padding: 0; }
@@ -451,7 +461,7 @@ section.news .carousel {
       cursor: pointer;
       opacity: 0.75; }
     .news .controls i:hover {
-      color: #cf0005; }
+      color: #3587A4; }
     .news .controls i svg {
       width: 1em;
       height: 1em; }
@@ -538,9 +548,9 @@ section.news .carousel {
     .operations .opdays div.opday {
       position: relative;
       font-family: "Raleway", sans-serif;
-      color: #cf0005; }
+      color: #3587A4; }
       .operations .opdays div.opday.side::after, .operations .opdays div.opday.main::after {
-        color: #b01f22;
+        color: #567783;
         position: absolute;
         width: 100%;
         text-align: center;
@@ -656,7 +666,7 @@ section.screenshots .screenshot {
     left: 0;
     height: 100%;
     width: 0;
-    background: #cf0005;
+    background: #3587A4;
     z-index: 100;
     transition: 0.2s ease-in-out; }
   section.screenshots .screenshot:hover {
@@ -671,7 +681,7 @@ section.screenshots .screenshot {
       transform: translateY(0);
       background: rgba(10, 16, 13, 0.5); }
       section.screenshots .screenshot:hover .description img {
-        border-top: 1px solid rgba(207, 0, 5, 0.5); }
+        border-top: 1px solid rgba(53, 135, 164, 0.5); }
 
 .campaigns .campaign {
   padding: 0 1em; }
@@ -690,7 +700,7 @@ section.screenshots .screenshot {
       display: flex;
       justify-content: space-between; }
       .campaigns .campaign .header > div b {
-        color: #cf0005; }
+        color: #3587A4; }
   .campaigns .campaign .gallery {
     display: flex;
     align-content: stretch;
@@ -730,9 +740,9 @@ section.screenshots .screenshot {
       display: none; }
     .campaigns .campaign a.learn-more:hover {
       transform: none;
-      color: #cf0005;
+      color: #3587A4;
       background: rgba(15, 23, 28, 0.75);
-      border-top: 1px solid rgba(207, 0, 5, 0.5); }
+      border-top: 1px solid rgba(53, 135, 164, 0.5); }
   .campaigns .campaign .picture {
     position: relative;
     display: flex;
@@ -946,7 +956,7 @@ footer {
             color: #FEFDFF;
             transition: 0.2s ease-in-out; }
           .frame.left .social a:hover {
-            color: #cf0005;
+            color: #3587A4;
             transform: scale(1.1); }
           .frame.left .social a:not(:first-child) {
             margin-top: 1.5em; }

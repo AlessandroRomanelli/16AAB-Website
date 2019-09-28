@@ -4,28 +4,28 @@ block content
   main#home.home-page
     header.header
       .title
-        h1 First 
+        h1 First
           span in
-        h1 
-          span Last 
+        h1
+          span Last
           | out
-        .subtitle ArmA 3 UK Relaxed Milsim Unit
+        .subtitle ArmA 3 British Milsim Unit
         .call-to-action
           a(href="#about") About Us
           a(href="https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk" target='_blank') Enlist now
     section.news
       .content
-        h1 Latest 
+        h1 Latest
           span News
-          div 
-            span Announcements 
-            | | 
-            span Events 
-            | | 
+          div
+            span Announcements
+            | |
+            span Events
+            | |
             span Updates
         .carousel(data-newsId='0')
           if (articles.length > 0)
-            each news,index in articles 
+            each news,index in articles
               include includes/article.pug
           else
             p(style='text-align: center') No news!
@@ -36,12 +36,12 @@ block content
             include includes/icons/long-arrow-right.pug
     section#about.about.lazy-bg
       .content
-        h1 
-          span Who 
+        h1
+          span Who
           | are we?
-        p The 
+        p The
           a(href="https://en.wikipedia.org/wiki/Pathfinder_Platoon" target='_blank') Pathfinders Platoon
-          |  is a unit of the British Army and an integral part of 
+          |  is a unit of the British Army and an integral part of
           a(href="https://en.wikipedia.org/wiki/16_Air_Assault_Brigade" target='_blank') 16 Air Assault Brigade
           | .
         picture.logo.lazy(data-aos="fade-left" data-aos-duration='1000')
@@ -75,7 +75,7 @@ block content
       .content
         h1 Operations
         p We require all our members to attend at least twice a week to our operations.
-        p Operations take place in the following days: 
+        p Operations take place in the following days:
         .opdays
           div(data-aos='fade-up' data-aos-delay='1000' data-aos-duration='500') Monday
           div.side.opday(data-aos='fade-up' data-aos-duration='500') Tuesday
@@ -84,34 +84,34 @@ block content
           div(data-aos='fade-up' data-aos-delay='1000' data-aos-duration='500') Friday
           div.main.opday(data-aos='fade-up' data-aos-duration='500') Saturday
           div(data-aos='fade-up' data-aos-delay='1000' data-aos-duration='500') Sunday
-        p The time at which operations begin is: 
-          b.time 19:30 
+        p The time at which operations begin is:
+          b.time 19:30
           a(href="https://www.timeanddate.com/worldclock/uk/london", target="_blank") British Time
           |  and last approximately 2H 30M.
     section#joining.joining.lazy-bg
       .content
-        h1 How to 
+        h1 How to
          span join
         p We require you to fullfil the following conditions in order to apply:
         ul
-          li(data-aos='fade-up' data-aos-duration='500') 
+          li(data-aos='fade-up' data-aos-duration='500')
             include includes/icons/microphone.pug
             span You must have a working microphone;
-          li(data-aos='fade-up' data-aos-duration='500') 
+          li(data-aos='fade-up' data-aos-duration='500')
             include includes/icons/people-carry.pug
             span You must be willing to play in team;
-          li(data-aos='fade-up' data-aos-duration='500') 
+          li(data-aos='fade-up' data-aos-duration='500')
             include includes/icons/child.pug
             span You must be 16 years old or older;
-          li(data-aos='fade-up' data-aos-duration='500') 
+          li(data-aos='fade-up' data-aos-duration='500')
             include includes/icons/fire.pug
             span You must have a mature and relaxed attitude.
-        p If you'd like to submit your application you can do so by filling out 
+        p If you'd like to submit your application you can do so by filling out
           a.enlist-form(href='https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk' target="_blank") this
           | &nbsp;form.
         .call-to-action
           a(href='https://docs.google.com/forms/d/10nlX3xsk6eLy6ngnObCGSTrsQqbnefeIKCnrUONDAZk' target="_blank") Enlist now
-           
+
     section#campaigns.campaigns
       .content
         h1 Campaigns
@@ -128,7 +128,7 @@ block content
     //-         include includes/lazyscreen.pug
   #modal
     .content
-      
+
 block js
   script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
   script(src="/js/vendors/yall-2.2.1.min.js")

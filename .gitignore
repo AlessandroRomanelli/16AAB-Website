@@ -4,3 +4,4 @@ webp.js
 src
 ./*.lock
 package-lock.json
+.idea/
